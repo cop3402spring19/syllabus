@@ -1,0 +1,16 @@
+Week,Tuesday Lecture,Thursday Lecture
+01/08,Course overview,Tools
+01/15,PL/0 variant programming language,"Regular expressions, Project 1 announcement"
+01/22,Automata,Lexing and ASCII encoding
+01/29,"Grammars, Project 1 due, Project 2 announcement",Top-down parsing
+02/05,ASTs,Bottom-up parsing
+02/12,"Types, Project 2 due, Project 3 announcement",Type-checking: symbol tables and declarations
+02/19,Type-checking: expressions and statements,Compiler front-end review and Q&A
+02/26,"P-code machine, Project 3 due, Project 4 announcement",Functions
+03/05,"Code generation: functions, Project 4 due, Project 5 announcement",Code generation: expressions
+03/12,<break>,<break>
+03/19,Code generation: expressions,"Code generation: statements, Project 6announcement"
+03/26,Code generation: everything,Compiler back-end review and Q&A
+04/02,"Assembly, object files, linking, and loading, Project 5 due",Optimization
+04/09,Software security,Program analysis
+04/16,"Final review, Project 6 due",Final review
