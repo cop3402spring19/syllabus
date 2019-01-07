@@ -10,25 +10,35 @@ Section 1
 Prerequisite(s): CDA 3103C and COP 3502C each with a grade of C (2.0)
 or better.
 
-### Instructor
+### People
+
+#### Instructor
 
 [Paul Gazzillo](https://paulgazzillo.com)<br>[paul.gazzillo@ucf.edu](mailto:paul.gazzillo@ucf.edu)<br>HEC-239
 
-Office Hours:
-- TBD
-- or by appointment
+#### GTAs
 
-### GTAs
+Sharare Zehtabian<br>[sharare.zehtabian@knights.ucf.edu](mailto:sharare.zehtabian@knights.ucf.edu)<br>HEC-315
 
-Sharare Zehtabian<br>[sharare.zehtabian@knights.ucf.edu](mailto:sharare.zehtabian@knights.ucf.edu)<br>Office Hours: TBD
+Necip Yildiran<br>[yildiran@knights.ucf.edu](mailto:yildiran@knights.ucf.edu)<br>HEC-213
 
-Necip Yildiran<br>[yildiran@knights.ucf.edu](mailto:yildiran@knights.ucf.edu)<br>HEC-213<br>Office Hours: TBD
+### Office Hours
+
+- Mondays 1:00pm-2:00pm (Sharare, HEC-315)
+- Tuesdays 11:00am-12:00pm (Necip, HEC-213)
+- Wednesdays 11:00am-12:00pm (Necip, HEC-213)
+- Thursdays 10:00am-11:00am (Paul, HEC-239)
+- Fridays 10:00am-11:00am (Paul, HEC-239)
+- or by appointment as necessary
+
 
 ## Schedule
 
 Class: Tuesday/Thursday 12:00PM-1:15PM CSB-0101
 
 Semester: 01/07-04/30
+
+Break: week of 03/11, no class, lab, or office hours.
 
 [Lecture schedule](schedule.csv)
 
