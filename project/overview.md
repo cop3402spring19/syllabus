@@ -106,11 +106,3 @@ data structures used in the project.
     vm.h - vm declarations
     vm_impl.c - vm implementation
     vm_ops.{c,gperf} - hash table of vm op names
-
-## Limits
-
-- 4096 max number of instructions `vm.h`
-
-- 4096 max stack size (`vm.h`)
-
-- 512 max token size (`token.h`)
