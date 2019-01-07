@@ -103,6 +103,7 @@ There are convenience macros for these offsets:
 
 - Recall that the caller pushed the return address to `FP - 3`
 - move the register holding the return expression to the stack at that offset
+- emit the epilogue
 
 ##### Caller Setup
 
@@ -240,7 +241,6 @@ emitting the function's prologue).
 
 Here is the algorithm for choosing registers:
 
-- The resulting register is always the `reg_base + node->ershov - 1`
 - For leaf nodes (`NUMBERFACTOR`, `BOOLEANFACTOR`, `FUNCTIONFACTOR`,
   `VARIABLEFACTOR`,), the result is always just put in `reg_base`,
   since their label is 1.
@@ -248,11 +248,11 @@ Here is the algorithm for choosing registers:
   single child.
 - For nodes with two children that have the same Ershov number label:
   - If the labels are the same, then we first emit code for the right
-    child with base `reg_base + 1`, then emit the left child with at
-    base `reg_base`.  The result is then in `reg_base + node->ershov - 1`.
+    child with base `reg_base - 1`, then emit the left child with at
+    base `reg_base`.  The result is then in `reg_base - node->ershov + 1`.
   - If the labels are different, we first emit code for the larger
     child with `reg_base`, then the smaller child, also with
-    `reg_base`.  The result is then in `reg_base + node->ershov - 1`.
+    `reg_base`.  The result is then in `reg_base - node->ershov + 1`.
 
 _Don't forget to return the resulting register number from each expression visitor!_
 
