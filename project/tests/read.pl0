@@ -1,0 +1,5 @@
+var x : int
+begin
+  read x
+  write x
+end

@@ -1,0 +1,17 @@
+begin
+write true
+write false
+write not true
+write not false
+write 1 < 0
+write true and true
+write true and false
+write false and true
+write false and false
+write true or true
+write true or false
+write false or true
+write false or false
+write 1 < 2
+write 1 > 2
+end

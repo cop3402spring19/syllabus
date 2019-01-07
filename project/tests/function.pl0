@@ -1,0 +1,11 @@
+var x : int
+var result : int
+function f(x : int) : int
+  begin
+    return x
+  end
+begin
+  x := 2
+  result := f(x)
+  write result
+end

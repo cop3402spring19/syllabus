@@ -1,0 +1,16 @@
+scope: <GLOBAL>, level: 0
+TranslationUnit
+| scope = <GLOBAL>
+| block = Block
+| | vardecls = TypedIdentList
+| | funcdecls = FuncDeclList
+| | statement = WhileStatement
+| | | while_condition = BooleanFactor
+| | | | ershov = 1
+| | | | datatype = bool
+| | | | boolean_value = true
+| | | while_body = WriteStatement
+| | | | write_expression = NumberFactor
+| | | | | ershov = 1
+| | | | | datatype = int
+| | | | | number_value = 1

@@ -1,0 +1,10 @@
+TranslationUnit
+| block = Block
+| | vardecls = TypedIdentList
+| | funcdecls = FuncDeclList
+| | statement = WhileStatement
+| | | while_condition = BooleanFactor
+| | | | boolean_value = true
+| | | while_body = WriteStatement
+| | | | write_expression = NumberFactor
+| | | | | number_value = 1

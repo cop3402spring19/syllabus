@@ -1,0 +1,44 @@
+br 1
+movi r0 2
+movi r1 5
+mul r0 r1 r0
+movi r1 7
+div r0 r0 r1
+wr r0
+movi r0 2
+movi r1 5
+div r0 r1 r0
+wr r0
+movi r0 2
+movi r1 5
+mod r0 r1 r0
+wr r0
+movi r0 3
+movi r1 2
+mul r0 r1 r0
+movi r1 1
+add r0 r1 r0
+wr r0
+movi r0 3
+movi r1 2
+mul r0 r1 r0
+movi r1 1
+add r0 r1 r0
+movi r1 2
+mul r0 r1 r0
+movi r1 5
+mul r0 r1 r0
+movi r1 2
+movi r2 5
+div r1 r2 r1
+add r0 r1 r0
+wr r0
+movi r0 1
+muli r0 r0 -1
+wr r0
+movi r0 2
+movi r1 5
+div r0 r1 r0
+muli r0 r0 -1
+wr r0
+hlt

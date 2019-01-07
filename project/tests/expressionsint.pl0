@@ -1,0 +1,9 @@
+begin
+write (5 * 2) / 7
+write 5 / 2
+write 5 % 2
+write 1 + 2 * 3
+write 5 / 2 + 5 * (2 * (1 + 2 * 3))
+write -1
+write -(5 / 2)
+end

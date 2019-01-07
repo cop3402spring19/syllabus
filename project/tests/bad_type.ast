@@ -1,0 +1,69 @@
+TranslationUnit
+| block = Block
+| | vardecls = TypedIdentList
+| | funcdecls = FuncDeclList
+| | | FuncDecl
+| | | | identifier = bob
+| | | | formals = TypedIdentList
+| | | | | TypedIdent
+| | | | | | identifier = x
+| | | | | | type = INT
+| | | | has_return = true
+| | | | return_type = INT
+| | | | block = Block
+| | | | | vardecls = TypedIdentList
+| | | | | funcdecls = FuncDeclList
+| | | | | statement = CompoundStatement
+| | | | | | compound_statement = StatementList
+| | | | | | | WriteStatement
+| | | | | | | | write_expression = NumberFactor
+| | | | | | | | | number_value = 2
+| | | | | | | ReturnStatement
+| | | | | | | | return_expression = BooleanFactor
+| | | | | | | | | boolean_value = true
+| | | | | | | ReturnStatement
+| | | | | | | | return_expression = NumberFactor
+| | | | | | | | | number_value = 1
+| | statement = CompoundStatement
+| | | compound_statement = StatementList
+| | | | CallStatement
+| | | | | call_function = bob
+| | | | | call_parameters = ExpressionList
+| | | | | | BooleanFactor
+| | | | | | | boolean_value = false
+| | | | CallStatement
+| | | | | call_function = bob
+| | | | | call_parameters = ExpressionList
+| | | | | | NumberFactor
+| | | | | | | number_value = 1
+| | | | | | BooleanFactor
+| | | | | | | boolean_value = false
+| | | | CallStatement
+| | | | | call_function = bob
+| | | | | call_parameters = ExpressionList
+| | | | | | NumberFactor
+| | | | | | | number_value = 1
+| | | | WriteStatement
+| | | | | write_expression = UnaryExpression
+| | | | | | unary_op = MINUS
+| | | | | | unary_expression = BooleanFactor
+| | | | | | | boolean_value = false
+| | | | WriteStatement
+| | | | | write_expression = UnaryExpression
+| | | | | | unary_op = NOT
+| | | | | | unary_expression = NumberFactor
+| | | | | | | number_value = 1
+| | | | WriteStatement
+| | | | | write_expression = BinaryExpression
+| | | | | | binary_op = LT
+| | | | | | binary_left = NumberFactor
+| | | | | | | number_value = 3
+| | | | | | binary_right = NumberFactor
+| | | | | | | number_value = 10
+| | | | WriteStatement
+| | | | | write_expression = BinaryExpression
+| | | | | | binary_op = LT
+| | | | | | binary_left = NumberFactor
+| | | | | | | number_value = 3
+| | | | | | binary_right = BooleanFactor
+| | | | | | | boolean_value = true

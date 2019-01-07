@@ -1,0 +1,15 @@
+function bob(x : int) : int
+  begin
+    write 2
+    return true
+    return 1
+  end
+begin
+  bob(false)
+  bob(1, false)
+  bob(1)
+  write -false
+  write not 1
+  write 3 < 10
+  write 3 < true
+end

@@ -1,0 +1,125 @@
+scope: <GLOBAL>, level: 0
+  i : int @0
+  b : bool @0
+  fi : (int) -> int @0
+  scope: fi, level: 1
+    x : int @0
+    i : int @0
+    b : bool @0
+    fb : (bool, int, int) -> bool @0
+    fv : (bool) -> void @0
+    scope: fb, level: 2
+      b : bool @0
+      i : int @0
+      y : int @0
+      fb_local_1 : int @0
+      fb_local_2 : bool @0
+    scope: fv, level: 2
+      b : bool @0
+TranslationUnit
+| scope = <GLOBAL>
+| block = Block
+| | vardecls = TypedIdentList
+| | | TypedIdent
+| | | | symbol = <GLOBAL>.i
+| | | | identifier = i
+| | | | type = INT
+| | | TypedIdent
+| | | | symbol = <GLOBAL>.b
+| | | | identifier = b
+| | | | type = BOOL
+| | funcdecls = FuncDeclList
+| | | FuncDecl
+| | | | scope = fi
+| | | | symbol = <GLOBAL>.fi
+| | | | identifier = fi
+| | | | formals = TypedIdentList
+| | | | | TypedIdent
+| | | | | | symbol = fi.x
+| | | | | | identifier = x
+| | | | | | type = INT
+| | | | has_return = true
+| | | | return_type = INT
+| | | | block = Block
+| | | | | vardecls = TypedIdentList
+| | | | | | TypedIdent
+| | | | | | | symbol = fi.i
+| | | | | | | identifier = i
+| | | | | | | type = INT
+| | | | | | TypedIdent
+| | | | | | | symbol = fi.b
+| | | | | | | identifier = b
+| | | | | | | type = BOOL
+| | | | | funcdecls = FuncDeclList
+| | | | | | FuncDecl
+| | | | | | | scope = fb
+| | | | | | | symbol = fi.fb
+| | | | | | | identifier = fb
+| | | | | | | formals = TypedIdentList
+| | | | | | | | TypedIdent
+| | | | | | | | | symbol = fb.b
+| | | | | | | | | identifier = b
+| | | | | | | | | type = BOOL
+| | | | | | | | TypedIdent
+| | | | | | | | | symbol = fb.i
+| | | | | | | | | identifier = i
+| | | | | | | | | type = INT
+| | | | | | | | TypedIdent
+| | | | | | | | | symbol = fb.y
+| | | | | | | | | identifier = y
+| | | | | | | | | type = INT
+| | | | | | | has_return = true
+| | | | | | | return_type = BOOL
+| | | | | | | block = Block
+| | | | | | | | vardecls = TypedIdentList
+| | | | | | | | | TypedIdent
+| | | | | | | | | | symbol = fb.fb_local_1
+| | | | | | | | | | identifier = fb_local_1
+| | | | | | | | | | type = INT
+| | | | | | | | | TypedIdent
+| | | | | | | | | | symbol = fb.fb_local_2
+| | | | | | | | | | identifier = fb_local_2
+| | | | | | | | | | type = BOOL
+| | | | | | | | funcdecls = FuncDeclList
+| | | | | | | | statement = CompoundStatement
+| | | | | | | | | compound_statement = StatementList
+| | | | | | | | | | WriteStatement
+| | | | | | | | | | | write_expression = NumberFactor
+| | | | | | | | | | | | ershov = 1
+| | | | | | | | | | | | datatype = int
+| | | | | | | | | | | | number_value = 3
+| | | | | | FuncDecl
+| | | | | | | scope = fv
+| | | | | | | symbol = fi.fv
+| | | | | | | identifier = fv
+| | | | | | | formals = TypedIdentList
+| | | | | | | | TypedIdent
+| | | | | | | | | symbol = fv.b
+| | | | | | | | | identifier = b
+| | | | | | | | | type = BOOL
+| | | | | | | has_return = false
+| | | | | | | return_type = 
+| | | | | | | block = Block
+| | | | | | | | vardecls = TypedIdentList
+| | | | | | | | funcdecls = FuncDeclList
+| | | | | | | | statement = CompoundStatement
+| | | | | | | | | compound_statement = StatementList
+| | | | | | | | | | WriteStatement
+| | | | | | | | | | | write_expression = NumberFactor
+| | | | | | | | | | | | ershov = 1
+| | | | | | | | | | | | datatype = int
+| | | | | | | | | | | | number_value = 4
+| | | | | statement = CompoundStatement
+| | | | | | compound_statement = StatementList
+| | | | | | | WriteStatement
+| | | | | | | | write_expression = NumberFactor
+| | | | | | | | | ershov = 1
+| | | | | | | | | datatype = int
+| | | | | | | | | number_value = 2
+| | statement = CompoundStatement
+| | | compound_statement = StatementList
+| | | | WriteStatement
+| | | | | write_expression = NumberFactor
+| | | | | | ershov = 1
+| | | | | | datatype = int
+| | | | | | number_value = 1

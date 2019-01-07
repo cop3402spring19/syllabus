@@ -1,0 +1,21 @@
+addi sp sp 1
+br 1
+movi r0 1
+st r0 fp 1
+movi r0 8
+ld r1 fp 1
+cmp r1 r0
+blt 3
+movi r0 0
+br 2
+movi r0 1
+cmpi r0 1
+bne 8
+ld r0 fp 1
+wr r0
+movi r0 1
+ld r1 fp 1
+add r0 r1 r0
+st r0 fp 1
+br -15
+hlt

@@ -1,0 +1,55 @@
+TranslationUnit
+| block = Block
+| | vardecls = TypedIdentList
+| | | TypedIdent
+| | | | identifier = global
+| | | | type = INT
+| | | TypedIdent
+| | | | identifier = retval
+| | | | type = INT
+| | funcdecls = FuncDeclList
+| | | FuncDecl
+| | | | identifier = f
+| | | | formals = TypedIdentList
+| | | | | TypedIdent
+| | | | | | identifier = param
+| | | | | | type = INT
+| | | | has_return = true
+| | | | return_type = INT
+| | | | block = Block
+| | | | | vardecls = TypedIdentList
+| | | | | | TypedIdent
+| | | | | | | identifier = local
+| | | | | | | type = INT
+| | | | | funcdecls = FuncDeclList
+| | | | | statement = CompoundStatement
+| | | | | | compound_statement = StatementList
+| | | | | | | AssignStatement
+| | | | | | | | assign_variable = local
+| | | | | | | | assign_expression = NumberFactor
+| | | | | | | | | number_value = 3
+| | | | | | | WriteStatement
+| | | | | | | | write_expression = VariableFactor
+| | | | | | | | | variable = global
+| | | | | | | WriteStatement
+| | | | | | | | write_expression = VariableFactor
+| | | | | | | | | variable = param
+| | | | | | | WriteStatement
+| | | | | | | | write_expression = VariableFactor
+| | | | | | | | | variable = local
+| | statement = CompoundStatement
+| | | compound_statement = StatementList
+| | | | AssignStatement
+| | | | | assign_variable = global
+| | | | | assign_expression = NumberFactor
+| | | | | | number_value = 1
+| | | | AssignStatement
+| | | | | assign_variable = retval
+| | | | | assign_expression = FunctionFactor
+| | | | | | function_name = f
+| | | | | | function_parameters = ExpressionList
+| | | | | | | NumberFactor
+| | | | | | | | number_value = 2
+| | | | WriteStatement
+| | | | | write_expression = VariableFactor
+| | | | | | variable = global

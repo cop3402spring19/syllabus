@@ -1,0 +1,70 @@
+TranslationUnit
+| block = Block
+| | vardecls = TypedIdentList
+| | | TypedIdent
+| | | | identifier = N
+| | | | type = INT
+| | | TypedIdent
+| | | | identifier = x
+| | | | type = INT
+| | | TypedIdent
+| | | | identifier = sum
+| | | | type = INT
+| | funcdecls = FuncDeclList
+| | statement = CompoundStatement
+| | | compound_statement = StatementList
+| | | | AssignStatement
+| | | | | assign_variable = N
+| | | | | assign_expression = NumberFactor
+| | | | | | number_value = 100
+| | | | AssignStatement
+| | | | | assign_variable = x
+| | | | | assign_expression = NumberFactor
+| | | | | | number_value = 1
+| | | | AssignStatement
+| | | | | assign_variable = sum
+| | | | | assign_expression = NumberFactor
+| | | | | | number_value = 0
+| | | | WhileStatement
+| | | | | while_condition = BinaryExpression
+| | | | | | binary_op = LTE
+| | | | | | binary_left = VariableFactor
+| | | | | | | variable = x
+| | | | | | binary_right = VariableFactor
+| | | | | | | variable = N
+| | | | | while_body = CompoundStatement
+| | | | | | compound_statement = StatementList
+| | | | | | | AssignStatement
+| | | | | | | | assign_variable = sum
+| | | | | | | | assign_expression = BinaryExpression
+| | | | | | | | | binary_op = PLUS
+| | | | | | | | | binary_left = VariableFactor
+| | | | | | | | | | variable = sum
+| | | | | | | | | binary_right = VariableFactor
+| | | | | | | | | | variable = x
+| | | | | | | AssignStatement
+| | | | | | | | assign_variable = x
+| | | | | | | | assign_expression = BinaryExpression
+| | | | | | | | | binary_op = PLUS
+| | | | | | | | | binary_left = VariableFactor
+| | | | | | | | | | variable = x
+| | | | | | | | | binary_right = NumberFactor
+| | | | | | | | | | number_value = 1
+| | | | WriteStatement
+| | | | | write_expression = VariableFactor
+| | | | | | variable = sum
+| | | | WriteStatement
+| | | | | write_expression = BinaryExpression
+| | | | | | binary_op = DIV
+| | | | | | binary_left = BinaryExpression
+| | | | | | | binary_op = MULT
+| | | | | | | binary_left = VariableFactor
+| | | | | | | | variable = N
+| | | | | | | binary_right = BinaryExpression
+| | | | | | | | binary_op = PLUS
+| | | | | | | | binary_left = VariableFactor
+| | | | | | | | | variable = N
+| | | | | | | | binary_right = NumberFactor
+| | | | | | | | | number_value = 1
+| | | | | | binary_right = NumberFactor
+| | | | | | | number_value = 2

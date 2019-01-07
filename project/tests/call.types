@@ -1,0 +1,39 @@
+scope: <GLOBAL>, level: 0
+  bob : (int) -> int @0
+  scope: bob, level: 1
+    x : int @0
+TranslationUnit
+| scope = <GLOBAL>
+| block = Block
+| | vardecls = TypedIdentList
+| | funcdecls = FuncDeclList
+| | | FuncDecl
+| | | | scope = bob
+| | | | symbol = <GLOBAL>.bob
+| | | | identifier = bob
+| | | | formals = TypedIdentList
+| | | | | TypedIdent
+| | | | | | symbol = bob.x
+| | | | | | identifier = x
+| | | | | | type = INT
+| | | | has_return = true
+| | | | return_type = INT
+| | | | block = Block
+| | | | | vardecls = TypedIdentList
+| | | | | funcdecls = FuncDeclList
+| | | | | statement = CompoundStatement
+| | | | | | compound_statement = StatementList
+| | | | | | | WriteStatement
+| | | | | | | | write_expression = VariableFactor
+| | | | | | | | | ershov = 1
+| | | | | | | | | datatype = int
+| | | | | | | | | variable_symbol = bob.x
+| | | | | | | | | variable = x
+| | statement = CallStatement
+| | | call_symbol = <GLOBAL>.bob
+| | | call_function = bob
+| | | call_parameters = ExpressionList
+| | | | NumberFactor
+| | | | | ershov = 1
+| | | | | datatype = int
+| | | | | number_value = 2

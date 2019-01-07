@@ -1,0 +1,10 @@
+begin
+if true then
+  write 1
+else
+  write 0
+if false then
+  write 1
+else
+  write 0
+end

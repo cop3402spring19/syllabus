@@ -1,0 +1,131 @@
+scope: <GLOBAL>, level: 0
+  N : int @0
+  x : int @0
+  sum : int @0
+TranslationUnit
+| scope = <GLOBAL>
+| block = Block
+| | vardecls = TypedIdentList
+| | | TypedIdent
+| | | | symbol = <GLOBAL>.N
+| | | | identifier = N
+| | | | type = INT
+| | | TypedIdent
+| | | | symbol = <GLOBAL>.x
+| | | | identifier = x
+| | | | type = INT
+| | | TypedIdent
+| | | | symbol = <GLOBAL>.sum
+| | | | identifier = sum
+| | | | type = INT
+| | funcdecls = FuncDeclList
+| | statement = CompoundStatement
+| | | compound_statement = StatementList
+| | | | AssignStatement
+| | | | | assign_symbol = <GLOBAL>.N
+| | | | | assign_variable = N
+| | | | | assign_expression = NumberFactor
+| | | | | | ershov = 1
+| | | | | | datatype = int
+| | | | | | number_value = 100
+| | | | AssignStatement
+| | | | | assign_symbol = <GLOBAL>.x
+| | | | | assign_variable = x
+| | | | | assign_expression = NumberFactor
+| | | | | | ershov = 1
+| | | | | | datatype = int
+| | | | | | number_value = 1
+| | | | AssignStatement
+| | | | | assign_symbol = <GLOBAL>.sum
+| | | | | assign_variable = sum
+| | | | | assign_expression = NumberFactor
+| | | | | | ershov = 1
+| | | | | | datatype = int
+| | | | | | number_value = 0
+| | | | WhileStatement
+| | | | | while_condition = BinaryExpression
+| | | | | | ershov = 2
+| | | | | | datatype = bool
+| | | | | | binary_op = LTE
+| | | | | | binary_left = VariableFactor
+| | | | | | | ershov = 1
+| | | | | | | datatype = int
+| | | | | | | variable_symbol = <GLOBAL>.x
+| | | | | | | variable = x
+| | | | | | binary_right = VariableFactor
+| | | | | | | ershov = 1
+| | | | | | | datatype = int
+| | | | | | | variable_symbol = <GLOBAL>.N
+| | | | | | | variable = N
+| | | | | while_body = CompoundStatement
+| | | | | | compound_statement = StatementList
+| | | | | | | AssignStatement
+| | | | | | | | assign_symbol = <GLOBAL>.sum
+| | | | | | | | assign_variable = sum
+| | | | | | | | assign_expression = BinaryExpression
+| | | | | | | | | ershov = 2
+| | | | | | | | | datatype = int
+| | | | | | | | | binary_op = PLUS
+| | | | | | | | | binary_left = VariableFactor
+| | | | | | | | | | ershov = 1
+| | | | | | | | | | datatype = int
+| | | | | | | | | | variable_symbol = <GLOBAL>.sum
+| | | | | | | | | | variable = sum
+| | | | | | | | | binary_right = VariableFactor
+| | | | | | | | | | ershov = 1
+| | | | | | | | | | datatype = int
+| | | | | | | | | | variable_symbol = <GLOBAL>.x
+| | | | | | | | | | variable = x
+| | | | | | | AssignStatement
+| | | | | | | | assign_symbol = <GLOBAL>.x
+| | | | | | | | assign_variable = x
+| | | | | | | | assign_expression = BinaryExpression
+| | | | | | | | | ershov = 2
+| | | | | | | | | datatype = int
+| | | | | | | | | binary_op = PLUS
+| | | | | | | | | binary_left = VariableFactor
+| | | | | | | | | | ershov = 1
+| | | | | | | | | | datatype = int
+| | | | | | | | | | variable_symbol = <GLOBAL>.x
+| | | | | | | | | | variable = x
+| | | | | | | | | binary_right = NumberFactor
+| | | | | | | | | | ershov = 1
+| | | | | | | | | | datatype = int
+| | | | | | | | | | number_value = 1
+| | | | WriteStatement
+| | | | | write_expression = VariableFactor
+| | | | | | ershov = 1
+| | | | | | datatype = int
+| | | | | | variable_symbol = <GLOBAL>.sum
+| | | | | | variable = sum
+| | | | WriteStatement
+| | | | | write_expression = BinaryExpression
+| | | | | | ershov = 2
+| | | | | | datatype = int
+| | | | | | binary_op = DIV
+| | | | | | binary_left = BinaryExpression
+| | | | | | | ershov = 2
+| | | | | | | datatype = int
+| | | | | | | binary_op = MULT
+| | | | | | | binary_left = VariableFactor
+| | | | | | | | ershov = 1
+| | | | | | | | datatype = int
+| | | | | | | | variable_symbol = <GLOBAL>.N
+| | | | | | | | variable = N
+| | | | | | | binary_right = BinaryExpression
+| | | | | | | | ershov = 2
+| | | | | | | | datatype = int
+| | | | | | | | binary_op = PLUS
+| | | | | | | | binary_left = VariableFactor
+| | | | | | | | | ershov = 1
+| | | | | | | | | datatype = int
+| | | | | | | | | variable_symbol = <GLOBAL>.N
+| | | | | | | | | variable = N
+| | | | | | | | binary_right = NumberFactor
+| | | | | | | | | ershov = 1
+| | | | | | | | | datatype = int
+| | | | | | | | | number_value = 1
+| | | | | | binary_right = NumberFactor
+| | | | | | | ershov = 1
+| | | | | | | datatype = int
+| | | | | | | number_value = 2

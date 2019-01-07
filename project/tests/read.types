@@ -1,0 +1,22 @@
+scope: <GLOBAL>, level: 0
+  x : int @0
+TranslationUnit
+| scope = <GLOBAL>
+| block = Block
+| | vardecls = TypedIdentList
+| | | TypedIdent
+| | | | symbol = <GLOBAL>.x
+| | | | identifier = x
+| | | | type = INT
+| | funcdecls = FuncDeclList
+| | statement = CompoundStatement
+| | | compound_statement = StatementList
+| | | | ReadStatement
+| | | | | read_symbol = <GLOBAL>.x
+| | | | | read_variable = x
+| | | | WriteStatement
+| | | | | write_expression = VariableFactor
+| | | | | | ershov = 1
+| | | | | | datatype = int
+| | | | | | variable_symbol = <GLOBAL>.x
+| | | | | | variable = x

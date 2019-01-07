@@ -1,0 +1,33 @@
+TranslationUnit
+| block = Block
+| | vardecls = TypedIdentList
+| | | TypedIdent
+| | | | identifier = x
+| | | | type = INT
+| | funcdecls = FuncDeclList
+| | statement = CompoundStatement
+| | | compound_statement = StatementList
+| | | | AssignStatement
+| | | | | assign_variable = x
+| | | | | assign_expression = NumberFactor
+| | | | | | number_value = 1
+| | | | WhileStatement
+| | | | | while_condition = BinaryExpression
+| | | | | | binary_op = LT
+| | | | | | binary_left = VariableFactor
+| | | | | | | variable = x
+| | | | | | binary_right = NumberFactor
+| | | | | | | number_value = 8
+| | | | | while_body = CompoundStatement
+| | | | | | compound_statement = StatementList
+| | | | | | | WriteStatement
+| | | | | | | | write_expression = VariableFactor
+| | | | | | | | | variable = x
+| | | | | | | AssignStatement
+| | | | | | | | assign_variable = x
+| | | | | | | | assign_expression = BinaryExpression
+| | | | | | | | | binary_op = PLUS
+| | | | | | | | | binary_left = VariableFactor
+| | | | | | | | | | variable = x
+| | | | | | | | | binary_right = NumberFactor
+| | | | | | | | | | number_value = 1

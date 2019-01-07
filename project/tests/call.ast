@@ -1,0 +1,25 @@
+TranslationUnit
+| block = Block
+| | vardecls = TypedIdentList
+| | funcdecls = FuncDeclList
+| | | FuncDecl
+| | | | identifier = bob
+| | | | formals = TypedIdentList
+| | | | | TypedIdent
+| | | | | | identifier = x
+| | | | | | type = INT
+| | | | has_return = true
+| | | | return_type = INT
+| | | | block = Block
+| | | | | vardecls = TypedIdentList
+| | | | | funcdecls = FuncDeclList
+| | | | | statement = CompoundStatement
+| | | | | | compound_statement = StatementList
+| | | | | | | WriteStatement
+| | | | | | | | write_expression = VariableFactor
+| | | | | | | | | variable = x
+| | statement = CallStatement
+| | | call_function = bob
+| | | call_parameters = ExpressionList
+| | | | NumberFactor
+| | | | | number_value = 2

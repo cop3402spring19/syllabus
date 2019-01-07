@@ -1,0 +1,135 @@
+scope: <GLOBAL>, level: 0
+  x : int @0
+  result : int @0
+  factorial : (int) -> int @0
+  scope: factorial, level: 1
+    x : int @0
+TranslationUnit
+| scope = <GLOBAL>
+| block = Block
+| | vardecls = TypedIdentList
+| | | TypedIdent
+| | | | symbol = <GLOBAL>.x
+| | | | identifier = x
+| | | | type = INT
+| | | TypedIdent
+| | | | symbol = <GLOBAL>.result
+| | | | identifier = result
+| | | | type = INT
+| | funcdecls = FuncDeclList
+| | | FuncDecl
+| | | | scope = factorial
+| | | | symbol = <GLOBAL>.factorial
+| | | | identifier = factorial
+| | | | formals = TypedIdentList
+| | | | | TypedIdent
+| | | | | | symbol = factorial.x
+| | | | | | identifier = x
+| | | | | | type = INT
+| | | | has_return = true
+| | | | return_type = INT
+| | | | block = Block
+| | | | | vardecls = TypedIdentList
+| | | | | funcdecls = FuncDeclList
+| | | | | statement = CompoundStatement
+| | | | | | compound_statement = StatementList
+| | | | | | | IfStatement
+| | | | | | | | if_condition = BinaryExpression
+| | | | | | | | | ershov = 2
+| | | | | | | | | datatype = bool
+| | | | | | | | | binary_op = EQ
+| | | | | | | | | binary_left = VariableFactor
+| | | | | | | | | | ershov = 1
+| | | | | | | | | | datatype = int
+| | | | | | | | | | variable_symbol = factorial.x
+| | | | | | | | | | variable = x
+| | | | | | | | | binary_right = NumberFactor
+| | | | | | | | | | ershov = 1
+| | | | | | | | | | datatype = int
+| | | | | | | | | | number_value = 0
+| | | | | | | | if_branch = ReturnStatement
+| | | | | | | | | function_symbol = <GLOBAL>.factorial
+| | | | | | | | | return_expression = NumberFactor
+| | | | | | | | | | ershov = 1
+| | | | | | | | | | datatype = int
+| | | | | | | | | | number_value = 1
+| | | | | | | | if_elsebranch = ReturnStatement
+| | | | | | | | | function_symbol = <GLOBAL>.factorial
+| | | | | | | | | return_expression = BinaryExpression
+| | | | | | | | | | ershov = 2
+| | | | | | | | | | datatype = int
+| | | | | | | | | | binary_op = MULT
+| | | | | | | | | | binary_left = VariableFactor
+| | | | | | | | | | | ershov = 1
+| | | | | | | | | | | datatype = int
+| | | | | | | | | | | variable_symbol = factorial.x
+| | | | | | | | | | | variable = x
+| | | | | | | | | | binary_right = FunctionFactor
+| | | | | | | | | | | ershov = 1
+| | | | | | | | | | | datatype = int
+| | | | | | | | | | | function_symbol = <GLOBAL>.factorial
+| | | | | | | | | | | function_name = factorial
+| | | | | | | | | | | function_parameters = ExpressionList
+| | | | | | | | | | | | BinaryExpression
+| | | | | | | | | | | | | ershov = 2
+| | | | | | | | | | | | | datatype = int
+| | | | | | | | | | | | | binary_op = MINUS
+| | | | | | | | | | | | | binary_left = VariableFactor
+| | | | | | | | | | | | | | ershov = 1
+| | | | | | | | | | | | | | datatype = int
+| | | | | | | | | | | | | | variable_symbol = factorial.x
+| | | | | | | | | | | | | | variable = x
+| | | | | | | | | | | | | binary_right = NumberFactor
+| | | | | | | | | | | | | | ershov = 1
+| | | | | | | | | | | | | | datatype = int
+| | | | | | | | | | | | | | number_value = 1
+| | statement = CompoundStatement
+| | | compound_statement = StatementList
+| | | | AssignStatement
+| | | | | assign_symbol = <GLOBAL>.x
+| | | | | assign_variable = x
+| | | | | assign_expression = NumberFactor
+| | | | | | ershov = 1
+| | | | | | datatype = int
+| | | | | | number_value = 4
+| | | | IfStatement
+| | | | | if_condition = BinaryExpression
+| | | | | | ershov = 2
+| | | | | | datatype = bool
+| | | | | | binary_op = GTE
+| | | | | | binary_left = VariableFactor
+| | | | | | | ershov = 1
+| | | | | | | datatype = int
+| | | | | | | variable_symbol = <GLOBAL>.x
+| | | | | | | variable = x
+| | | | | | binary_right = NumberFactor
+| | | | | | | ershov = 1
+| | | | | | | datatype = int
+| | | | | | | number_value = 0
+| | | | | if_branch = CompoundStatement
+| | | | | | compound_statement = StatementList
+| | | | | | | AssignStatement
+| | | | | | | | assign_symbol = <GLOBAL>.result
+| | | | | | | | assign_variable = result
+| | | | | | | | assign_expression = FunctionFactor
+| | | | | | | | | ershov = 1
+| | | | | | | | | datatype = int
+| | | | | | | | | function_symbol = <GLOBAL>.factorial
+| | | | | | | | | function_name = factorial
+| | | | | | | | | function_parameters = ExpressionList
+| | | | | | | | | | VariableFactor
+| | | | | | | | | | | ershov = 1
+| | | | | | | | | | | datatype = int
+| | | | | | | | | | | variable_symbol = <GLOBAL>.x
+| | | | | | | | | | | variable = x
+| | | | | | | WriteStatement
+| | | | | | | | write_expression = VariableFactor
+| | | | | | | | | ershov = 1
+| | | | | | | | | datatype = int
+| | | | | | | | | variable_symbol = <GLOBAL>.result
+| | | | | | | | | variable = result
+| | | | | if_elsebranch = WriteStatement
+| | | | | | write_expression = NumberFactor
+| | | | | | | ershov = 1
+| | | | | | | datatype = int
+| | | | | | | number_value = 1

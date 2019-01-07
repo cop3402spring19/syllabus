@@ -1,0 +1,47 @@
+br 37
+psh ln sp
+psh fp sp
+mov fp sp
+br 1
+movi r0 0
+ld r1 fp -4
+cmp r1 r0
+bgt 3
+movi r0 0
+br 2
+movi r0 1
+cmpi r0 1
+bne 14
+addi sp sp 1
+movi r0 1
+ld r1 fp -4
+sub r0 r1 r0
+st r0 sp 0
+addi sp sp 1
+ld r0 fp -2
+psh r0 sp
+bl -21
+subi sp sp 1
+pop r0 sp
+subi sp sp 1
+br 1
+movi r0 0
+st r0 fp -3
+mov sp fp
+pop fp sp
+pop ln sp
+ret ln
+mov sp fp
+pop fp sp
+pop ln sp
+ret ln
+addi sp sp 1
+movi r0 2
+st r0 sp 0
+addi sp sp 1
+psh fp sp
+bl -41
+subi sp sp 1
+pop r0 sp
+subi sp sp 1
+hlt

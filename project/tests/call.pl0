@@ -1,0 +1,5 @@
+function bob(x : int) : int
+  begin
+    write x
+  end
+bob(2)

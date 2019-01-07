@@ -1,0 +1,73 @@
+scope: <GLOBAL>, level: 0
+  f : (int) -> int @0
+  scope: f, level: 1
+    x : int @0
+TranslationUnit
+| scope = <GLOBAL>
+| block = Block
+| | vardecls = TypedIdentList
+| | funcdecls = FuncDeclList
+| | | FuncDecl
+| | | | scope = f
+| | | | symbol = <GLOBAL>.f
+| | | | identifier = f
+| | | | formals = TypedIdentList
+| | | | | TypedIdent
+| | | | | | symbol = f.x
+| | | | | | identifier = x
+| | | | | | type = INT
+| | | | has_return = true
+| | | | return_type = INT
+| | | | block = Block
+| | | | | vardecls = TypedIdentList
+| | | | | funcdecls = FuncDeclList
+| | | | | statement = CompoundStatement
+| | | | | | compound_statement = StatementList
+| | | | | | | IfStatement
+| | | | | | | | if_condition = BinaryExpression
+| | | | | | | | | ershov = 2
+| | | | | | | | | datatype = bool
+| | | | | | | | | binary_op = GT
+| | | | | | | | | binary_left = VariableFactor
+| | | | | | | | | | ershov = 1
+| | | | | | | | | | datatype = int
+| | | | | | | | | | variable_symbol = f.x
+| | | | | | | | | | variable = x
+| | | | | | | | | binary_right = NumberFactor
+| | | | | | | | | | ershov = 1
+| | | | | | | | | | datatype = int
+| | | | | | | | | | number_value = 0
+| | | | | | | | if_branch = CallStatement
+| | | | | | | | | call_symbol = <GLOBAL>.f
+| | | | | | | | | call_function = f
+| | | | | | | | | call_parameters = ExpressionList
+| | | | | | | | | | BinaryExpression
+| | | | | | | | | | | ershov = 2
+| | | | | | | | | | | datatype = int
+| | | | | | | | | | | binary_op = MINUS
+| | | | | | | | | | | binary_left = VariableFactor
+| | | | | | | | | | | | ershov = 1
+| | | | | | | | | | | | datatype = int
+| | | | | | | | | | | | variable_symbol = f.x
+| | | | | | | | | | | | variable = x
+| | | | | | | | | | | binary_right = NumberFactor
+| | | | | | | | | | | | ershov = 1
+| | | | | | | | | | | | datatype = int
+| | | | | | | | | | | | number_value = 1
+| | | | | | | | if_elsebranch = 
+| | | | | | | ReturnStatement
+| | | | | | | | function_symbol = <GLOBAL>.f
+| | | | | | | | return_expression = NumberFactor
+| | | | | | | | | ershov = 1
+| | | | | | | | | datatype = int
+| | | | | | | | | number_value = 0
+| | statement = CompoundStatement
+| | | compound_statement = StatementList
+| | | | CallStatement
+| | | | | call_symbol = <GLOBAL>.f
+| | | | | call_function = f
+| | | | | call_parameters = ExpressionList
+| | | | | | NumberFactor
+| | | | | | | ershov = 1
+| | | | | | | datatype = int
+| | | | | | | number_value = 2

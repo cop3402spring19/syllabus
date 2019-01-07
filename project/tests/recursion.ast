@@ -1,0 +1,44 @@
+TranslationUnit
+| block = Block
+| | vardecls = TypedIdentList
+| | funcdecls = FuncDeclList
+| | | FuncDecl
+| | | | identifier = f
+| | | | formals = TypedIdentList
+| | | | | TypedIdent
+| | | | | | identifier = x
+| | | | | | type = INT
+| | | | has_return = true
+| | | | return_type = INT
+| | | | block = Block
+| | | | | vardecls = TypedIdentList
+| | | | | funcdecls = FuncDeclList
+| | | | | statement = CompoundStatement
+| | | | | | compound_statement = StatementList
+| | | | | | | IfStatement
+| | | | | | | | if_condition = BinaryExpression
+| | | | | | | | | binary_op = GT
+| | | | | | | | | binary_left = VariableFactor
+| | | | | | | | | | variable = x
+| | | | | | | | | binary_right = NumberFactor
+| | | | | | | | | | number_value = 0
+| | | | | | | | if_branch = CallStatement
+| | | | | | | | | call_function = f
+| | | | | | | | | call_parameters = ExpressionList
+| | | | | | | | | | BinaryExpression
+| | | | | | | | | | | binary_op = MINUS
+| | | | | | | | | | | binary_left = VariableFactor
+| | | | | | | | | | | | variable = x
+| | | | | | | | | | | binary_right = NumberFactor
+| | | | | | | | | | | | number_value = 1
+| | | | | | | | if_elsebranch = 
+| | | | | | | ReturnStatement
+| | | | | | | | return_expression = NumberFactor
+| | | | | | | | | number_value = 0
+| | statement = CompoundStatement
+| | | compound_statement = StatementList
+| | | | CallStatement
+| | | | | call_function = f
+| | | | | call_parameters = ExpressionList
+| | | | | | NumberFactor
+| | | | | | | number_value = 2

@@ -1,0 +1,12 @@
+br 1
+movi r0 4
+movi r1 5
+sub r0 r1 r0
+movi r1 2
+mul r0 r1 r0
+movi r1 1
+movi r2 3
+add r1 r2 r1
+div r0 r1 r0
+wr r0
+hlt

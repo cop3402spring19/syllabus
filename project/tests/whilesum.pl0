@@ -1,0 +1,15 @@
+var N : int
+var x : int
+var sum : int
+begin
+  N := 100
+  x := 1
+  sum := 0
+  while x <= N do
+    begin
+      sum := sum + x
+      x := x + 1
+    end
+  write sum
+  write ((N)*(N+1))/2
+end

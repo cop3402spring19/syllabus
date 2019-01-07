@@ -1,0 +1,14 @@
+TranslationUnit
+| block = Block
+| | vardecls = TypedIdentList
+| | | TypedIdent
+| | | | identifier = x
+| | | | type = INT
+| | funcdecls = FuncDeclList
+| | statement = CompoundStatement
+| | | compound_statement = StatementList
+| | | | ReadStatement
+| | | | | read_variable = x
+| | | | WriteStatement
+| | | | | write_expression = VariableFactor
+| | | | | | variable = x

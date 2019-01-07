@@ -1,0 +1,45 @@
+scope: <GLOBAL>, level: 0
+TranslationUnit
+| scope = <GLOBAL>
+| block = Block
+| | vardecls = TypedIdentList
+| | funcdecls = FuncDeclList
+| | statement = CompoundStatement
+| | | compound_statement = StatementList
+| | | | WriteStatement
+| | | | | write_expression = BinaryExpression
+| | | | | | ershov = 3
+| | | | | | datatype = int
+| | | | | | binary_op = DIV
+| | | | | | binary_left = BinaryExpression
+| | | | | | | ershov = 2
+| | | | | | | datatype = int
+| | | | | | | binary_op = PLUS
+| | | | | | | binary_left = NumberFactor
+| | | | | | | | ershov = 1
+| | | | | | | | datatype = int
+| | | | | | | | number_value = 3
+| | | | | | | binary_right = NumberFactor
+| | | | | | | | ershov = 1
+| | | | | | | | datatype = int
+| | | | | | | | number_value = 1
+| | | | | | binary_right = BinaryExpression
+| | | | | | | ershov = 2
+| | | | | | | datatype = int
+| | | | | | | binary_op = MULT
+| | | | | | | binary_left = NumberFactor
+| | | | | | | | ershov = 1
+| | | | | | | | datatype = int
+| | | | | | | | number_value = 2
+| | | | | | | binary_right = BinaryExpression
+| | | | | | | | ershov = 2
+| | | | | | | | datatype = int
+| | | | | | | | binary_op = MINUS
+| | | | | | | | binary_left = NumberFactor
+| | | | | | | | | ershov = 1
+| | | | | | | | | datatype = int
+| | | | | | | | | number_value = 5
+| | | | | | | | binary_right = NumberFactor
+| | | | | | | | | ershov = 1
+| | | | | | | | | datatype = int
+| | | | | | | | | number_value = 4

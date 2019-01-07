@@ -1,0 +1,16 @@
+scope: <GLOBAL>, level: 0
+  x : int @0
+TranslationUnit
+| scope = <GLOBAL>
+| block = Block
+| | vardecls = TypedIdentList
+| | | TypedIdent
+| | | | symbol = <GLOBAL>.x
+| | | | identifier = x
+| | | | type = INT
+| | funcdecls = FuncDeclList
+| | statement = WriteStatement
+| | | write_expression = NumberFactor
+| | | | ershov = 1
+| | | | datatype = int
+| | | | number_value = 1

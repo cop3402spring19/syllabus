@@ -1,0 +1,27 @@
+var x : int
+var result : int
+function fib(x : int) : int
+  var f0 : int
+  var f1 : int
+  begin
+    if x = 0 then
+      return 0
+    else if (x = 1) or (x = 2) then
+      return 1
+    else
+    begin
+      f1 := fib(x - 1)
+      f0 := fib(x - 2)
+      return f1 + f0
+    end
+  end
+begin
+  x := 1
+  while x < 8 do
+    begin
+      # write x
+      result := fib(x)
+      write result
+      x := x + 1
+    end
+end

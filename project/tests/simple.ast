@@ -1,0 +1,7 @@
+TranslationUnit
+| block = Block
+| | vardecls = TypedIdentList
+| | funcdecls = FuncDeclList
+| | statement = WriteStatement
+| | | write_expression = NumberFactor
+| | | | number_value = 1

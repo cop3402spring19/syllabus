@@ -1,0 +1,225 @@
+scope: <GLOBAL>, level: 0
+  x : int @0
+  result : int @0
+  fib : (int) -> int @0
+  scope: fib, level: 1
+    x : int @0
+    f0 : int @0
+    f1 : int @0
+TranslationUnit
+| scope = <GLOBAL>
+| block = Block
+| | vardecls = TypedIdentList
+| | | TypedIdent
+| | | | symbol = <GLOBAL>.x
+| | | | identifier = x
+| | | | type = INT
+| | | TypedIdent
+| | | | symbol = <GLOBAL>.result
+| | | | identifier = result
+| | | | type = INT
+| | funcdecls = FuncDeclList
+| | | FuncDecl
+| | | | scope = fib
+| | | | symbol = <GLOBAL>.fib
+| | | | identifier = fib
+| | | | formals = TypedIdentList
+| | | | | TypedIdent
+| | | | | | symbol = fib.x
+| | | | | | identifier = x
+| | | | | | type = INT
+| | | | has_return = true
+| | | | return_type = INT
+| | | | block = Block
+| | | | | vardecls = TypedIdentList
+| | | | | | TypedIdent
+| | | | | | | symbol = fib.f0
+| | | | | | | identifier = f0
+| | | | | | | type = INT
+| | | | | | TypedIdent
+| | | | | | | symbol = fib.f1
+| | | | | | | identifier = f1
+| | | | | | | type = INT
+| | | | | funcdecls = FuncDeclList
+| | | | | statement = CompoundStatement
+| | | | | | compound_statement = StatementList
+| | | | | | | IfStatement
+| | | | | | | | if_condition = BinaryExpression
+| | | | | | | | | ershov = 2
+| | | | | | | | | datatype = bool
+| | | | | | | | | binary_op = EQ
+| | | | | | | | | binary_left = VariableFactor
+| | | | | | | | | | ershov = 1
+| | | | | | | | | | datatype = int
+| | | | | | | | | | variable_symbol = fib.x
+| | | | | | | | | | variable = x
+| | | | | | | | | binary_right = NumberFactor
+| | | | | | | | | | ershov = 1
+| | | | | | | | | | datatype = int
+| | | | | | | | | | number_value = 0
+| | | | | | | | if_branch = ReturnStatement
+| | | | | | | | | function_symbol = <GLOBAL>.fib
+| | | | | | | | | return_expression = NumberFactor
+| | | | | | | | | | ershov = 1
+| | | | | | | | | | datatype = int
+| | | | | | | | | | number_value = 0
+| | | | | | | | if_elsebranch = IfStatement
+| | | | | | | | | if_condition = BinaryExpression
+| | | | | | | | | | ershov = 3
+| | | | | | | | | | datatype = bool
+| | | | | | | | | | binary_op = OR
+| | | | | | | | | | binary_left = BinaryExpression
+| | | | | | | | | | | ershov = 2
+| | | | | | | | | | | datatype = bool
+| | | | | | | | | | | binary_op = EQ
+| | | | | | | | | | | binary_left = VariableFactor
+| | | | | | | | | | | | ershov = 1
+| | | | | | | | | | | | datatype = int
+| | | | | | | | | | | | variable_symbol = fib.x
+| | | | | | | | | | | | variable = x
+| | | | | | | | | | | binary_right = NumberFactor
+| | | | | | | | | | | | ershov = 1
+| | | | | | | | | | | | datatype = int
+| | | | | | | | | | | | number_value = 1
+| | | | | | | | | | binary_right = BinaryExpression
+| | | | | | | | | | | ershov = 2
+| | | | | | | | | | | datatype = bool
+| | | | | | | | | | | binary_op = EQ
+| | | | | | | | | | | binary_left = VariableFactor
+| | | | | | | | | | | | ershov = 1
+| | | | | | | | | | | | datatype = int
+| | | | | | | | | | | | variable_symbol = fib.x
+| | | | | | | | | | | | variable = x
+| | | | | | | | | | | binary_right = NumberFactor
+| | | | | | | | | | | | ershov = 1
+| | | | | | | | | | | | datatype = int
+| | | | | | | | | | | | number_value = 2
+| | | | | | | | | if_branch = ReturnStatement
+| | | | | | | | | | function_symbol = <GLOBAL>.fib
+| | | | | | | | | | return_expression = NumberFactor
+| | | | | | | | | | | ershov = 1
+| | | | | | | | | | | datatype = int
+| | | | | | | | | | | number_value = 1
+| | | | | | | | | if_elsebranch = CompoundStatement
+| | | | | | | | | | compound_statement = StatementList
+| | | | | | | | | | | AssignStatement
+| | | | | | | | | | | | assign_symbol = fib.f1
+| | | | | | | | | | | | assign_variable = f1
+| | | | | | | | | | | | assign_expression = FunctionFactor
+| | | | | | | | | | | | | ershov = 1
+| | | | | | | | | | | | | datatype = int
+| | | | | | | | | | | | | function_symbol = <GLOBAL>.fib
+| | | | | | | | | | | | | function_name = fib
+| | | | | | | | | | | | | function_parameters = ExpressionList
+| | | | | | | | | | | | | | BinaryExpression
+| | | | | | | | | | | | | | | ershov = 2
+| | | | | | | | | | | | | | | datatype = int
+| | | | | | | | | | | | | | | binary_op = MINUS
+| | | | | | | | | | | | | | | binary_left = VariableFactor
+| | | | | | | | | | | | | | | | ershov = 1
+| | | | | | | | | | | | | | | | datatype = int
+| | | | | | | | | | | | | | | | variable_symbol = fib.x
+| | | | | | | | | | | | | | | | variable = x
+| | | | | | | | | | | | | | | binary_right = NumberFactor
+| | | | | | | | | | | | | | | | ershov = 1
+| | | | | | | | | | | | | | | | datatype = int
+| | | | | | | | | | | | | | | | number_value = 1
+| | | | | | | | | | | AssignStatement
+| | | | | | | | | | | | assign_symbol = fib.f0
+| | | | | | | | | | | | assign_variable = f0
+| | | | | | | | | | | | assign_expression = FunctionFactor
+| | | | | | | | | | | | | ershov = 1
+| | | | | | | | | | | | | datatype = int
+| | | | | | | | | | | | | function_symbol = <GLOBAL>.fib
+| | | | | | | | | | | | | function_name = fib
+| | | | | | | | | | | | | function_parameters = ExpressionList
+| | | | | | | | | | | | | | BinaryExpression
+| | | | | | | | | | | | | | | ershov = 2
+| | | | | | | | | | | | | | | datatype = int
+| | | | | | | | | | | | | | | binary_op = MINUS
+| | | | | | | | | | | | | | | binary_left = VariableFactor
+| | | | | | | | | | | | | | | | ershov = 1
+| | | | | | | | | | | | | | | | datatype = int
+| | | | | | | | | | | | | | | | variable_symbol = fib.x
+| | | | | | | | | | | | | | | | variable = x
+| | | | | | | | | | | | | | | binary_right = NumberFactor
+| | | | | | | | | | | | | | | | ershov = 1
+| | | | | | | | | | | | | | | | datatype = int
+| | | | | | | | | | | | | | | | number_value = 2
+| | | | | | | | | | | ReturnStatement
+| | | | | | | | | | | | function_symbol = <GLOBAL>.fib
+| | | | | | | | | | | | return_expression = BinaryExpression
+| | | | | | | | | | | | | ershov = 2
+| | | | | | | | | | | | | datatype = int
+| | | | | | | | | | | | | binary_op = PLUS
+| | | | | | | | | | | | | binary_left = VariableFactor
+| | | | | | | | | | | | | | ershov = 1
+| | | | | | | | | | | | | | datatype = int
+| | | | | | | | | | | | | | variable_symbol = fib.f1
+| | | | | | | | | | | | | | variable = f1
+| | | | | | | | | | | | | binary_right = VariableFactor
+| | | | | | | | | | | | | | ershov = 1
+| | | | | | | | | | | | | | datatype = int
+| | | | | | | | | | | | | | variable_symbol = fib.f0
+| | | | | | | | | | | | | | variable = f0
+| | statement = CompoundStatement
+| | | compound_statement = StatementList
+| | | | AssignStatement
+| | | | | assign_symbol = <GLOBAL>.x
+| | | | | assign_variable = x
+| | | | | assign_expression = NumberFactor
+| | | | | | ershov = 1
+| | | | | | datatype = int
+| | | | | | number_value = 1
+| | | | WhileStatement
+| | | | | while_condition = BinaryExpression
+| | | | | | ershov = 2
+| | | | | | datatype = bool
+| | | | | | binary_op = LT
+| | | | | | binary_left = VariableFactor
+| | | | | | | ershov = 1
+| | | | | | | datatype = int
+| | | | | | | variable_symbol = <GLOBAL>.x
+| | | | | | | variable = x
+| | | | | | binary_right = NumberFactor
+| | | | | | | ershov = 1
+| | | | | | | datatype = int
+| | | | | | | number_value = 8
+| | | | | while_body = CompoundStatement
+| | | | | | compound_statement = StatementList
+| | | | | | | AssignStatement
+| | | | | | | | assign_symbol = <GLOBAL>.result
+| | | | | | | | assign_variable = result
+| | | | | | | | assign_expression = FunctionFactor
+| | | | | | | | | ershov = 1
+| | | | | | | | | datatype = int
+| | | | | | | | | function_symbol = <GLOBAL>.fib
+| | | | | | | | | function_name = fib
+| | | | | | | | | function_parameters = ExpressionList
+| | | | | | | | | | VariableFactor
+| | | | | | | | | | | ershov = 1
+| | | | | | | | | | | datatype = int
+| | | | | | | | | | | variable_symbol = <GLOBAL>.x
+| | | | | | | | | | | variable = x
+| | | | | | | WriteStatement
+| | | | | | | | write_expression = VariableFactor
+| | | | | | | | | ershov = 1
+| | | | | | | | | datatype = int
+| | | | | | | | | variable_symbol = <GLOBAL>.result
+| | | | | | | | | variable = result
+| | | | | | | AssignStatement
+| | | | | | | | assign_symbol = <GLOBAL>.x
+| | | | | | | | assign_variable = x
+| | | | | | | | assign_expression = BinaryExpression
+| | | | | | | | | ershov = 2
+| | | | | | | | | datatype = int
+| | | | | | | | | binary_op = PLUS
+| | | | | | | | | binary_left = VariableFactor
+| | | | | | | | | | ershov = 1
+| | | | | | | | | | datatype = int
+| | | | | | | | | | variable_symbol = <GLOBAL>.x
+| | | | | | | | | | variable = x
+| | | | | | | | | binary_right = NumberFactor
+| | | | | | | | | | ershov = 1
+| | | | | | | | | | datatype = int
+| | | | | | | | | | number_value = 1

@@ -1,0 +1,18 @@
+br 1
+movi r0 1
+cmpi r0 1
+bne 4
+movi r0 1
+wr r0
+br 3
+movi r0 0
+wr r0
+movi r0 0
+cmpi r0 1
+bne 4
+movi r0 1
+wr r0
+br 3
+movi r0 0
+wr r0
+hlt

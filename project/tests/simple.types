@@ -1,0 +1,11 @@
+scope: <GLOBAL>, level: 0
+TranslationUnit
+| scope = <GLOBAL>
+| block = Block
+| | vardecls = TypedIdentList
+| | funcdecls = FuncDeclList
+| | statement = WriteStatement
+| | | write_expression = NumberFactor
+| | | | ershov = 1
+| | | | datatype = int
+| | | | number_value = 1

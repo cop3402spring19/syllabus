@@ -1,0 +1,58 @@
+scope: <GLOBAL>, level: 0
+  x : int @0
+TranslationUnit
+| scope = <GLOBAL>
+| block = Block
+| | vardecls = TypedIdentList
+| | | TypedIdent
+| | | | symbol = <GLOBAL>.x
+| | | | identifier = x
+| | | | type = INT
+| | funcdecls = FuncDeclList
+| | statement = CompoundStatement
+| | | compound_statement = StatementList
+| | | | AssignStatement
+| | | | | assign_symbol = <GLOBAL>.x
+| | | | | assign_variable = x
+| | | | | assign_expression = NumberFactor
+| | | | | | ershov = 1
+| | | | | | datatype = int
+| | | | | | number_value = 1
+| | | | WhileStatement
+| | | | | while_condition = BinaryExpression
+| | | | | | ershov = 2
+| | | | | | datatype = bool
+| | | | | | binary_op = LT
+| | | | | | binary_left = VariableFactor
+| | | | | | | ershov = 1
+| | | | | | | datatype = int
+| | | | | | | variable_symbol = <GLOBAL>.x
+| | | | | | | variable = x
+| | | | | | binary_right = NumberFactor
+| | | | | | | ershov = 1
+| | | | | | | datatype = int
+| | | | | | | number_value = 8
+| | | | | while_body = CompoundStatement
+| | | | | | compound_statement = StatementList
+| | | | | | | WriteStatement
+| | | | | | | | write_expression = VariableFactor
+| | | | | | | | | ershov = 1
+| | | | | | | | | datatype = int
+| | | | | | | | | variable_symbol = <GLOBAL>.x
+| | | | | | | | | variable = x
+| | | | | | | AssignStatement
+| | | | | | | | assign_symbol = <GLOBAL>.x
+| | | | | | | | assign_variable = x
+| | | | | | | | assign_expression = BinaryExpression
+| | | | | | | | | ershov = 2
+| | | | | | | | | datatype = int
+| | | | | | | | | binary_op = PLUS
+| | | | | | | | | binary_left = VariableFactor
+| | | | | | | | | | ershov = 1
+| | | | | | | | | | datatype = int
+| | | | | | | | | | variable_symbol = <GLOBAL>.x
+| | | | | | | | | | variable = x
+| | | | | | | | | binary_right = NumberFactor
+| | | | | | | | | | ershov = 1
+| | | | | | | | | | datatype = int
+| | | | | | | | | | number_value = 1

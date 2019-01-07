@@ -1,0 +1,38 @@
+scope: <GLOBAL>, level: 0
+TranslationUnit
+| scope = <GLOBAL>
+| block = Block
+| | vardecls = TypedIdentList
+| | funcdecls = FuncDeclList
+| | statement = CompoundStatement
+| | | compound_statement = StatementList
+| | | | IfStatement
+| | | | | if_condition = BooleanFactor
+| | | | | | ershov = 1
+| | | | | | datatype = bool
+| | | | | | boolean_value = true
+| | | | | if_branch = WriteStatement
+| | | | | | write_expression = NumberFactor
+| | | | | | | ershov = 1
+| | | | | | | datatype = int
+| | | | | | | number_value = 1
+| | | | | if_elsebranch = WriteStatement
+| | | | | | write_expression = NumberFactor
+| | | | | | | ershov = 1
+| | | | | | | datatype = int
+| | | | | | | number_value = 0
+| | | | IfStatement
+| | | | | if_condition = BooleanFactor
+| | | | | | ershov = 1
+| | | | | | datatype = bool
+| | | | | | boolean_value = false
+| | | | | if_branch = WriteStatement
+| | | | | | write_expression = NumberFactor
+| | | | | | | ershov = 1
+| | | | | | | datatype = int
+| | | | | | | number_value = 1
+| | | | | if_elsebranch = WriteStatement
+| | | | | | write_expression = NumberFactor
+| | | | | | | ershov = 1
+| | | | | | | datatype = int
+| | | | | | | number_value = 0

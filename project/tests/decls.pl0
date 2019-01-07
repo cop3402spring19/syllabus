@@ -1,0 +1,21 @@
+var i : int
+var b : bool
+function fi(x : int) : int
+  var i : int
+  var b : bool
+  function fb(b : bool, i : int, y : int) : bool
+    var fb_local_1 : int
+    var fb_local_2 : bool
+    begin
+      write 3
+    end
+  function fv(b : bool)
+    begin
+      write 4
+    end
+  begin
+    write 2
+  end
+begin
+  write 1
+end

@@ -1,0 +1,93 @@
+scope: <GLOBAL>, level: 0
+  global : int @0
+  retval : int @0
+  f : (int) -> int @0
+  scope: f, level: 1
+    param : int @0
+    local : int @0
+TranslationUnit
+| scope = <GLOBAL>
+| block = Block
+| | vardecls = TypedIdentList
+| | | TypedIdent
+| | | | symbol = <GLOBAL>.global
+| | | | identifier = global
+| | | | type = INT
+| | | TypedIdent
+| | | | symbol = <GLOBAL>.retval
+| | | | identifier = retval
+| | | | type = INT
+| | funcdecls = FuncDeclList
+| | | FuncDecl
+| | | | scope = f
+| | | | symbol = <GLOBAL>.f
+| | | | identifier = f
+| | | | formals = TypedIdentList
+| | | | | TypedIdent
+| | | | | | symbol = f.param
+| | | | | | identifier = param
+| | | | | | type = INT
+| | | | has_return = true
+| | | | return_type = INT
+| | | | block = Block
+| | | | | vardecls = TypedIdentList
+| | | | | | TypedIdent
+| | | | | | | symbol = f.local
+| | | | | | | identifier = local
+| | | | | | | type = INT
+| | | | | funcdecls = FuncDeclList
+| | | | | statement = CompoundStatement
+| | | | | | compound_statement = StatementList
+| | | | | | | AssignStatement
+| | | | | | | | assign_symbol = f.local
+| | | | | | | | assign_variable = local
+| | | | | | | | assign_expression = NumberFactor
+| | | | | | | | | ershov = 1
+| | | | | | | | | datatype = int
+| | | | | | | | | number_value = 3
+| | | | | | | WriteStatement
+| | | | | | | | write_expression = VariableFactor
+| | | | | | | | | ershov = 1
+| | | | | | | | | datatype = int
+| | | | | | | | | variable_symbol = <GLOBAL>.global
+| | | | | | | | | variable = global
+| | | | | | | WriteStatement
+| | | | | | | | write_expression = VariableFactor
+| | | | | | | | | ershov = 1
+| | | | | | | | | datatype = int
+| | | | | | | | | variable_symbol = f.param
+| | | | | | | | | variable = param
+| | | | | | | WriteStatement
+| | | | | | | | write_expression = VariableFactor
+| | | | | | | | | ershov = 1
+| | | | | | | | | datatype = int
+| | | | | | | | | variable_symbol = f.local
+| | | | | | | | | variable = local
+| | statement = CompoundStatement
+| | | compound_statement = StatementList
+| | | | AssignStatement
+| | | | | assign_symbol = <GLOBAL>.global
+| | | | | assign_variable = global
+| | | | | assign_expression = NumberFactor
+| | | | | | ershov = 1
+| | | | | | datatype = int
+| | | | | | number_value = 1
+| | | | AssignStatement
+| | | | | assign_symbol = <GLOBAL>.retval
+| | | | | assign_variable = retval
+| | | | | assign_expression = FunctionFactor
+| | | | | | ershov = 1
+| | | | | | datatype = int
+| | | | | | function_symbol = <GLOBAL>.f
+| | | | | | function_name = f
+| | | | | | function_parameters = ExpressionList
+| | | | | | | NumberFactor
+| | | | | | | | ershov = 1
+| | | | | | | | datatype = int
+| | | | | | | | number_value = 2
+| | | | WriteStatement
+| | | | | write_expression = VariableFactor
+| | | | | | ershov = 1
+| | | | | | datatype = int
+| | | | | | variable_symbol = <GLOBAL>.global
+| | | | | | variable = global

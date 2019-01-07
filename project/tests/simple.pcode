@@ -1,0 +1,4 @@
+br 1
+movi r0 1
+wr r0
+hlt

@@ -1,0 +1,6 @@
+begin
+if true then
+  write 1
+if false then
+  write 1
+end
