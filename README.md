@@ -40,8 +40,6 @@ Semester: 01/07-04/30
 
 Break: week of 03/11, no class, lab, or office hours.
 
-[Lecture schedule](schedule.csv)
-
 Labs:
 
 - Thursday 1:30PM-2:20PM HEC-0104
@@ -50,6 +48,27 @@ Labs:
 - Thursday 4:30PM-5:20PM HPA1-O106
 
 _All dates in year of semester, times in UCF's time zone._
+
+### Lecture Schedule
+
+| Week  | Tuesday Lecture                                                     | Thursday Lecture                                     | 
+|-------|---------------------------------------------------------------------|------------------------------------------------------| 
+| 01/08 | Course overview                                                     | Tools                                                | 
+| 01/15 | PL/0 variant programming language                                   | "Regular expressions, Project 1 announcement"        | 
+| 01/22 | Automata                                                            | Lexing and ASCII encoding                            | 
+| 01/29 | Grammars, Project 1 due, Project 2 announcement                     | Top-down parsing                                     | 
+| 02/05 | ASTs                                                                | Bottom-up parsing                                    | 
+| 02/12 | Types, Project 2 due, Project 3 announcement                        | Type-checking: symbol tables and declarations        | 
+| 02/19 | Type-checking: expressions and statements                           | Compiler front-end review and Q&A                    | 
+| 02/26 | P-code machine, Project 3 due, Project 4 announcement               | Functions                                            | 
+| 03/05 | Code generation: functions, Project 4 due, Project 5 announcement   | Code generation: expressions                         | 
+| 03/12 | (break)                                                             | (break)                                              | 
+| 03/19 | Code generation: expressions                                        | Code generation: statements, Project 6 announcement  | 
+| 03/26 | Code generation: everything                                         | Compiler back-end review and Q&A                     | 
+| 04/02 | Assembly, object files, linking, and loading, Project 5 due         | Optimization                                         | 
+| 04/09 | Software security                                                   | Program analysis                                     | 
+| 04/16 | Final review, Project 6 due                                         | Final review                                         | 
+
 
 ### Project Due Dates
 
