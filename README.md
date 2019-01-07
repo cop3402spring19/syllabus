@@ -54,7 +54,7 @@ _All dates in year of semester, times in UCF's time zone._
 | Week  | Tuesday Lecture                                                     | Thursday Lecture                                     | 
 |-------|---------------------------------------------------------------------|------------------------------------------------------| 
 | 01/08 | Course overview                                                     | Tools                                                | 
-| 01/15 | PL/0 variant programming language                                   | "Regular expressions, Project 1 announcement"        | 
+| 01/15 | PL/0 variant programming language                                   | Regular expressions, Project 1 announcement        |
 | 01/22 | Automata                                                            | Lexing and ASCII encoding                            | 
 | 01/29 | Grammars, Project 1 due, Project 2 announcement                     | Top-down parsing                                     | 
 | 02/05 | ASTs                                                                | Bottom-up parsing                                    | 
