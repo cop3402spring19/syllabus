@@ -42,24 +42,25 @@ _All dates in year of semester, times in UCF's time zone._
 
 ### Lecture Schedule
 
-| Week  | Tuesday Lecture                                                     | Thursday Lecture                                     | HW Due before Lab |
-|-------|---------------------------------------------------------------------|------------------------------------------------------|-------------------|
-| 01/08 | Course overview                                                     | Tools                                                | None |
-| 01/15 | PL/0 variant programming language                                   | Regular expressions, Project 1 announcement          | None |
-| 01/22 | Automata                                                            | Lexing and ASCII encoding                            | HW1 regex/dfa |
-| 01/29 | Grammars, Project 1 due, Project 2 announcement                     | Top-down parsing                                     | HW2 CFGs/languages |
-| 02/05 | ASTs                                                                | Bottom-up parsing                                    | HW3 draw ASTs |
-| 02/12 | Types, Project 2 due, Project 3 announcement                        | Type-checking: symbol tables and declarations        | HW4 LR parsing |
+| Week  | Tuesday Lecture                                                     | Thursday Lecture                                     | HW | Dragon Book |
+|-------|---------------------------------------------------------------------|------------------------------------------------------|-------------------|----------|
+| 01/08 | Course overview                                                     | Tools                                                | None | Chapter 2 |
+| 01/15 | PL/0 variant programming language                                   | Regular expressions, Project 1 announcement          | None | 3.1-3.3
+| 01/22 | Automata                                                            | Lexing and ASCII encoding                            | HW1 regex/dfa | 3.4-3.7 |
+| 01/29 | Grammars, Project 1 due, Project 2 announcement                     | Top-down parsing                                     | HW2 CFGs/languages | 4.1-4.4 |
+| 02/05 | ASTs                                                                | Bottom-up parsing                                    | HW3 draw ASTs | 2.5.1, 3.5.1, 4.4-4.6 |
+| 02/12 | Types, Project 2 due, Project 3 announcement                        | Type-checking: symbol tables and declarations        | HW4 LR parsing | 6.5 |
 | 02/19 | Type-checking: expressions and statements                           | Compiler front-end review and Q&A                    | HW5 type-check some ASTs |
-| 02/26 | P-code machine, Project 3 due, Project 4 announcement               | Functions                                            | HW6 evaluate p-code |
-| 03/05 | Code generation: functions, Project 4 due, Project 5 announcement   | Code generation: expressions                         | HW7 accessing functions/vars |
-| 03/12 | (break)                                                             | (break)                                              | None |
-| 03/19 | Code generation: expressions                                        | Code generation: statements, Project 6 announcement  | HW8 codegen expression |
-| 03/26 | Code generation: everything                                         | Compiler back-end review and Q&A                     | HW9 codegen statements |
-| 04/02 | Assembly, object files, linking, and loading, Project 5 due         | Optimization                                         | None |
-| 04/09 | Program analysis                                                    | Software security                                    | HW10 control/data flow |
-| 04/16 | Final review, Project 6 due                                         | Final review                                         | None |
+| 02/26 | P-code machine, Project 3 due, Project 4 announcement               | Functions                                            | HW6 evaluate p-code | 7.1-7.3 |
+| 03/05 | Code generation: functions, Project 4 due, Project 5 announcement   | Code generation: expressions                         | HW7 accessing functions/vars | 8.10, 6.2-6.4 |
+| 03/12 | (break)                                                             | (break)                                              | None | None |
+| 03/19 | Code generation: expressions                                        | Code generation: statements, Project 6 announcement  | HW8 codegen expression | 6.6-6.7 |
+| 03/26 | Code generation: everything                                         | Compiler back-end review and Q&A                     | HW9 codegen statements | (same) |
+| 04/02 | Assembly, object files, linking, and loading, Project 5 due         | Optimization                                         | None | None |
+| 04/09 | Program analysis                                                    | Software security                                    | HW10 control/data flow | None |
+| 04/16 | Final review, Project 6 due                                         | Final review                                         | None | None |
 
+_All readings are chapters and sections (inclusive) from the Dragon book (Compilers: Principles, Techniques, & Tools, Second Edition)_
 
 ### Due Dates
 
