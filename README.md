@@ -43,9 +43,9 @@ Break: week of 03/11, no class, lab, or office hours.
 Labs:
 
 - Thursday 1:30PM-2:20PM HEC-0104
-- Thursday 2:30PM-3:20PM HEC-0104 
-- Thursday 3:30PM-4:20PM HEC-0104
-- Thursday 4:30PM-5:20PM HPA1-O106
+- Thursday 2:30PM-3:20PM CB2-O204 
+- Thursday 3:30PM-4:20PM BA2-0207
+- Thursday 4:30PM-5:20PM BA2-0208
 
 _All dates in year of semester, times in UCF's time zone._
 
