@@ -1,36 +1,27 @@
-# Syllabus
+# COP-3402 Systems Software Syllabus
 
-## Course Details
+- Spring 2019
+- Section 1
+- University of Central Florida
+- Prerequisite(s): CDA 3103C and COP 3502C each with a grade of C (2.0) or better.
 
-COP-3402 Systems Software<br>
-University of Central Florida<br>
-Spring 2019<br>
-Section 1
+## Personnel
 
-Prerequisite(s): CDA 3103C and COP 3502C each with a grade of C (2.0)
-or better.
+- Instructor
+    - [Paul Gazzillo](https://paulgazzillo.com) [paul.gazzillo@ucf.edu](mailto:paul.gazzillo@ucf.edu)
+- GTAs
+    - Sharare Zehtabian [sharare.zehtabian@knights.ucf.edu](mailto:sharare.zehtabian@knights.ucf.edu)
+    - Necip Yildiran [yildiran@knights.ucf.edu](mailto:yildiran@knights.ucf.edu)
 
-### People
-
-#### Instructor
-
-[Paul Gazzillo](https://paulgazzillo.com)<br>[paul.gazzillo@ucf.edu](mailto:paul.gazzillo@ucf.edu)<br>HEC-239
-
-#### GTAs
-
-Sharare Zehtabian<br>[sharare.zehtabian@knights.ucf.edu](mailto:sharare.zehtabian@knights.ucf.edu)<br>HEC-315
-
-Necip Yildiran<br>[yildiran@knights.ucf.edu](mailto:yildiran@knights.ucf.edu)<br>HEC-213
-
-### Office Hours
+## Office Hours
 
 - Mondays 1:00pm-2:00pm (Sharare, HEC-315)
 - Tuesdays 11:00am-12:00pm (Necip, HEC-213)
 - Wednesdays 11:00am-12:00pm (Necip, HEC-213)
+- Wednesdays 1:00pm-2:00pm (Sharare, HEC-315)
 - Thursdays 10:00am-11:00am (Paul, HEC-239)
 - Fridays 10:00am-11:00am (Paul, HEC-239)
 - or by appointment as necessary
-
 
 ## Schedule
 
@@ -51,26 +42,26 @@ _All dates in year of semester, times in UCF's time zone._
 
 ### Lecture Schedule
 
-| Week  | Tuesday Lecture                                                     | Thursday Lecture                                     | 
-|-------|---------------------------------------------------------------------|------------------------------------------------------| 
-| 01/08 | Course overview                                                     | Tools                                                | 
-| 01/15 | PL/0 variant programming language                                   | Regular expressions, Project 1 announcement        |
-| 01/22 | Automata                                                            | Lexing and ASCII encoding                            | 
-| 01/29 | Grammars, Project 1 due, Project 2 announcement                     | Top-down parsing                                     | 
-| 02/05 | ASTs                                                                | Bottom-up parsing                                    | 
-| 02/12 | Types, Project 2 due, Project 3 announcement                        | Type-checking: symbol tables and declarations        | 
-| 02/19 | Type-checking: expressions and statements                           | Compiler front-end review and Q&A                    | 
-| 02/26 | P-code machine, Project 3 due, Project 4 announcement               | Functions                                            | 
-| 03/05 | Code generation: functions, Project 4 due, Project 5 announcement   | Code generation: expressions                         | 
-| 03/12 | (break)                                                             | (break)                                              | 
-| 03/19 | Code generation: expressions                                        | Code generation: statements, Project 6 announcement  | 
-| 03/26 | Code generation: everything                                         | Compiler back-end review and Q&A                     | 
-| 04/02 | Assembly, object files, linking, and loading, Project 5 due         | Optimization                                         | 
-| 04/09 | Software security                                                   | Program analysis                                     | 
-| 04/16 | Final review, Project 6 due                                         | Final review                                         | 
+| Week  | Tuesday Lecture                                                     | Thursday Lecture                                     | HW Due before Lab |
+|-------|---------------------------------------------------------------------|------------------------------------------------------|-------------------|
+| 01/08 | Course overview                                                     | Tools                                                | None |
+| 01/15 | PL/0 variant programming language                                   | Regular expressions, Project 1 announcement          | None |
+| 01/22 | Automata                                                            | Lexing and ASCII encoding                            | HW1 regex/dfa |
+| 01/29 | Grammars, Project 1 due, Project 2 announcement                     | Top-down parsing                                     | HW2 CFGs/languages |
+| 02/05 | ASTs                                                                | Bottom-up parsing                                    | HW3 draw ASTs |
+| 02/12 | Types, Project 2 due, Project 3 announcement                        | Type-checking: symbol tables and declarations        | HW4 LR parsing |
+| 02/19 | Type-checking: expressions and statements                           | Compiler front-end review and Q&A                    | HW5 type-check some ASTs |
+| 02/26 | P-code machine, Project 3 due, Project 4 announcement               | Functions                                            | HW6 evaluate p-code |
+| 03/05 | Code generation: functions, Project 4 due, Project 5 announcement   | Code generation: expressions                         | HW7 accessing functions/vars |
+| 03/12 | (break)                                                             | (break)                                              | None |
+| 03/19 | Code generation: expressions                                        | Code generation: statements, Project 6 announcement  | HW8 codegen expression |
+| 03/26 | Code generation: everything                                         | Compiler back-end review and Q&A                     | HW9 codegen statements |
+| 04/02 | Assembly, object files, linking, and loading, Project 5 due         | Optimization                                         | None |
+| 04/09 | Program analysis                                                    | Software security                                    | HW10 control/data flow |
+| 04/16 | Final review, Project 6 due                                         | Final review                                         | None |
 
 
-### Project Due Dates
+### Due Dates
 
 All projects are due on _**the Tuesday morning before class at 02:00AM**_
 
@@ -80,6 +71,8 @@ All projects are due on _**the Tuesday morning before class at 02:00AM**_
 - Project 4 Tuesday morning 03/05 02:00AM
 - Project 5 Tuesday morning 04/02 02:00AM
 - Project 6 Tuesday morning 04/16 02:00AM
+
+All homework is due _**before the lab you attend**_
 
 ### Final Exam
 
@@ -120,9 +113,9 @@ Thursday 04/25 10:00AM-12:50PM CSB-0101
       
 - 25% Homework
 
-  Assigned via webcourses.  Roughly 8-12 small homeworks.  Useful for completing programming
-  projects.  Useful as final exam preparation.  Leniently graded.  0pt
-  for late homework.  Lowest two homeworks dropped.
+      Assigned via webcourses.  Roughly 8-12 small homeworks.  Useful for completing programming
+      projects.  Useful as final exam preparation.  Leniently graded.  0pt
+      for late homework.  Lowest two homeworks dropped.
 
 - 30% Final
 
