@@ -50,7 +50,7 @@ _All dates in year of semester, times in UCF's time zone._
 | 01/29 | Grammars, Project 1 due, Project 2 announcement                     | Top-down parsing                                     | HW2 CFGs/languages | 4.1-4.4 |
 | 02/05 | ASTs                                                                | Bottom-up parsing                                    | HW3 draw ASTs | 2.5.1, 3.5.1, 4.4-4.6 |
 | 02/12 | Types, Project 2 due, Project 3 announcement                        | Type-checking: symbol tables and declarations        | HW4 LR parsing | 6.5 |
-| 02/19 | Type-checking: expressions and statements                           | Compiler front-end review and Q&A                    | HW5 type-check some ASTs |
+| 02/19 | Type-checking: expressions and statements                           | Compiler front-end review and Q&A                    | HW5 type-check some ASTs | (same) |
 | 02/26 | P-code machine, Project 3 due, Project 4 announcement               | Functions                                            | HW6 evaluate p-code | 7.1-7.3 |
 | 03/05 | Code generation: functions, Project 4 due, Project 5 announcement   | Code generation: expressions                         | HW7 accessing functions/vars | 8.10, 6.2-6.4 |
 | 03/12 | (break)                                                             | (break)                                              | None | None |
