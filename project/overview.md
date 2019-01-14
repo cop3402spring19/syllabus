@@ -73,7 +73,7 @@ overwrite the copied binary.  Recopy the binary in case this happens.
     .pl0 - PL/0 source code
     .tokens - tokenized PL/0 source code
     .ast - abstract syntax tree of PL/0 source code
-    .symtab - type checker report
+    .types - type checker report
     .pcode - p-code
     .vmin - vm input
     .vmout - vm output
