@@ -1,0 +1,14 @@
+var b : bool
+var x : int
+function f(x : int) : bool
+ function g(x : int) : int
+   begin
+     return x + 1
+   end
+ begin
+   return g(x) > 5
+ end
+begin
+  x:=4
+  write f(5)
+end
