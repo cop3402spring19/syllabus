@@ -1,0 +1,73 @@
+# scope shadowing, different scopes with different types
+var x : int
+var y : bool
+
+function foo(x : bool, y : int) : bool
+  begin
+    write 0
+
+    if x     then write 1 else write 2
+    
+    if not x then write 3 else write 4
+    
+    write x
+    write y
+
+    return true
+  end
+
+function bar() : bool
+  var x : bool
+  var y : int
+  begin
+    write 5
+
+    x := true
+    y := 6
+
+    if x     then write 7 else write 8
+    
+    if not x then write 9 else write 10
+    
+    write x
+    write y
+
+    return true
+  end
+
+function thud() : bool
+  begin
+    write x
+    write y
+  end
+
+# main
+begin
+  x := 11
+  y := false
+
+  # 11 false
+  write x
+  write y
+
+  # 11 false
+  thud()
+
+  # 0 2 3 false 12
+  foo(false, 12)
+
+  # 11 false
+  thud()
+
+  # 0 1 4 true 13
+  foo(true, 13)
+
+  # 11 false
+  thud()
+
+  # 5 7 10 true 6
+  bar()
+
+  # 11 false
+  thud()
+end
