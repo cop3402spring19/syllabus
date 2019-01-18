@@ -1,0 +1,15 @@
+var x : int
+
+function digitcount(param : int) : int
+  begin
+    if param < 0 then
+      return digitcount(-param)
+    else if (param >= 0) and (param < 10) then
+      return 1
+    else
+      return digitcount(param / 10) + 1
+  end
+
+begin  
+  write digitcount(123456789)
+end

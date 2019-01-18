@@ -1,0 +1,249 @@
+scope: <GLOBAL>, level: 0
+  pow : (int, int) -> int @0
+  scope: pow, level: 1
+    base : int @0
+    power : int @0
+    x : int @0
+TranslationUnit
+| scope = <GLOBAL>
+| block = Block
+| | vardecls = TypedIdentList
+| | funcdecls = FuncDeclList
+| | | FuncDecl
+| | | | scope = pow
+| | | | symbol = <GLOBAL>.pow
+| | | | identifier = pow
+| | | | formals = TypedIdentList
+| | | | | TypedIdent
+| | | | | | symbol = pow.base
+| | | | | | identifier = base
+| | | | | | type = INT
+| | | | | TypedIdent
+| | | | | | symbol = pow.power
+| | | | | | identifier = power
+| | | | | | type = INT
+| | | | has_return = true
+| | | | return_type = INT
+| | | | block = Block
+| | | | | vardecls = TypedIdentList
+| | | | | | TypedIdent
+| | | | | | | symbol = pow.x
+| | | | | | | identifier = x
+| | | | | | | type = INT
+| | | | | funcdecls = FuncDeclList
+| | | | | statement = CompoundStatement
+| | | | | | compound_statement = StatementList
+| | | | | | | IfStatement
+| | | | | | | | if_condition = BinaryExpression
+| | | | | | | | | datatype = bool
+| | | | | | | | | ershov = 2
+| | | | | | | | | binary_op = LT
+| | | | | | | | | binary_left = VariableFactor
+| | | | | | | | | | datatype = int
+| | | | | | | | | | ershov = 1
+| | | | | | | | | | variable_symbol = pow.power
+| | | | | | | | | | variable = power
+| | | | | | | | | binary_right = NumberFactor
+| | | | | | | | | | datatype = int
+| | | | | | | | | | ershov = 1
+| | | | | | | | | | number_value = 1
+| | | | | | | | if_branch = ReturnStatement
+| | | | | | | | | function_symbol = <GLOBAL>.pow
+| | | | | | | | | return_expression = NumberFactor
+| | | | | | | | | | datatype = int
+| | | | | | | | | | ershov = 1
+| | | | | | | | | | number_value = 1
+| | | | | | | | if_elsebranch = 
+| | | | | | | WhileStatement
+| | | | | | | | while_condition = BinaryExpression
+| | | | | | | | | datatype = bool
+| | | | | | | | | ershov = 2
+| | | | | | | | | binary_op = GT
+| | | | | | | | | binary_left = VariableFactor
+| | | | | | | | | | datatype = int
+| | | | | | | | | | ershov = 1
+| | | | | | | | | | variable_symbol = pow.power
+| | | | | | | | | | variable = power
+| | | | | | | | | binary_right = NumberFactor
+| | | | | | | | | | datatype = int
+| | | | | | | | | | ershov = 1
+| | | | | | | | | | number_value = 1
+| | | | | | | | while_body = CompoundStatement
+| | | | | | | | | compound_statement = StatementList
+| | | | | | | | | | AssignStatement
+| | | | | | | | | | | assign_symbol = pow.base
+| | | | | | | | | | | assign_variable = base
+| | | | | | | | | | | assign_expression = BinaryExpression
+| | | | | | | | | | | | datatype = int
+| | | | | | | | | | | | ershov = 2
+| | | | | | | | | | | | binary_op = MULT
+| | | | | | | | | | | | binary_left = VariableFactor
+| | | | | | | | | | | | | datatype = int
+| | | | | | | | | | | | | ershov = 1
+| | | | | | | | | | | | | variable_symbol = pow.base
+| | | | | | | | | | | | | variable = base
+| | | | | | | | | | | | binary_right = VariableFactor
+| | | | | | | | | | | | | datatype = int
+| | | | | | | | | | | | | ershov = 1
+| | | | | | | | | | | | | variable_symbol = pow.base
+| | | | | | | | | | | | | variable = base
+| | | | | | | | | | AssignStatement
+| | | | | | | | | | | assign_symbol = pow.power
+| | | | | | | | | | | assign_variable = power
+| | | | | | | | | | | assign_expression = BinaryExpression
+| | | | | | | | | | | | datatype = int
+| | | | | | | | | | | | ershov = 2
+| | | | | | | | | | | | binary_op = MINUS
+| | | | | | | | | | | | binary_left = VariableFactor
+| | | | | | | | | | | | | datatype = int
+| | | | | | | | | | | | | ershov = 1
+| | | | | | | | | | | | | variable_symbol = pow.power
+| | | | | | | | | | | | | variable = power
+| | | | | | | | | | | | binary_right = NumberFactor
+| | | | | | | | | | | | | datatype = int
+| | | | | | | | | | | | | ershov = 1
+| | | | | | | | | | | | | number_value = 1
+| | | | | | | ReturnStatement
+| | | | | | | | function_symbol = <GLOBAL>.pow
+| | | | | | | | return_expression = VariableFactor
+| | | | | | | | | datatype = int
+| | | | | | | | | ershov = 1
+| | | | | | | | | variable_symbol = pow.base
+| | | | | | | | | variable = base
+| | statement = CompoundStatement
+| | | compound_statement = StatementList
+| | | | WriteStatement
+| | | | | write_expression = FunctionFactor
+| | | | | | datatype = int
+| | | | | | ershov = 1
+| | | | | | function_symbol = <GLOBAL>.pow
+| | | | | | function_name = pow
+| | | | | | function_parameters = ExpressionList
+| | | | | | | NumberFactor
+| | | | | | | | datatype = int
+| | | | | | | | ershov = 1
+| | | | | | | | number_value = 1
+| | | | | | | NumberFactor
+| | | | | | | | datatype = int
+| | | | | | | | ershov = 1
+| | | | | | | | number_value = 10
+| | | | WriteStatement
+| | | | | write_expression = FunctionFactor
+| | | | | | datatype = int
+| | | | | | ershov = 1
+| | | | | | function_symbol = <GLOBAL>.pow
+| | | | | | function_name = pow
+| | | | | | function_parameters = ExpressionList
+| | | | | | | NumberFactor
+| | | | | | | | datatype = int
+| | | | | | | | ershov = 1
+| | | | | | | | number_value = 2
+| | | | | | | NumberFactor
+| | | | | | | | datatype = int
+| | | | | | | | ershov = 1
+| | | | | | | | number_value = 0
+| | | | WriteStatement
+| | | | | write_expression = FunctionFactor
+| | | | | | datatype = int
+| | | | | | ershov = 1
+| | | | | | function_symbol = <GLOBAL>.pow
+| | | | | | function_name = pow
+| | | | | | function_parameters = ExpressionList
+| | | | | | | NumberFactor
+| | | | | | | | datatype = int
+| | | | | | | | ershov = 1
+| | | | | | | | number_value = 2
+| | | | | | | NumberFactor
+| | | | | | | | datatype = int
+| | | | | | | | ershov = 1
+| | | | | | | | number_value = 1
+| | | | WriteStatement
+| | | | | write_expression = FunctionFactor
+| | | | | | datatype = int
+| | | | | | ershov = 1
+| | | | | | function_symbol = <GLOBAL>.pow
+| | | | | | function_name = pow
+| | | | | | function_parameters = ExpressionList
+| | | | | | | NumberFactor
+| | | | | | | | datatype = int
+| | | | | | | | ershov = 1
+| | | | | | | | number_value = 2
+| | | | | | | NumberFactor
+| | | | | | | | datatype = int
+| | | | | | | | ershov = 1
+| | | | | | | | number_value = 2
+| | | | WriteStatement
+| | | | | write_expression = FunctionFactor
+| | | | | | datatype = int
+| | | | | | ershov = 1
+| | | | | | function_symbol = <GLOBAL>.pow
+| | | | | | function_name = pow
+| | | | | | function_parameters = ExpressionList
+| | | | | | | NumberFactor
+| | | | | | | | datatype = int
+| | | | | | | | ershov = 1
+| | | | | | | | number_value = 2
+| | | | | | | NumberFactor
+| | | | | | | | datatype = int
+| | | | | | | | ershov = 1
+| | | | | | | | number_value = 3
+| | | | WriteStatement
+| | | | | write_expression = FunctionFactor
+| | | | | | datatype = int
+| | | | | | ershov = 1
+| | | | | | function_symbol = <GLOBAL>.pow
+| | | | | | function_name = pow
+| | | | | | function_parameters = ExpressionList
+| | | | | | | NumberFactor
+| | | | | | | | datatype = int
+| | | | | | | | ershov = 1
+| | | | | | | | number_value = 10
+| | | | | | | NumberFactor
+| | | | | | | | datatype = int
+| | | | | | | | ershov = 1
+| | | | | | | | number_value = 0
+| | | | WriteStatement
+| | | | | write_expression = FunctionFactor
+| | | | | | datatype = int
+| | | | | | ershov = 1
+| | | | | | function_symbol = <GLOBAL>.pow
+| | | | | | function_name = pow
+| | | | | | function_parameters = ExpressionList
+| | | | | | | NumberFactor
+| | | | | | | | datatype = int
+| | | | | | | | ershov = 1
+| | | | | | | | number_value = 10
+| | | | | | | NumberFactor
+| | | | | | | | datatype = int
+| | | | | | | | ershov = 1
+| | | | | | | | number_value = 1
+| | | | WriteStatement
+| | | | | write_expression = FunctionFactor
+| | | | | | datatype = int
+| | | | | | ershov = 1
+| | | | | | function_symbol = <GLOBAL>.pow
+| | | | | | function_name = pow
+| | | | | | function_parameters = ExpressionList
+| | | | | | | NumberFactor
+| | | | | | | | datatype = int
+| | | | | | | | ershov = 1
+| | | | | | | | number_value = 10
+| | | | | | | NumberFactor
+| | | | | | | | datatype = int
+| | | | | | | | ershov = 1
+| | | | | | | | number_value = 2
+| | | | WriteStatement
+| | | | | write_expression = FunctionFactor
+| | | | | | datatype = int
+| | | | | | ershov = 1
+| | | | | | function_symbol = <GLOBAL>.pow
+| | | | | | function_name = pow
+| | | | | | function_parameters = ExpressionList
+| | | | | | | NumberFactor
+| | | | | | | | datatype = int
+| | | | | | | | ershov = 1
+| | | | | | | | number_value = 10
+| | | | | | | NumberFactor
+| | | | | | | | datatype = int
+| | | | | | | | ershov = 1
+| | | | | | | | number_value = 3

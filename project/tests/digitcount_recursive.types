@@ -1,0 +1,140 @@
+scope: <GLOBAL>, level: 0
+  x : int @0
+  digitcount : (int) -> int @0
+  scope: digitcount, level: 1
+    param : int @0
+TranslationUnit
+| scope = <GLOBAL>
+| block = Block
+| | vardecls = TypedIdentList
+| | | TypedIdent
+| | | | symbol = <GLOBAL>.x
+| | | | identifier = x
+| | | | type = INT
+| | funcdecls = FuncDeclList
+| | | FuncDecl
+| | | | scope = digitcount
+| | | | symbol = <GLOBAL>.digitcount
+| | | | identifier = digitcount
+| | | | formals = TypedIdentList
+| | | | | TypedIdent
+| | | | | | symbol = digitcount.param
+| | | | | | identifier = param
+| | | | | | type = INT
+| | | | has_return = true
+| | | | return_type = INT
+| | | | block = Block
+| | | | | vardecls = TypedIdentList
+| | | | | funcdecls = FuncDeclList
+| | | | | statement = CompoundStatement
+| | | | | | compound_statement = StatementList
+| | | | | | | IfStatement
+| | | | | | | | if_condition = BinaryExpression
+| | | | | | | | | datatype = bool
+| | | | | | | | | ershov = 2
+| | | | | | | | | binary_op = LT
+| | | | | | | | | binary_left = VariableFactor
+| | | | | | | | | | datatype = int
+| | | | | | | | | | ershov = 1
+| | | | | | | | | | variable_symbol = digitcount.param
+| | | | | | | | | | variable = param
+| | | | | | | | | binary_right = NumberFactor
+| | | | | | | | | | datatype = int
+| | | | | | | | | | ershov = 1
+| | | | | | | | | | number_value = 0
+| | | | | | | | if_branch = ReturnStatement
+| | | | | | | | | function_symbol = <GLOBAL>.digitcount
+| | | | | | | | | return_expression = FunctionFactor
+| | | | | | | | | | datatype = int
+| | | | | | | | | | ershov = 1
+| | | | | | | | | | function_symbol = <GLOBAL>.digitcount
+| | | | | | | | | | function_name = digitcount
+| | | | | | | | | | function_parameters = ExpressionList
+| | | | | | | | | | | UnaryExpression
+| | | | | | | | | | | | datatype = int
+| | | | | | | | | | | | ershov = 1
+| | | | | | | | | | | | unary_op = MINUS
+| | | | | | | | | | | | unary_expression = VariableFactor
+| | | | | | | | | | | | | datatype = int
+| | | | | | | | | | | | | ershov = 1
+| | | | | | | | | | | | | variable_symbol = digitcount.param
+| | | | | | | | | | | | | variable = param
+| | | | | | | | if_elsebranch = IfStatement
+| | | | | | | | | if_condition = BinaryExpression
+| | | | | | | | | | datatype = bool
+| | | | | | | | | | ershov = 3
+| | | | | | | | | | binary_op = AND
+| | | | | | | | | | binary_left = BinaryExpression
+| | | | | | | | | | | datatype = bool
+| | | | | | | | | | | ershov = 2
+| | | | | | | | | | | binary_op = GTE
+| | | | | | | | | | | binary_left = VariableFactor
+| | | | | | | | | | | | datatype = int
+| | | | | | | | | | | | ershov = 1
+| | | | | | | | | | | | variable_symbol = digitcount.param
+| | | | | | | | | | | | variable = param
+| | | | | | | | | | | binary_right = NumberFactor
+| | | | | | | | | | | | datatype = int
+| | | | | | | | | | | | ershov = 1
+| | | | | | | | | | | | number_value = 0
+| | | | | | | | | | binary_right = BinaryExpression
+| | | | | | | | | | | datatype = bool
+| | | | | | | | | | | ershov = 2
+| | | | | | | | | | | binary_op = LT
+| | | | | | | | | | | binary_left = VariableFactor
+| | | | | | | | | | | | datatype = int
+| | | | | | | | | | | | ershov = 1
+| | | | | | | | | | | | variable_symbol = digitcount.param
+| | | | | | | | | | | | variable = param
+| | | | | | | | | | | binary_right = NumberFactor
+| | | | | | | | | | | | datatype = int
+| | | | | | | | | | | | ershov = 1
+| | | | | | | | | | | | number_value = 10
+| | | | | | | | | if_branch = ReturnStatement
+| | | | | | | | | | function_symbol = <GLOBAL>.digitcount
+| | | | | | | | | | return_expression = NumberFactor
+| | | | | | | | | | | datatype = int
+| | | | | | | | | | | ershov = 1
+| | | | | | | | | | | number_value = 1
+| | | | | | | | | if_elsebranch = ReturnStatement
+| | | | | | | | | | function_symbol = <GLOBAL>.digitcount
+| | | | | | | | | | return_expression = BinaryExpression
+| | | | | | | | | | | datatype = int
+| | | | | | | | | | | ershov = 2
+| | | | | | | | | | | binary_op = PLUS
+| | | | | | | | | | | binary_left = FunctionFactor
+| | | | | | | | | | | | datatype = int
+| | | | | | | | | | | | ershov = 1
+| | | | | | | | | | | | function_symbol = <GLOBAL>.digitcount
+| | | | | | | | | | | | function_name = digitcount
+| | | | | | | | | | | | function_parameters = ExpressionList
+| | | | | | | | | | | | | BinaryExpression
+| | | | | | | | | | | | | | datatype = int
+| | | | | | | | | | | | | | ershov = 2
+| | | | | | | | | | | | | | binary_op = DIV
+| | | | | | | | | | | | | | binary_left = VariableFactor
+| | | | | | | | | | | | | | | datatype = int
+| | | | | | | | | | | | | | | ershov = 1
+| | | | | | | | | | | | | | | variable_symbol = digitcount.param
+| | | | | | | | | | | | | | | variable = param
+| | | | | | | | | | | | | | binary_right = NumberFactor
+| | | | | | | | | | | | | | | datatype = int
+| | | | | | | | | | | | | | | ershov = 1
+| | | | | | | | | | | | | | | number_value = 10
+| | | | | | | | | | | binary_right = NumberFactor
+| | | | | | | | | | | | datatype = int
+| | | | | | | | | | | | ershov = 1
+| | | | | | | | | | | | number_value = 1
+| | statement = CompoundStatement
+| | | compound_statement = StatementList
+| | | | WriteStatement
+| | | | | write_expression = FunctionFactor
+| | | | | | datatype = int
+| | | | | | ershov = 1
+| | | | | | function_symbol = <GLOBAL>.digitcount
+| | | | | | function_name = digitcount
+| | | | | | function_parameters = ExpressionList
+| | | | | | | NumberFactor
+| | | | | | | | datatype = int
+| | | | | | | | ershov = 1
+| | | | | | | | number_value = 123456789

@@ -1,0 +1,20 @@
+var x : int
+var y : bool
+
+function isodd(x : int) : bool
+  return not (x % 2 = 0)
+
+function iseven(x : int): bool
+  return not isodd(x)
+
+begin
+  x := 0
+  while x < 10 do
+  begin
+    y := isodd(x)
+    write y
+
+    write iseven(x)
+    x := x + 1
+  end
+end
