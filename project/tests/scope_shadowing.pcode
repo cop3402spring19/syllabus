@@ -1,0 +1,163 @@
+addi sp sp 1
+addi sp sp 1
+br 105
+psh ln sp
+psh fp sp
+mov fp sp
+br 1
+movi r0 0
+wr r0
+ld r0 fp -4
+cmpi r0 1
+bne 4
+movi r0 1
+wr r0
+br 3
+movi r0 2
+wr r0
+ld r0 fp -4
+cmpi r0 0
+beq 3
+movi r0 0
+br 2
+movi r0 1
+cmpi r0 1
+bne 4
+movi r0 3
+wr r0
+br 3
+movi r0 4
+wr r0
+ld r0 fp -4
+wr r0
+ld r0 fp -5
+wr r0
+movi r0 1
+st r0 fp -3
+mov sp fp
+pop fp sp
+pop ln sp
+ret ln
+mov sp fp
+pop fp sp
+pop ln sp
+ret ln
+psh ln sp
+psh fp sp
+mov fp sp
+addi sp sp 1
+addi sp sp 1
+br 1
+movi r0 5
+wr r0
+movi r0 1
+st r0 fp 1
+movi r0 6
+st r0 fp 2
+ld r0 fp 1
+cmpi r0 1
+bne 4
+movi r0 7
+wr r0
+br 3
+movi r0 8
+wr r0
+ld r0 fp 1
+cmpi r0 0
+beq 3
+movi r0 0
+br 2
+movi r0 1
+cmpi r0 1
+bne 4
+movi r0 9
+wr r0
+br 3
+movi r0 10
+wr r0
+ld r0 fp 1
+wr r0
+ld r0 fp 2
+wr r0
+movi r0 1
+st r0 fp -3
+mov sp fp
+pop fp sp
+pop ln sp
+ret ln
+mov sp fp
+pop fp sp
+pop ln sp
+ret ln
+psh ln sp
+psh fp sp
+mov fp sp
+br 1
+mov r0 fp
+ld r0 r0 -2
+ld r0 r0 1
+wr r0
+mov r0 fp
+ld r0 r0 -2
+ld r0 r0 2
+wr r0
+mov sp fp
+pop fp sp
+pop ln sp
+ret ln
+movi r0 11
+st r0 fp 1
+movi r0 0
+st r0 fp 2
+ld r0 fp 1
+wr r0
+ld r0 fp 2
+wr r0
+addi sp sp 1
+psh fp sp
+bl -26
+subi sp sp 1
+pop r0 sp
+addi sp sp 2
+movi r0 0
+st r0 sp 0
+movi r0 12
+st r0 sp -1
+addi sp sp 1
+psh fp sp
+bl -124
+subi sp sp 1
+pop r0 sp
+subi sp sp 2
+addi sp sp 1
+psh fp sp
+bl -42
+subi sp sp 1
+pop r0 sp
+addi sp sp 2
+movi r0 1
+st r0 sp 0
+movi r0 13
+st r0 sp -1
+addi sp sp 1
+psh fp sp
+bl -140
+subi sp sp 1
+pop r0 sp
+subi sp sp 2
+addi sp sp 1
+psh fp sp
+bl -58
+subi sp sp 1
+pop r0 sp
+addi sp sp 1
+psh fp sp
+bl -110
+subi sp sp 1
+pop r0 sp
+addi sp sp 1
+psh fp sp
+bl -68
+subi sp sp 1
+pop r0 sp
+hlt

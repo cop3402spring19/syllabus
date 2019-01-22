@@ -1,0 +1,223 @@
+scope: <GLOBAL>, level: 0
+  isprime : (int) -> bool @0
+  scope: isprime, level: 1
+    param : int @0
+    x : int @0
+TranslationUnit
+| scope = <GLOBAL>
+| block = Block
+| | vardecls = TypedIdentList
+| | funcdecls = FuncDeclList
+| | | FuncDecl
+| | | | scope = isprime
+| | | | symbol = <GLOBAL>.isprime
+| | | | identifier = isprime
+| | | | formals = TypedIdentList
+| | | | | TypedIdent
+| | | | | | symbol = isprime.param
+| | | | | | identifier = param
+| | | | | | type = INT
+| | | | has_return = true
+| | | | return_type = BOOL
+| | | | block = Block
+| | | | | vardecls = TypedIdentList
+| | | | | | TypedIdent
+| | | | | | | symbol = isprime.x
+| | | | | | | identifier = x
+| | | | | | | type = INT
+| | | | | funcdecls = FuncDeclList
+| | | | | statement = CompoundStatement
+| | | | | | compound_statement = StatementList
+| | | | | | | IfStatement
+| | | | | | | | if_condition = BinaryExpression
+| | | | | | | | | datatype = bool
+| | | | | | | | | ershov = 2
+| | | | | | | | | binary_op = LT
+| | | | | | | | | binary_left = VariableFactor
+| | | | | | | | | | datatype = int
+| | | | | | | | | | ershov = 1
+| | | | | | | | | | variable_symbol = isprime.param
+| | | | | | | | | | variable = param
+| | | | | | | | | binary_right = NumberFactor
+| | | | | | | | | | datatype = int
+| | | | | | | | | | ershov = 1
+| | | | | | | | | | number_value = 1
+| | | | | | | | if_branch = ReturnStatement
+| | | | | | | | | function_symbol = <GLOBAL>.isprime
+| | | | | | | | | return_expression = BooleanFactor
+| | | | | | | | | | datatype = bool
+| | | | | | | | | | ershov = 1
+| | | | | | | | | | boolean_value = false
+| | | | | | | | if_elsebranch = IfStatement
+| | | | | | | | | if_condition = BinaryExpression
+| | | | | | | | | | datatype = bool
+| | | | | | | | | | ershov = 3
+| | | | | | | | | | binary_op = OR
+| | | | | | | | | | binary_left = BinaryExpression
+| | | | | | | | | | | datatype = bool
+| | | | | | | | | | | ershov = 2
+| | | | | | | | | | | binary_op = EQ
+| | | | | | | | | | | binary_left = VariableFactor
+| | | | | | | | | | | | datatype = int
+| | | | | | | | | | | | ershov = 1
+| | | | | | | | | | | | variable_symbol = isprime.param
+| | | | | | | | | | | | variable = param
+| | | | | | | | | | | binary_right = NumberFactor
+| | | | | | | | | | | | datatype = int
+| | | | | | | | | | | | ershov = 1
+| | | | | | | | | | | | number_value = 1
+| | | | | | | | | | binary_right = BinaryExpression
+| | | | | | | | | | | datatype = bool
+| | | | | | | | | | | ershov = 2
+| | | | | | | | | | | binary_op = EQ
+| | | | | | | | | | | binary_left = VariableFactor
+| | | | | | | | | | | | datatype = int
+| | | | | | | | | | | | ershov = 1
+| | | | | | | | | | | | variable_symbol = isprime.param
+| | | | | | | | | | | | variable = param
+| | | | | | | | | | | binary_right = NumberFactor
+| | | | | | | | | | | | datatype = int
+| | | | | | | | | | | | ershov = 1
+| | | | | | | | | | | | number_value = 2
+| | | | | | | | | if_branch = ReturnStatement
+| | | | | | | | | | function_symbol = <GLOBAL>.isprime
+| | | | | | | | | | return_expression = BooleanFactor
+| | | | | | | | | | | datatype = bool
+| | | | | | | | | | | ershov = 1
+| | | | | | | | | | | boolean_value = true
+| | | | | | | | | if_elsebranch = 
+| | | | | | | AssignStatement
+| | | | | | | | assign_symbol = isprime.x
+| | | | | | | | assign_variable = x
+| | | | | | | | assign_expression = NumberFactor
+| | | | | | | | | datatype = int
+| | | | | | | | | ershov = 1
+| | | | | | | | | number_value = 2
+| | | | | | | WhileStatement
+| | | | | | | | while_condition = BinaryExpression
+| | | | | | | | | datatype = bool
+| | | | | | | | | ershov = 2
+| | | | | | | | | binary_op = LT
+| | | | | | | | | binary_left = VariableFactor
+| | | | | | | | | | datatype = int
+| | | | | | | | | | ershov = 1
+| | | | | | | | | | variable_symbol = isprime.x
+| | | | | | | | | | variable = x
+| | | | | | | | | binary_right = VariableFactor
+| | | | | | | | | | datatype = int
+| | | | | | | | | | ershov = 1
+| | | | | | | | | | variable_symbol = isprime.param
+| | | | | | | | | | variable = param
+| | | | | | | | while_body = CompoundStatement
+| | | | | | | | | compound_statement = StatementList
+| | | | | | | | | | IfStatement
+| | | | | | | | | | | if_condition = BinaryExpression
+| | | | | | | | | | | | datatype = bool
+| | | | | | | | | | | | ershov = 2
+| | | | | | | | | | | | binary_op = EQ
+| | | | | | | | | | | | binary_left = BinaryExpression
+| | | | | | | | | | | | | datatype = int
+| | | | | | | | | | | | | ershov = 2
+| | | | | | | | | | | | | binary_op = MOD
+| | | | | | | | | | | | | binary_left = VariableFactor
+| | | | | | | | | | | | | | datatype = int
+| | | | | | | | | | | | | | ershov = 1
+| | | | | | | | | | | | | | variable_symbol = isprime.param
+| | | | | | | | | | | | | | variable = param
+| | | | | | | | | | | | | binary_right = VariableFactor
+| | | | | | | | | | | | | | datatype = int
+| | | | | | | | | | | | | | ershov = 1
+| | | | | | | | | | | | | | variable_symbol = isprime.x
+| | | | | | | | | | | | | | variable = x
+| | | | | | | | | | | | binary_right = NumberFactor
+| | | | | | | | | | | | | datatype = int
+| | | | | | | | | | | | | ershov = 1
+| | | | | | | | | | | | | number_value = 0
+| | | | | | | | | | | if_branch = CompoundStatement
+| | | | | | | | | | | | compound_statement = StatementList
+| | | | | | | | | | | | | ReturnStatement
+| | | | | | | | | | | | | | function_symbol = <GLOBAL>.isprime
+| | | | | | | | | | | | | | return_expression = BooleanFactor
+| | | | | | | | | | | | | | | datatype = bool
+| | | | | | | | | | | | | | | ershov = 1
+| | | | | | | | | | | | | | | boolean_value = false
+| | | | | | | | | | | if_elsebranch = 
+| | | | | | | | | | AssignStatement
+| | | | | | | | | | | assign_symbol = isprime.x
+| | | | | | | | | | | assign_variable = x
+| | | | | | | | | | | assign_expression = BinaryExpression
+| | | | | | | | | | | | datatype = int
+| | | | | | | | | | | | ershov = 2
+| | | | | | | | | | | | binary_op = PLUS
+| | | | | | | | | | | | binary_left = VariableFactor
+| | | | | | | | | | | | | datatype = int
+| | | | | | | | | | | | | ershov = 1
+| | | | | | | | | | | | | variable_symbol = isprime.x
+| | | | | | | | | | | | | variable = x
+| | | | | | | | | | | | binary_right = NumberFactor
+| | | | | | | | | | | | | datatype = int
+| | | | | | | | | | | | | ershov = 1
+| | | | | | | | | | | | | number_value = 1
+| | | | | | | ReturnStatement
+| | | | | | | | function_symbol = <GLOBAL>.isprime
+| | | | | | | | return_expression = BooleanFactor
+| | | | | | | | | datatype = bool
+| | | | | | | | | ershov = 1
+| | | | | | | | | boolean_value = true
+| | statement = CompoundStatement
+| | | compound_statement = StatementList
+| | | | WriteStatement
+| | | | | write_expression = FunctionFactor
+| | | | | | datatype = bool
+| | | | | | ershov = 1
+| | | | | | function_symbol = <GLOBAL>.isprime
+| | | | | | function_name = isprime
+| | | | | | function_parameters = ExpressionList
+| | | | | | | NumberFactor
+| | | | | | | | datatype = int
+| | | | | | | | ershov = 1
+| | | | | | | | number_value = 1
+| | | | WriteStatement
+| | | | | write_expression = FunctionFactor
+| | | | | | datatype = bool
+| | | | | | ershov = 1
+| | | | | | function_symbol = <GLOBAL>.isprime
+| | | | | | function_name = isprime
+| | | | | | function_parameters = ExpressionList
+| | | | | | | NumberFactor
+| | | | | | | | datatype = int
+| | | | | | | | ershov = 1
+| | | | | | | | number_value = 2
+| | | | WriteStatement
+| | | | | write_expression = FunctionFactor
+| | | | | | datatype = bool
+| | | | | | ershov = 1
+| | | | | | function_symbol = <GLOBAL>.isprime
+| | | | | | function_name = isprime
+| | | | | | function_parameters = ExpressionList
+| | | | | | | NumberFactor
+| | | | | | | | datatype = int
+| | | | | | | | ershov = 1
+| | | | | | | | number_value = 3
+| | | | WriteStatement
+| | | | | write_expression = FunctionFactor
+| | | | | | datatype = bool
+| | | | | | ershov = 1
+| | | | | | function_symbol = <GLOBAL>.isprime
+| | | | | | function_name = isprime
+| | | | | | function_parameters = ExpressionList
+| | | | | | | NumberFactor
+| | | | | | | | datatype = int
+| | | | | | | | ershov = 1
+| | | | | | | | number_value = 4
+| | | | WriteStatement
+| | | | | write_expression = FunctionFactor
+| | | | | | datatype = bool
+| | | | | | ershov = 1
+| | | | | | function_symbol = <GLOBAL>.isprime
+| | | | | | function_name = isprime
+| | | | | | function_parameters = ExpressionList
+| | | | | | | NumberFactor
+| | | | | | | | datatype = int
+| | | | | | | | ershov = 1
+| | | | | | | | number_value = 5

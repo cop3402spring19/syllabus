@@ -4,7 +4,7 @@
 
     compiler --lex       file.pl0 > file.tokens
     compiler --parse     file.pl0 > file.ast
-    compiler --typecheck file.pl0 > file.symtab
+    compiler --typecheck file.pl0 > file.types
     compiler             file.pl0 > file.pcode
 
     vm file.pcode < file.vmin > file.vmout 2> file.vmtrace

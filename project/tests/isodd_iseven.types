@@ -1,0 +1,167 @@
+scope: <GLOBAL>, level: 0
+  x : int @0
+  y : bool @0
+  isodd : (int) -> bool @0
+  iseven : (int) -> bool @0
+  scope: isodd, level: 1
+    x : int @0
+  scope: iseven, level: 1
+    x : int @0
+TranslationUnit
+| scope = <GLOBAL>
+| block = Block
+| | vardecls = TypedIdentList
+| | | TypedIdent
+| | | | symbol = <GLOBAL>.x
+| | | | identifier = x
+| | | | type = INT
+| | | TypedIdent
+| | | | symbol = <GLOBAL>.y
+| | | | identifier = y
+| | | | type = BOOL
+| | funcdecls = FuncDeclList
+| | | FuncDecl
+| | | | scope = isodd
+| | | | symbol = <GLOBAL>.isodd
+| | | | identifier = isodd
+| | | | formals = TypedIdentList
+| | | | | TypedIdent
+| | | | | | symbol = isodd.x
+| | | | | | identifier = x
+| | | | | | type = INT
+| | | | has_return = true
+| | | | return_type = BOOL
+| | | | block = Block
+| | | | | vardecls = TypedIdentList
+| | | | | funcdecls = FuncDeclList
+| | | | | statement = ReturnStatement
+| | | | | | function_symbol = <GLOBAL>.isodd
+| | | | | | return_expression = UnaryExpression
+| | | | | | | datatype = bool
+| | | | | | | ershov = 2
+| | | | | | | unary_op = NOT
+| | | | | | | unary_expression = BinaryExpression
+| | | | | | | | datatype = bool
+| | | | | | | | ershov = 2
+| | | | | | | | binary_op = EQ
+| | | | | | | | binary_left = BinaryExpression
+| | | | | | | | | datatype = int
+| | | | | | | | | ershov = 2
+| | | | | | | | | binary_op = MOD
+| | | | | | | | | binary_left = VariableFactor
+| | | | | | | | | | datatype = int
+| | | | | | | | | | ershov = 1
+| | | | | | | | | | variable_symbol = isodd.x
+| | | | | | | | | | variable = x
+| | | | | | | | | binary_right = NumberFactor
+| | | | | | | | | | datatype = int
+| | | | | | | | | | ershov = 1
+| | | | | | | | | | number_value = 2
+| | | | | | | | binary_right = NumberFactor
+| | | | | | | | | datatype = int
+| | | | | | | | | ershov = 1
+| | | | | | | | | number_value = 0
+| | | FuncDecl
+| | | | scope = iseven
+| | | | symbol = <GLOBAL>.iseven
+| | | | identifier = iseven
+| | | | formals = TypedIdentList
+| | | | | TypedIdent
+| | | | | | symbol = iseven.x
+| | | | | | identifier = x
+| | | | | | type = INT
+| | | | has_return = true
+| | | | return_type = BOOL
+| | | | block = Block
+| | | | | vardecls = TypedIdentList
+| | | | | funcdecls = FuncDeclList
+| | | | | statement = ReturnStatement
+| | | | | | function_symbol = <GLOBAL>.iseven
+| | | | | | return_expression = UnaryExpression
+| | | | | | | datatype = bool
+| | | | | | | ershov = 1
+| | | | | | | unary_op = NOT
+| | | | | | | unary_expression = FunctionFactor
+| | | | | | | | datatype = bool
+| | | | | | | | ershov = 1
+| | | | | | | | function_symbol = <GLOBAL>.isodd
+| | | | | | | | function_name = isodd
+| | | | | | | | function_parameters = ExpressionList
+| | | | | | | | | VariableFactor
+| | | | | | | | | | datatype = int
+| | | | | | | | | | ershov = 1
+| | | | | | | | | | variable_symbol = iseven.x
+| | | | | | | | | | variable = x
+| | statement = CompoundStatement
+| | | compound_statement = StatementList
+| | | | AssignStatement
+| | | | | assign_symbol = <GLOBAL>.x
+| | | | | assign_variable = x
+| | | | | assign_expression = NumberFactor
+| | | | | | datatype = int
+| | | | | | ershov = 1
+| | | | | | number_value = 0
+| | | | WhileStatement
+| | | | | while_condition = BinaryExpression
+| | | | | | datatype = bool
+| | | | | | ershov = 2
+| | | | | | binary_op = LT
+| | | | | | binary_left = VariableFactor
+| | | | | | | datatype = int
+| | | | | | | ershov = 1
+| | | | | | | variable_symbol = <GLOBAL>.x
+| | | | | | | variable = x
+| | | | | | binary_right = NumberFactor
+| | | | | | | datatype = int
+| | | | | | | ershov = 1
+| | | | | | | number_value = 10
+| | | | | while_body = CompoundStatement
+| | | | | | compound_statement = StatementList
+| | | | | | | AssignStatement
+| | | | | | | | assign_symbol = <GLOBAL>.y
+| | | | | | | | assign_variable = y
+| | | | | | | | assign_expression = FunctionFactor
+| | | | | | | | | datatype = bool
+| | | | | | | | | ershov = 1
+| | | | | | | | | function_symbol = <GLOBAL>.isodd
+| | | | | | | | | function_name = isodd
+| | | | | | | | | function_parameters = ExpressionList
+| | | | | | | | | | VariableFactor
+| | | | | | | | | | | datatype = int
+| | | | | | | | | | | ershov = 1
+| | | | | | | | | | | variable_symbol = <GLOBAL>.x
+| | | | | | | | | | | variable = x
+| | | | | | | WriteStatement
+| | | | | | | | write_expression = VariableFactor
+| | | | | | | | | datatype = bool
+| | | | | | | | | ershov = 1
+| | | | | | | | | variable_symbol = <GLOBAL>.y
+| | | | | | | | | variable = y
+| | | | | | | WriteStatement
+| | | | | | | | write_expression = FunctionFactor
+| | | | | | | | | datatype = bool
+| | | | | | | | | ershov = 1
+| | | | | | | | | function_symbol = <GLOBAL>.iseven
+| | | | | | | | | function_name = iseven
+| | | | | | | | | function_parameters = ExpressionList
+| | | | | | | | | | VariableFactor
+| | | | | | | | | | | datatype = int
+| | | | | | | | | | | ershov = 1
+| | | | | | | | | | | variable_symbol = <GLOBAL>.x
+| | | | | | | | | | | variable = x
+| | | | | | | AssignStatement
+| | | | | | | | assign_symbol = <GLOBAL>.x
+| | | | | | | | assign_variable = x
+| | | | | | | | assign_expression = BinaryExpression
+| | | | | | | | | datatype = int
+| | | | | | | | | ershov = 2
+| | | | | | | | | binary_op = PLUS
+| | | | | | | | | binary_left = VariableFactor
+| | | | | | | | | | datatype = int
+| | | | | | | | | | ershov = 1
+| | | | | | | | | | variable_symbol = <GLOBAL>.x
+| | | | | | | | | | variable = x
+| | | | | | | | | binary_right = NumberFactor
+| | | | | | | | | | datatype = int
+| | | | | | | | | | ershov = 1
+| | | | | | | | | | number_value = 1

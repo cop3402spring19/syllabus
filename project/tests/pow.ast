@@ -1,0 +1,136 @@
+TranslationUnit
+| block = Block
+| | vardecls = TypedIdentList
+| | funcdecls = FuncDeclList
+| | | FuncDecl
+| | | | identifier = pow
+| | | | formals = TypedIdentList
+| | | | | TypedIdent
+| | | | | | identifier = base
+| | | | | | type = INT
+| | | | | TypedIdent
+| | | | | | identifier = power
+| | | | | | type = INT
+| | | | has_return = true
+| | | | return_type = INT
+| | | | block = Block
+| | | | | vardecls = TypedIdentList
+| | | | | | TypedIdent
+| | | | | | | identifier = x
+| | | | | | | type = INT
+| | | | | funcdecls = FuncDeclList
+| | | | | statement = CompoundStatement
+| | | | | | compound_statement = StatementList
+| | | | | | | IfStatement
+| | | | | | | | if_condition = BinaryExpression
+| | | | | | | | | binary_op = LT
+| | | | | | | | | binary_left = VariableFactor
+| | | | | | | | | | variable = power
+| | | | | | | | | binary_right = NumberFactor
+| | | | | | | | | | number_value = 1
+| | | | | | | | if_branch = ReturnStatement
+| | | | | | | | | return_expression = NumberFactor
+| | | | | | | | | | number_value = 1
+| | | | | | | | if_elsebranch = 
+| | | | | | | WhileStatement
+| | | | | | | | while_condition = BinaryExpression
+| | | | | | | | | binary_op = GT
+| | | | | | | | | binary_left = VariableFactor
+| | | | | | | | | | variable = power
+| | | | | | | | | binary_right = NumberFactor
+| | | | | | | | | | number_value = 1
+| | | | | | | | while_body = CompoundStatement
+| | | | | | | | | compound_statement = StatementList
+| | | | | | | | | | AssignStatement
+| | | | | | | | | | | assign_variable = base
+| | | | | | | | | | | assign_expression = BinaryExpression
+| | | | | | | | | | | | binary_op = MULT
+| | | | | | | | | | | | binary_left = VariableFactor
+| | | | | | | | | | | | | variable = base
+| | | | | | | | | | | | binary_right = VariableFactor
+| | | | | | | | | | | | | variable = base
+| | | | | | | | | | AssignStatement
+| | | | | | | | | | | assign_variable = power
+| | | | | | | | | | | assign_expression = BinaryExpression
+| | | | | | | | | | | | binary_op = MINUS
+| | | | | | | | | | | | binary_left = VariableFactor
+| | | | | | | | | | | | | variable = power
+| | | | | | | | | | | | binary_right = NumberFactor
+| | | | | | | | | | | | | number_value = 1
+| | | | | | | ReturnStatement
+| | | | | | | | return_expression = VariableFactor
+| | | | | | | | | variable = base
+| | statement = CompoundStatement
+| | | compound_statement = StatementList
+| | | | WriteStatement
+| | | | | write_expression = FunctionFactor
+| | | | | | function_name = pow
+| | | | | | function_parameters = ExpressionList
+| | | | | | | NumberFactor
+| | | | | | | | number_value = 1
+| | | | | | | NumberFactor
+| | | | | | | | number_value = 10
+| | | | WriteStatement
+| | | | | write_expression = FunctionFactor
+| | | | | | function_name = pow
+| | | | | | function_parameters = ExpressionList
+| | | | | | | NumberFactor
+| | | | | | | | number_value = 2
+| | | | | | | NumberFactor
+| | | | | | | | number_value = 0
+| | | | WriteStatement
+| | | | | write_expression = FunctionFactor
+| | | | | | function_name = pow
+| | | | | | function_parameters = ExpressionList
+| | | | | | | NumberFactor
+| | | | | | | | number_value = 2
+| | | | | | | NumberFactor
+| | | | | | | | number_value = 1
+| | | | WriteStatement
+| | | | | write_expression = FunctionFactor
+| | | | | | function_name = pow
+| | | | | | function_parameters = ExpressionList
+| | | | | | | NumberFactor
+| | | | | | | | number_value = 2
+| | | | | | | NumberFactor
+| | | | | | | | number_value = 2
+| | | | WriteStatement
+| | | | | write_expression = FunctionFactor
+| | | | | | function_name = pow
+| | | | | | function_parameters = ExpressionList
+| | | | | | | NumberFactor
+| | | | | | | | number_value = 2
+| | | | | | | NumberFactor
+| | | | | | | | number_value = 3
+| | | | WriteStatement
+| | | | | write_expression = FunctionFactor
+| | | | | | function_name = pow
+| | | | | | function_parameters = ExpressionList
+| | | | | | | NumberFactor
+| | | | | | | | number_value = 10
+| | | | | | | NumberFactor
+| | | | | | | | number_value = 0
+| | | | WriteStatement
+| | | | | write_expression = FunctionFactor
+| | | | | | function_name = pow
+| | | | | | function_parameters = ExpressionList
+| | | | | | | NumberFactor
+| | | | | | | | number_value = 10
+| | | | | | | NumberFactor
+| | | | | | | | number_value = 1
+| | | | WriteStatement
+| | | | | write_expression = FunctionFactor
+| | | | | | function_name = pow
+| | | | | | function_parameters = ExpressionList
+| | | | | | | NumberFactor
+| | | | | | | | number_value = 10
+| | | | | | | NumberFactor
+| | | | | | | | number_value = 2
+| | | | WriteStatement
+| | | | | write_expression = FunctionFactor
+| | | | | | function_name = pow
+| | | | | | function_parameters = ExpressionList
+| | | | | | | NumberFactor
+| | | | | | | | number_value = 10
+| | | | | | | NumberFactor
+| | | | | | | | number_value = 3
