@@ -25,7 +25,7 @@
 
 ### Exceptions
 
-- 02/21 Thursday, moved to 11am
+- 02/21 Thursday, cancelled
 
 ## Schedule
 
