@@ -23,6 +23,10 @@
 - Fridays 10:00am-11:00am (Paul, HEC-239)
 - or by appointment as necessary
 
+### Exceptions
+
+- 02/21 Thursday, moved to 11am
+
 ## Schedule
 
 Class: Tuesday/Thursday 12:00PM-1:15PM CSB-0101
