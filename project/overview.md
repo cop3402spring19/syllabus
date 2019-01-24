@@ -39,6 +39,8 @@ to send the input to `vm`.
 Search for `TODO`s in the source files for hints on completing the
 projects.
 
+Type `make` to compile your program.
+
 ## Using Given Object Files for Previous Phases
 
 Later projects depend on earlier projects, e.g., a correct parser
