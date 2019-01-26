@@ -11,9 +11,14 @@
 
 ## Example Usage
 
+First build your project
+
+    cd /path/to/your/project
+    make
+
 This will compile and run the fibonacci series program:
 
-    ./compiler fib_series.pl0 > fib_series.pcode
+    ./compiler /path/to/syllabus/project/tests/fib_series.pl0 > fib_series.pcode
     ./vm fib_series.pcode
     
 To stop the VM from printing out the state, redirect to `/dev/null`:
@@ -22,7 +27,7 @@ To stop the VM from printing out the state, redirect to `/dev/null`:
 
 To enter number when prompted by a `read`, e.g., in the following:
 
-    ./compiler fib.pl0 > fib.pcode
+    ./compiler /path/to/syllabus/project/tests/fib.pl0 > fib.pcode
     ./vm fib.pcode
 
 `vm` will wait for user input.  Enter a number and then hit `Ctrl-D`
