@@ -68,6 +68,8 @@ _All readings are chapters and sections (inclusive) from the Dragon book (Compil
 
 ### Due Dates
 
+All homework is due _**by 1:30pm on Thursdays before the labs**_
+
 All projects are due on _**the Tuesday morning before class at 02:00AM**_
 
 - Project 1 Tuesday morning 01/29 02:00AM
@@ -77,7 +79,7 @@ All projects are due on _**the Tuesday morning before class at 02:00AM**_
 - Project 5 Tuesday morning 04/02 02:00AM
 - Project 6 Tuesday morning 04/16 02:00AM
 
-All homework is due _**by 1:30pm on Thursdays before the labs**_
+Projects may be turned in late for a 1pt deduction per project.  _**The final deadline for all late project submissions is Tuesday morning 04/23 02:00AM**_, one week after the project 6 deadline.
 
 ### Final Exam
 
