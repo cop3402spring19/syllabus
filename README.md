@@ -77,7 +77,7 @@ All projects are due on _**the Tuesday morning before class at 02:00AM**_
 - Project 5 Tuesday morning 04/02 02:00AM
 - Project 6 Tuesday morning 04/16 02:00AM
 
-All homework is due _**before the lab you attend**_
+All homework is due _**by 1:30pm on Thursdays before the labs**_
 
 ### Final Exam
 
