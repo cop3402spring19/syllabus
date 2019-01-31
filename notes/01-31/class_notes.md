@@ -24,8 +24,10 @@ However, not every trees are linked-lists.
 Conversion from regular expression to context free grammar:  
 Concatenation `ab`: `A -> a b`  
 Union `a | b`:  
-```A -> a
-A -> b```  
+```
+A -> a
+A -> b 
+```  
 Closure `a*`:
 `A->Aa`  
 `A->epsilon` (it cannot be `A->a` because `*` means zero or more)  
@@ -46,12 +48,6 @@ T -> T * F
 T -> F
 F -> 0 | 1
 ```  
-
-
-
-
-
-
 
 
 __String__: `1 + 0 * 1`  
@@ -139,7 +135,7 @@ It is better to have the tree to have a better sense about the traversal.
 If you see the trace of function calls it will be just like the trees. If you understand tree traversal, you will understand recursion easier.  
 
 __The output of parser example from class__:  
-!(parser_example.png)[parser_example.png]  
+![parser_example.png](parser_example.png)  
 
 `assert()` function in C: it terminates the program if the given parameter is false (0).  
 
