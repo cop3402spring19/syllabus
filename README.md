@@ -99,7 +99,9 @@ Thursday 04/25 10:00AM-12:50PM CSB-0101
   
   For each project, 1pt when the program compiles and there is
   evidence of effort.  Remaining points given based on how many test
-  cases passed.  Minus 1pt for each project that is late.
+  cases passed.  Minus 1pt for each project that is late.  You can
+  resubmit until the late due date to be regraded, but still lose the
+  1pt for lateness.
 
   - Warning: each phase depends on the previous
 
