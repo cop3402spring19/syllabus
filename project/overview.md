@@ -11,22 +11,51 @@
 
 ## Example Usage
 
+First build your project
+
+    cd /path/to/your/project
+    make
+
+This will run the lexer
+
+    ./compiler --lex /path/to/syllabus/project/tests/fib_series.pl0 > fib_series.tokens
+
+This will run the parser
+
+    ./compiler --parse /path/to/syllabus/project/tests/fib_series.pl0 > fib_series.ast
+
+This will run the typechecker
+
+    ./compiler --typecheck /path/to/syllabus/project/tests/fib_series.pl0 > fib_series.types
+
+This will run the code generator
+
+    ./compiler /path/to/syllabus/project/tests/fib_series.pl0 > fib_series.pcode
+
+This will run the vm (after running your code generation step)
+
+    ./vm fib_series.pcode > fib_series.vmout 2> fib_series.vmtrace
+
 This will compile and run the fibonacci series program:
 
-    ./compiler fib_series.pl0 > fib_series.pcode
+    ./compiler /path/to/syllabus/project/tests/fib_series.pl0 > fib_series.pcode
     ./vm fib_series.pcode
-    
-To stop the VM from printing out the state, redirect to `/dev/null`:
+
+To prevent the VM from printing out the state, redirect to `/dev/null`:
 
     ./vm fib_series.pcode 2>/dev/null
 
 To enter number when prompted by a `read`, e.g., in the following:
 
-    ./compiler fib.pl0 > fib.pcode
-    ./vm fib.pcode
+    ./compiler /path/to/syllabus/project/tests/fib.pl0 > fib.pcode
+    ./vm fib.pcode 2>/dev/null
 
 `vm` will wait for user input.  Enter a number and then hit `Ctrl-D`
 to send the input to `vm`.
+
+You can also redirect the input from a file:
+
+    ./vm fib.pcode 2>/dev/null < /path/to/syllabus/project/tests/fib.vmin
 
 ### Programming Assignment Skeletons
 
@@ -35,7 +64,7 @@ to send the input to `vm`.
     typechecker.c - project 3
     vm_impl.c - project 4
     codegen.c - project 5 and 6
-    
+
 Search for `TODO`s in the source files for hints on completing the
 projects.
 
