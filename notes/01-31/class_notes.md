@@ -24,8 +24,10 @@ However, not every trees are linked-lists.
 Conversion from regular expression to context free grammar:  
 Concatenation `ab`: `A -> a b`  
 Union `a | b`:  
-```A -> a
-A -> b```  
+```
+A -> a
+A -> b 
+```  
 Closure `a*`:
 `A->Aa`  
 `A->epsilon` (it cannot be `A->a` because `*` means zero or more)  
@@ -46,12 +48,6 @@ T -> T * F
 T -> F
 F -> 0 | 1
 ```  
-
-
-
-
-
-
 
 
 __String__: `1 + 0 * 1`  
