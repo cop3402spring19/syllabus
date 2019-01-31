@@ -135,7 +135,7 @@ It is better to have the tree to have a better sense about the traversal.
 If you see the trace of function calls it will be just like the trees. If you understand tree traversal, you will understand recursion easier.  
 
 __The output of parser example from class__:  
-!(parser_example.png)[parser_example.png]  
+![parser_example.png](parser_example.png)  
 
 `assert()` function in C: it terminates the program if the given parameter is false (0).  
 
