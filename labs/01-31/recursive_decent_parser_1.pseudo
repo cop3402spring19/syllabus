@@ -1,0 +1,29 @@
+main()
+{
+	S();
+	
+	if(current_token != $) {
+		error();
+	}
+}
+
+S()
+{
+     if(current_token == a) {
+          next_token();
+     } else {
+          error();
+     }
+    
+    B();
+}
+
+B()
+{
+    if(current_token == b) {
+        next_token();
+        B();
+	} else {
+		// do nothing
+	}
+}
