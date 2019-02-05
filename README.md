@@ -16,8 +16,8 @@
 ## Office Hours
 
 - Mondays 1:00pm-2:00pm (Sharare, HEC-315)
-- Tuesdays 11:00am-12:00pm (Necip, HEC-213)
-- Wednesdays 11:00am-12:00pm (Necip, HEC-213)
+- Tuesdays 11:00am-12:00pm (Necip, R1-368)
+- Wednesdays 11:00am-12:00pm (Necip, R1-368)
 - Wednesdays 1:00pm-2:00pm (Sharare, HEC-315)
 - Thursdays 10:00am-11:00am (Paul, HEC-239)
 - Fridays 10:00am-11:00am (Paul, HEC-239)
@@ -68,6 +68,8 @@ _All readings are chapters and sections (inclusive) from the Dragon book (Compil
 
 ### Due Dates
 
+All homework is due _**by 1:30pm on Thursdays before the labs**_
+
 All projects are due on _**the Tuesday morning before class at 02:00AM**_
 
 - Project 1 Tuesday morning 01/29 02:00AM
@@ -77,7 +79,7 @@ All projects are due on _**the Tuesday morning before class at 02:00AM**_
 - Project 5 Tuesday morning 04/02 02:00AM
 - Project 6 Tuesday morning 04/16 02:00AM
 
-All homework is due _**before the lab you attend**_
+Projects may be turned in late for a 1pt deduction per project.  _**The final deadline for all late project submissions is Tuesday morning 04/23 02:00AM**_, one week after the project 6 deadline.
 
 ### Final Exam
 
@@ -99,7 +101,9 @@ Thursday 04/25 10:00AM-12:50PM CSB-0101
   
   For each project, 1pt when the program compiles and there is
   evidence of effort.  Remaining points given based on how many test
-  cases passed.  Minus 1pt for each project that is late.
+  cases passed.  Minus 1pt for each project that is late.  You can
+  resubmit until the late due date to be regraded, but still lose the
+  1pt for lateness.
 
   - Warning: each phase depends on the previous
 
