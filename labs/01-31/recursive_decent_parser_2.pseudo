@@ -1,0 +1,48 @@
+funcdecls()
+{
+    while( current_token == FUNC )
+    {
+        // consume FUNC
+        next_token();
+        
+        if( current_token != IDENT ) {
+            error();
+        }
+        
+        // consume IDENT
+        next_token();
+        
+        if( current_token != LPAREN ) {
+            error();
+        }
+        
+        // consume LPAREN
+        next_token();
+        
+        // formals is optional
+        if( current_token == IDENT ) {
+            // if there is IDENT, it means that there is formals
+            formals();
+        }
+        
+        if( current_token != RPAREN ) {
+            error();
+        }
+        
+        // consume RPAREN
+        next_token();
+        
+        // COLON type is optional
+        if( current_token == COLON ) {
+            // consume COLON
+            next_token();
+            
+            // type follows COLON
+            type();
+        }
+        
+        block();
+        
+    }
+}
+
