@@ -1,5 +1,38 @@
 ## AST Nodes for Parsing
 
+### Syntax-Directed Definition
+
+    // declarations
+    program      - TranslationUnit(block)
+    block        - Block(vardecls, funcdecls, statement)
+    vardecls     - TypedIdentList(TypedIdent(identfier, type), TypedIdent(identifer, type), ...)
+    funcdelcs    - FuncDeclList(FuncDecl(identifier, formals, has_return, return_type, block), ...)
+    formals      - TypedIdentList(TypedIdent(identfier, type), TypedIdent(identifer, type), ...)
+    type         - Token
+
+    // statements
+    statement    - AssignStatement(assign_variable, assign_expression)
+                 | CallStatement(call_function, call_parameters)
+                 | ReturnStatement(return_expression)
+                 | CompoundStatement(compound_statement)
+                 | IfStatement(if_condition, if_branch, else_branch)
+                 | WhileStatement(while_condition, while_statement)
+                 | ReadStatement(read_variable)
+                 | WriteStatement(write_expression)
+    exprlist     - ExpressionList(expression, expression, ...)
+
+    // expressions
+    expr         - Expression(...)
+    simpleexpr   - Expression(...)
+    term         - Expression(...)
+    factor       - Expression(...)
+
+    // check token for type of operation
+    is_relop        ::= bool
+    is_termop       ::= bool
+    is_factorop     ::= bool
+
+
 ### Declarations
 
     TranslationUnit:
@@ -137,40 +170,3 @@
       
     FunctionFactor:
       function_symbol: Symbol
-
-## Union Nodes
-
-Union nodes are tagged unions containing a `kind` field and a
-anonymous union containing anonymous structs.
-
-    static void visitStatement(struct Statement *node) {
-      // given
-      switch (node->kind) {
-      case ASSIGNSTATEMENT:
-        visitAssignStatement(node);
-      // etc
-    }
-
-    static void visitAssignStatement(struct Statement *node) {
-      struct Symbol *symbol = node->assign_symbol;
-      int assigned_reg = visitExpression(node->assign_expression, 0);
-
-      setVariable(symbol, assigned_reg);
-    }
-
-
-## List Nodes
-
-List nodes have `head` and `tail` fields that point to elements
-containing `node` and `next` fields.
-
-For instance, to traverse a TypedIdentList, use the following code:
-
-    static void visitVarDecls(struct TypedIdentList *list) {
-      struct TypedIdentListElement *cur = list->head;
-      while (NULL != cur) {
-        visitVarDecl(cur->node);
-        cur = cur->next;
-      }
-    }
-
