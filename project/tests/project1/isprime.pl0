@@ -1,0 +1,29 @@
+function isprime(param : int) : bool
+  var x : int
+  begin
+    if param < 1 then
+      return false
+    else if (param = 1) or (param = 2) then
+      return true
+    
+    x := 2
+    while x < param do
+    begin
+      if param % x = 0 then
+      begin
+        return false
+      end
+
+      x := x + 1
+    end
+
+    return true
+  end
+
+begin
+  write isprime(1)
+  write isprime(2)
+  write isprime(3)
+  write isprime(4)
+  write isprime(5)
+end
