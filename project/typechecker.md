@@ -22,6 +22,78 @@ Be sure to set all the `datatype`, `symbol`, and `scope` fields.  See
 ast.yml for which nodes have them.  These record symbol table entries
 directly into the tree for use in code generation.
 
+
+### Union Nodes
+
+Union nodes are tagged unions containing a `kind` field and a
+anonymous union containing anonymous structs.
+
+    static void visitStatement(struct Statement *node) {
+      // given
+      switch (node->kind) {
+      case ASSIGNSTATEMENT:
+        visitAssignStatement(node);
+      // etc
+    }
+
+    static void visitAssignStatement(struct Statement *node) {
+      struct Symbol *symbol = node->assign_symbol;
+      int assigned_reg = visitExpression(node->assign_expression, 0);
+
+      setVariable(symbol, assigned_reg);
+    }
+
+
+### List Nodes
+
+List nodes have `head` and `tail` fields that point to elements
+containing `node` and `next` fields.
+
+For instance, to traverse a TypedIdentList, use the following code:
+
+    static void visitVarDecls(struct TypedIdentList *list) {
+      struct TypedIdentListElement *cur = list->head;
+      while (NULL != cur) {
+        visitVarDecl(cur->node);
+        cur = cur->next;
+      }
+    }
+
+
+## AST Attributes for Type Checking
+
+    TranslationUnit:
+      scope: Scope
+      
+    FuncDecl:
+      scope: Scope
+      symbol: Symbol
+      
+    TypedIdent:
+      symbol: Symbol
+
+    AssignStatement:
+      assign_symbol: Symbol
+      
+    CallStatement:
+      call_symbol: Symbol
+      
+    ReturnStatement:
+      function_symbol: Symbol
+      
+    ReadStatement:
+      read_symbol: Symbol
+          
+    Expression:
+      datatype: DataType
+      ershov: int
+      
+    VariableFactor:
+      variable_symbol: Symbol
+      
+    FunctionFactor:
+      function_symbol: Symbol
+
 ## APIs
 
 ### Data Types

@@ -3,7 +3,7 @@
 #include <stdlib.h>
 
 #define SIZE 256
-char pos;
+int pos;
 char input[SIZE];
 
 void E();
@@ -39,11 +39,11 @@ void T() {
 }
 
 void Tp() {
-  printf("Tp -> *FT' | epsilon\n");
+  printf("T' -> *FT' | epsilon\n");
   char c = input[pos];
   printf("peek %c\n", c);
   if ('*' == c) {
-    pos++;
+    pos++; // consume the input, move to next character
     printf("read %c\n", c);
     F();
     Tp();
@@ -57,14 +57,13 @@ void F() {
   char c = input[pos];
   printf("peek %c\n", c);
   if ('0' == c) {
-    pos++;
+    pos++; // consume input
     printf("read %c\n", c);
-  }  else if ('1' == c) {
+  } else if ('1' == c) {
     pos++;
     printf("read %c\n", c);
   } else {
-    printf("invalid factor\n");
-    exit(1);
+    assert(0);
   }
 }
 

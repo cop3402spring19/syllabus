@@ -5,14 +5,14 @@ produces code for a virtual machine instruction interpreter.
 
 ## Documentation
 
-- Specifications
-  - [Grammar](grammar.md)
-  - [Abstract Syntax Tree (AST)](ast.md)
-  - [Type specification](type_specification.md)
-  - [VM specification](vm_specification.md)
-- Implementation guides
+- Guides
   - [Overview](overview.md)
   - [Lexer](lexer.md)
   - [Parser](parser.md)
   - [Type checking](typechecker.md)
   - [Code generation](codegen.md)
+- Specifications
+  - [Grammar](grammar.md) for lexing and parsing
+  - [Abstract Syntax Tree (AST)](ast.md) for parsing
+  - [Type specification](type_specification.md) for type checking
+  - [VM specification](vm_specification.md) for the p-code machine and codegen

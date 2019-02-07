@@ -13,6 +13,14 @@ tokens as the leaves of the tree.
 
 ## Grammar
 
+    // EBNF notation tips
+    lowercase symbols are nonterminals
+    UPPERCASE symbols are terminals (tokens from your lexer)
+    ::= denotes a production
+    { } means 0 or more
+    [ ] means 0 or 1
+    ( ) just groups symbols
+    
     // declarations
     program      ::= block
     block        ::= vardecls funcdecls statement
@@ -31,7 +39,7 @@ tokens as the leaves of the tree.
                      | READ IDENT
                      | WRITE expr
                      ]
-    exprlist     ::= expr { COMMA expr }
+    exprlist     ::= [ expr { COMMA expr } ]
 
     // expressions
     expr         ::= simpleexpr [ relop simpleexpr ]

@@ -125,6 +125,7 @@ Thursday 04/25 10:00AM-12:50PM CSB-0101
     Assigned via webcourses.  Roughly 8-12 small homeworks.  Useful for completing programming
     projects.  Useful as final exam preparation.  Leniently graded.  0pt
     for late homework.  Lowest two homeworks dropped.
+    Graded based on effort: 1pt for attempted multiple choice problems; 2pt for attempted open-ended questions with authentic effort, 1pt for half-hearted attemptes.  0pt for any missing answers.
 
 - 30% Final
 
