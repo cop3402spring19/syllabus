@@ -39,7 +39,7 @@ tokens as the leaves of the tree.
                      | READ IDENT
                      | WRITE expr
                      ]
-    exprlist     ::= expr { COMMA expr }
+    exprlist     ::= [ expr { COMMA expr } ]
 
     // expressions
     expr         ::= simpleexpr [ relop simpleexpr ]
