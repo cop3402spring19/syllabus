@@ -22,10 +22,14 @@
     exprlist     - ExpressionList(expression, expression, ...)
 
     // expressions
-    expr         - Expression(...)
-    simpleexpr   - Expression(...)
-    term         - Expression(...)
-    factor       - Expression(...)
+    expr         - BinaryExpression(binary_op, binary_left, binary_right) or just passes through simpleexpr's return value
+    simpleexpr   - BinaryExpression(binary_op, binary_left, binary_right) or just passes through term's return value
+    term         - BinaryExpression(binary_op, binary_left, binary_right) or just passes through factor()'s return value
+    factor       - VariableFactor(variable) for IDENT
+                 | FunctionFactor(function_name, function_parameters) for 'IDENT LPAREN exprlist RPAREN'
+                 | UnaryExpression(unary_op, unary_expression) for 'NOT factor' or 'MINUS factor'
+                 | NumberFactor(number_value) for NUMBER
+                 | BooleanFactor(boolean_value) for TRUE or FALSE
 
     // check token for type of operation
     is_relop        ::= bool
