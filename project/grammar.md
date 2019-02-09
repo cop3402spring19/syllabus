@@ -34,7 +34,7 @@ tokens as the leaves of the tree.
                      | IDENT LPAREN exprlist RPAREN
                      | RETURN expr
                      | BEGIN { statement } END
-                     | IF expr THEN statement [ELSE statement]
+                     | IF expr THEN statement [ ELSE statement ]
                      | WHILE expr DO statement
                      | READ IDENT
                      | WRITE expr
