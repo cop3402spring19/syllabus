@@ -23,6 +23,8 @@ This will run the lexer
 This will run the parser
 
     ./compiler --parse /path/to/syllabus/project/tests/fib_series.pl0 > fib_series.ast
+    # to also save parser errors that go to stderr do this
+    ./compiler --parse /path/to/syllabus/project/tests/fib_series.pl0 > fib_series.ast 2>&1
 
 This will run the typechecker
 
