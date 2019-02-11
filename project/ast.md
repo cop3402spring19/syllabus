@@ -6,7 +6,7 @@
     program      - TranslationUnit(block)
     block        - Block(vardecls, funcdecls, statement)
     vardecls     - TypedIdentList(TypedIdent(identfier, type), TypedIdent(identifer, type), ...)
-    funcdelcs    - FuncDeclList(FuncDecl(identifier, formals, has_return, return_type, block), ...)
+    funcdelcs    - FuncDeclList(FuncDecl(identifier, formals, has_return, return_type, block), ...) return_type == NULL only when has_return is false
     formals      - TypedIdentList(TypedIdent(identfier, type), TypedIdent(identifer, type), ...)
     type         - Token
 
@@ -30,6 +30,7 @@
                  | UnaryExpression(unary_op, unary_expression) for 'NOT factor' or 'MINUS factor'
                  | NumberFactor(number_value) for NUMBER
                  | BooleanFactor(boolean_value) for TRUE or FALSE
+                 | pass through expr()'s return value for LPAREN expr RPAREN
 
     // check token for type of operation
     is_relop        ::= bool
