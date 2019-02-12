@@ -168,6 +168,7 @@ motivational benefits of such study:
 ### Recommended
 
 - Compilers: Principles, Techniques, & Tools, Second Edition by Alfred V. Aho, Monica S. Lam, Ravi Sethi, and Jeffrey D. Ullman. Addison Wesley, 2007
+- The Practice of Programming by Brian W. Kernighan and Rob Pike. https://www.cs.princeton.edu/~bwk/tpop.webpage/
 
 ### Supplementary
 
