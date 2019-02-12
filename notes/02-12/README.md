@@ -1,0 +1,2 @@
+- [Example of LR parsing](https://www.cs.rutgers.edu/~zz124/cs415_spring2014/lectures/lr_parser_animation.pdf)
+- Constructing an LR(0) parser with examples [here](https://www.cs.rutgers.edu/~zz124/cs415_spring2014/lectures/lec14_synVII.pdf) and [here](https://www.cs.rutgers.edu/~zz124/cs415_spring2014/lectures/lr_states_exp.pdf)
