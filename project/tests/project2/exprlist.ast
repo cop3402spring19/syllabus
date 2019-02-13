@@ -1,0 +1,29 @@
+TranslationUnit
+| block = Block
+| | vardecls = TypedIdentList
+| | funcdecls = FuncDeclList
+| | statement = CallStatement
+| | | call_function = x
+| | | call_parameters = ExpressionList
+| | | | BinaryExpression
+| | | | | binary_op = GT
+| | | | | binary_left = VariableFactor
+| | | | | | variable = x
+| | | | | binary_right = NumberFactor
+| | | | | | number_value = 2
+| | | | BinaryExpression
+| | | | | binary_op = OR
+| | | | | binary_left = BinaryExpression
+| | | | | | binary_op = AND
+| | | | | | binary_left = VariableFactor
+| | | | | | | variable = s
+| | | | | | binary_right = NumberFactor
+| | | | | | | number_value = 3
+| | | | | binary_right = NumberFactor
+| | | | | | number_value = 6
+| | | | BinaryExpression
+| | | | | binary_op = LTE
+| | | | | binary_left = VariableFactor
+| | | | | | variable = f
+| | | | | binary_right = NumberFactor
+| | | | | | number_value = 3

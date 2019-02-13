@@ -1,0 +1,4 @@
+while (3 > 9)
+	write 3
+
+

@@ -1,0 +1,24 @@
+TranslationUnit
+| block = Block
+| | vardecls = TypedIdentList
+| | funcdecls = FuncDeclList
+| | | FuncDecl
+| | | | identifier = empty
+| | | | formals = TypedIdentList
+| | | | | TypedIdent
+| | | | | | identifier = x
+| | | | | | type = BOOL
+| | | | | TypedIdent
+| | | | | | identifier = y
+| | | | | | type = INT
+| | | | has_return = false
+| | | | return_type = 
+| | | | block = Block
+| | | | | vardecls = TypedIdentList
+| | | | | funcdecls = FuncDeclList
+| | | | | statement = ReturnStatement
+| | | | | | return_expression = NumberFactor
+| | | | | | | number_value = 1
+| | statement = WriteStatement
+| | | write_expression = NumberFactor
+| | | | number_value = 1

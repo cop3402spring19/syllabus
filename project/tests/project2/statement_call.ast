@@ -1,0 +1,13 @@
+TranslationUnit
+| block = Block
+| | vardecls = TypedIdentList
+| | funcdecls = FuncDeclList
+| | statement = CallStatement
+| | | call_function = ident
+| | | call_parameters = ExpressionList
+| | | | BinaryExpression
+| | | | | binary_op = PLUS
+| | | | | binary_left = VariableFactor
+| | | | | | variable = i
+| | | | | binary_right = VariableFactor
+| | | | | | variable = j

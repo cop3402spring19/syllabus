@@ -1,0 +1,11 @@
+TranslationUnit
+| block = Block
+| | vardecls = TypedIdentList
+| | funcdecls = FuncDeclList
+| | statement = WriteStatement
+| | | write_expression = BinaryExpression
+| | | | binary_op = PLUS
+| | | | binary_left = VariableFactor
+| | | | | variable = x
+| | | | binary_right = VariableFactor
+| | | | | variable = y
