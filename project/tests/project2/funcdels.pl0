@@ -1,0 +1,7 @@
+function f (y : int) : bool
+	begin
+		if y > 0 then
+			return true
+		else
+			return false
+	end
