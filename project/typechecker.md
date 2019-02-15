@@ -26,7 +26,7 @@ directly into the tree for use in code generation.
 ### Union Nodes
 
 Union nodes are tagged unions containing a `kind` field and a
-anonymous union containing anonymous structs.
+anonymous union containing anonymous structs.  The following is an example of the union fields will be accessed during the codegen phase of the compiler.
 
     static void visitStatement(struct Statement *node) {
       // given
