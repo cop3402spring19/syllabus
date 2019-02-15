@@ -1,0 +1,6 @@
+- [Lecture slides](02-14%20types.pdf)
+- [Class notes](class_notes.md)
+- [Diagrams from class](typechecker_ast_traversal.pdf)
+- Python examples: [floatingpoint.md](floatingpoint.md), [dynamic.py](dynamic.py)
+- C examples: [static.c](static.c), [unsafe.c](unsafe.c)
+- PL0 example with type error: [type_error.pl0](type_error.pl0)
