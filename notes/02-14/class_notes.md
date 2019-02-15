@@ -126,7 +126,7 @@ write 2 + f(2)
 
 Above program prints 5. We will see how typechecking is done by using that example.  
 
-Check: (typechecker_ast_traversal.pdf)[typechecker_ast_traversal.pdf]  
+Check: [typechecker_ast_traversal.pdf](typechecker_ast_traversal.pdf)  
 
 Typechecker uses two pieces of data: symbol table and AST  
 Symbol table keeps track of: name, type and scope of the symbols  
