@@ -123,11 +123,6 @@ From symtab.h
 
 `struct Symbol *addFunction(struct Scope *scope, char *name, struct FuncDecl *node)`  returns NULL if the symbol exists already.
 
-`struct Symbol *getSymbol(struct Scope *scope, char *name);` searches
-the current scope for the symbol.  Returns NULL if the symbol is not
-found.
-
-
 `struct Symbol *searchSymbol(struct Scope *scope, char *name);`
 recursively searches scopes starting from the current one.  Returns
 NULL if no variable found even after reaching the global scope.
