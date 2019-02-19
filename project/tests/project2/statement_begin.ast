@@ -1,0 +1,14 @@
+TranslationUnit
+| block = Block
+| | vardecls = TypedIdentList
+| | funcdecls = FuncDeclList
+| | statement = CompoundStatement
+| | | compound_statement = StatementList
+| | | | AssignStatement
+| | | | | assign_variable = a
+| | | | | assign_expression = BinaryExpression
+| | | | | | binary_op = PLUS
+| | | | | | binary_left = VariableFactor
+| | | | | | | variable = a
+| | | | | | binary_right = NumberFactor
+| | | | | | | number_value = 2

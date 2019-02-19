@@ -21,11 +21,7 @@ expression on either side of the operator.  It is left as an optional
 exercise to extend the grammar and parser to accept such expressions.
 The AST need not change.
 
-### Debugging
-
-If the parser is hanging, you may have a while loop without a `next()`.
-
-When you have a while loop, you have to use `next()` at the end in order for the test to check the next element, but once the while loop is done, call `previous()` to put the unneeded token back.
+### Precondition and Postcondition Invariants
 
 While there are many ways to write the same parser, I use this convenient invariant about the nonterminals' recursive descent functions:
 
@@ -40,6 +36,17 @@ Once the token is no longer what the nonterminal expects, e.g., in
 vardecls when finding that next token is not `VAR`, push the token
 back into the stream with `previous()`.
 
+### Debugging
+
+If the parser is hanging, you may have a while loop without a `next()`.
+
+When you have a while loop, you have to use `next()` at the end in order for the test to check the next element, but once the while loop is done, call `previous()` to put the unneeded token back.
+
+If you get a segfault, check whether this is during AST printing, rather than parsing.  If so, this means your parser has not yet completed constructing the AST node that still contains a NULL.
+
+A parse error on token likely means you are advancing the tokens too far.  Double-check that the invariants are met, i.e., when you finish parsing a production, you are on the last token of that production (or the previous token if it was empty).  Confirm this using `print_token(stdout, token());`.  There is a chance it means you have not advanced the tokens, i.e., a parsing function is incomplete.
+
+Don't be afraid to write your own test cases.  In fact, I strongly encourage it, as it is good practice.  Try to write small test cases that exercise just the suspicious or unfinished portion of code.  Trace through the code by hand to make sure it does what you want it to do.  Use `printf` to confirm or investigate.
 
 Remember: the AST is _abstract_.  it is not an exact parse tree.  The
 names of the grammar nonterminals need not be the same as the AST

@@ -1,0 +1,16 @@
+var global : int
+var retval : int
+function f(param : int) : int
+  var local : int
+  begin
+    local := 3
+    write global
+    write param
+    write local
+  end
+begin
+  global := 1
+  retval := f(2)  
+  # f(2)  
+  write global
+end

@@ -1,0 +1,7 @@
+TranslationUnit
+| block = Block
+| | vardecls = TypedIdentList
+| | funcdecls = FuncDeclList
+| | statement = ReturnStatement
+| | | return_expression = BooleanFactor
+| | | | boolean_value = true

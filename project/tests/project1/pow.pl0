@@ -1,0 +1,27 @@
+# for simplicity: power should be non-negative
+function pow(base : int, power : int) : int
+  var x : int
+  begin
+    if power < 1 then
+      return 1
+
+    while power > 1 do
+      begin
+        base := base * base
+        power := power - 1
+      end
+    
+    return base
+  end
+
+begin
+  write pow(1, 10)
+  write pow(2, 0)
+  write pow(2, 1)
+  write pow(2, 2)
+  write pow(2, 3)
+  write pow(10, 0)
+  write pow(10, 1)
+  write pow(10, 2)
+  write pow(10, 3)
+end

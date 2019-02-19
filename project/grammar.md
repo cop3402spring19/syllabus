@@ -30,15 +30,14 @@ tokens as the leaves of the tree.
     type         ::= INT | BOOL
 
     // statements
-    statement    ::= [ IDENT ASSIGN expr
+    statement    ::=   IDENT ASSIGN expr
                      | IDENT LPAREN exprlist RPAREN
                      | RETURN expr
                      | BEGIN { statement } END
-                     | IF expr THEN statement [ELSE expr]
+                     | IF expr THEN statement [ ELSE statement ]
                      | WHILE expr DO statement
                      | READ IDENT
                      | WRITE expr
-                     ]
     exprlist     ::= [ expr { COMMA expr } ]
 
     // expressions

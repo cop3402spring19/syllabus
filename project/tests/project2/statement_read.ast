@@ -1,0 +1,6 @@
+TranslationUnit
+| block = Block
+| | vardecls = TypedIdentList
+| | funcdecls = FuncDeclList
+| | statement = ReadStatement
+| | | read_variable = y

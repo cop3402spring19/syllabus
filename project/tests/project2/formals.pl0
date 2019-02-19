@@ -1,0 +1,4 @@
+function empty(x : bool , y : int)
+  return 1
+
+write 1

@@ -1,0 +1,9 @@
+TranslationUnit
+| block = Block
+| | vardecls = TypedIdentList
+| | funcdecls = FuncDeclList
+| | statement = WriteStatement
+| | | write_expression = UnaryExpression
+| | | | unary_op = NOT
+| | | | unary_expression = BooleanFactor
+| | | | | boolean_value = true

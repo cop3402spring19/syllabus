@@ -1,0 +1,20 @@
+TranslationUnit
+| block = Block
+| | vardecls = TypedIdentList
+| | funcdecls = FuncDeclList
+| | statement = AssignStatement
+| | | assign_variable = x
+| | | assign_expression = BinaryExpression
+| | | | binary_op = PLUS
+| | | | binary_left = VariableFactor
+| | | | | variable = x
+| | | | binary_right = BinaryExpression
+| | | | | binary_op = MULT
+| | | | | binary_left = NumberFactor
+| | | | | | number_value = 123
+| | | | | binary_right = BinaryExpression
+| | | | | | binary_op = MINUS
+| | | | | | binary_left = NumberFactor
+| | | | | | | number_value = 17
+| | | | | | binary_right = NumberFactor
+| | | | | | | number_value = 3

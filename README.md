@@ -16,16 +16,12 @@
 ## Office Hours
 
 - Mondays 1:00pm-2:00pm (Sharare, HEC-315)
+- Mondays 2:00pm-3:00pm (Paul, HEC-239) except 03/25 and 04/08
 - Tuesdays 11:00am-12:00pm (Necip, R1-368)
-- Wednesdays 11:00am-12:00pm (Necip, R1-368)
 - Wednesdays 1:00pm-2:00pm (Sharare, HEC-315)
-- Thursdays 10:00am-11:00am (Paul, HEC-239)
+- Thursdays 10:00am-11:00am (Necip, R1-368)
 - Fridays 10:00am-11:00am (Paul, HEC-239)
 - or by appointment as necessary
-
-### Exceptions
-
-- 02/21 Thursday, cancelled
 
 ## Schedule
 
@@ -168,6 +164,7 @@ motivational benefits of such study:
 ### Recommended
 
 - Compilers: Principles, Techniques, & Tools, Second Edition by Alfred V. Aho, Monica S. Lam, Ravi Sethi, and Jeffrey D. Ullman. Addison Wesley, 2007
+- The Practice of Programming by Brian W. Kernighan and Rob Pike. https://www.cs.princeton.edu/~bwk/tpop.webpage/
 
 ### Supplementary
 

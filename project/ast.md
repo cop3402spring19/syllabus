@@ -6,7 +6,7 @@
     program      - TranslationUnit(block)
     block        - Block(vardecls, funcdecls, statement)
     vardecls     - TypedIdentList(TypedIdent(identfier, type), TypedIdent(identifer, type), ...)
-    funcdelcs    - FuncDeclList(FuncDecl(identifier, formals, has_return, return_type, block), ...)
+    funcdelcs    - FuncDeclList(FuncDecl(identifier, formals, has_return, return_type, block), ...) return_type == NULL only when has_return is false
     formals      - TypedIdentList(TypedIdent(identfier, type), TypedIdent(identifer, type), ...)
     type         - Token
 
@@ -15,17 +15,22 @@
                  | CallStatement(call_function, call_parameters)
                  | ReturnStatement(return_expression)
                  | CompoundStatement(compound_statement)
-                 | IfStatement(if_condition, if_branch, else_branch)
-                 | WhileStatement(while_condition, while_statement)
+                 | IfStatement(if_condition, if_branch, if_elsebranch)
+                 | WhileStatement(while_condition, while_body)
                  | ReadStatement(read_variable)
                  | WriteStatement(write_expression)
     exprlist     - ExpressionList(expression, expression, ...)
 
     // expressions
-    expr         - Expression(...)
-    simpleexpr   - Expression(...)
-    term         - Expression(...)
-    factor       - Expression(...)
+    expr         - BinaryExpression(binary_op, binary_left, binary_right) or just passes through simpleexpr's return value
+    simpleexpr   - BinaryExpression(binary_op, binary_left, binary_right) or just passes through term's return value
+    term         - BinaryExpression(binary_op, binary_left, binary_right) or just passes through factor()'s return value
+    factor       - VariableFactor(variable) for IDENT
+                 | FunctionFactor(function_name, function_parameters) for 'IDENT LPAREN exprlist RPAREN'
+                 | UnaryExpression(unary_op, unary_expression) for 'NOT factor' or 'MINUS factor'
+                 | NumberFactor(number_value) for NUMBER
+                 | BooleanFactor(boolean_value) for TRUE or FALSE
+                 | pass through expr()'s return value for LPAREN expr RPAREN
 
     // check token for type of operation
     is_relop        ::= bool
