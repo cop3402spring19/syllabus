@@ -1,3 +1,49 @@
+## Overview
+
+In this project, you will be managing two pieces of state: the symbol
+table and the AST annotations.  While traversing the tree, variable
+and function declarations will have their symbols entered into the
+symbol (`addVariable` and `addFunction`) and annotated on the tree
+with their symbols (the return values of return values of
+`addVariable` and `addFunction`).  These function's construct a
+`DataType` struct automatically for you from the given AST subtree for
+the declaration.  See `datatype.h` for the definitions.  Note the
+fields for each kind of datatype, variables, tuples (lists of function
+parameters), and function types (tuples for the parameters and the
+return type), as these will be used later when actually checking that
+types match.
+
+Make sure you read `type_specification.md` carefully.  This defines
+the typing rules of our language.
+
+Start with the variable and function declarations and make sure the
+symbol table output looks right.  When entering a function
+declaration, add it to the `current_scope` before process its
+children.  Make sure to first save the previous `current_scope` so
+that you can restore it once you've typechecked all the function
+declaration's children.
+
+Then typecheck expressions.  For expression nodes, keep the invariant:
+set each expression's `datatype` before returning.  This way, you can
+use a postorder traversal to recursively check the entire expression
+subtree.  Number and Boolean factors just set the `datatype` field and
+that's it, since we know the types of these nodes.  Variable and
+function factors require a table lookup.  Don't forget to set the
+symbol annotations for these as well (look at ast.yml for the actual
+field names).
+
+Then typecheck statements.  The specification has more detail, but in
+most cases, you will recursively typecheck whatever expressions the
+statement uses, then check that the expressions are used
+appropriately.
+
+For the return statement, you need the current function's return type.
+Get this by searching the symbol table for the function's name (taken
+from the current scope) and looking in the parent scope (also taken
+from the current_scope).  See `symtab.h` for the field names for
+scopes.  Don't forget the set the symbol annotation fields (see
+`ast.yml` for the field names.).
+
 ## AST Traversal
 
 The type checker is using both pre- and post-order processing of the tree:
@@ -21,44 +67,6 @@ Use `printXXX` functions to help with debugging, e.g,
 Be sure to set all the `datatype`, `symbol`, and `scope` fields.  See
 ast.yml for which nodes have them.  These record symbol table entries
 directly into the tree for use in code generation.
-
-
-### Union Nodes
-
-Union nodes are tagged unions containing a `kind` field and a
-anonymous union containing anonymous structs.  The following is an example of the union fields will be accessed during the codegen phase of the compiler.
-
-    static void visitStatement(struct Statement *node) {
-      // given
-      switch (node->kind) {
-      case ASSIGNSTATEMENT:
-        visitAssignStatement(node);
-      // etc
-    }
-
-    static void visitAssignStatement(struct Statement *node) {
-      struct Symbol *symbol = node->assign_symbol;
-      int assigned_reg = visitExpression(node->assign_expression, 0);
-
-      setVariable(symbol, assigned_reg);
-    }
-
-
-### List Nodes
-
-List nodes have `head` and `tail` fields that point to elements
-containing `node` and `next` fields.
-
-For instance, to traverse a TypedIdentList, use the following code:
-
-    static void visitVarDecls(struct TypedIdentList *list) {
-      struct TypedIdentListElement *cur = list->head;
-      while (NULL != cur) {
-        visitVarDecl(cur->node);
-        cur = cur->next;
-      }
-    }
-
 
 ## AST Attributes for Type Checking
 
@@ -119,9 +127,9 @@ From symtab.h
 
 `struct Scope *getParentScope(struct Scope *scope);`  returns NULL is scope is the global scope.
 
-`struct Symbol *addVariable(struct Scope *scope, char *name, struct TypedIdent *node);`  return NULL if the symbol exists already.
+`struct Symbol *addVariable(struct Scope *scope, char *name, struct TypedIdent *node);`  return NULL if the symbol exists already.  this function takes the typedident subtree and automatically determines the type for you in the symbol table.  use the return value to annotate the tree with the symbol table.
 
-`struct Symbol *addFunction(struct Scope *scope, char *name, struct FuncDecl *node)`  returns NULL if the symbol exists already.
+`struct Symbol *addFunction(struct Scope *scope, char *name, struct FuncDecl *node)`  returns NULL if the symbol exists already.  this function takes the funcdecl subtree and automatically determines the type for you in the symbol table.  use the return value to annotate the tree with the symbol table.
 
 `struct Symbol *searchSymbol(struct Scope *scope, char *name);`
 recursively searches scopes starting from the current one.  Returns

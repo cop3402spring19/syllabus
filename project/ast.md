@@ -175,3 +175,43 @@
       
     FunctionFactor:
       function_symbol: Symbol
+
+
+## Traversal
+
+### Union Nodes
+
+Union nodes are tagged unions containing a `kind` field and a
+anonymous union containing anonymous structs.  The following is an example of the union fields will be accessed during the codegen phase of the compiler.
+
+    static void visitStatement(struct Statement *node) {
+      // given
+      switch (node->kind) {
+      case ASSIGNSTATEMENT:
+        visitAssignStatement(node);
+      // etc
+    }
+
+    static void visitAssignStatement(struct Statement *node) {
+      struct Symbol *symbol = node->assign_symbol;
+      int assigned_reg = visitExpression(node->assign_expression, 0);
+
+      setVariable(symbol, assigned_reg);
+    }
+
+
+### List Nodes
+
+List nodes have `head` and `tail` fields that point to elements
+containing `node` and `next` fields.
+
+For instance, to traverse a TypedIdentList, use the following code:
+
+    static void visitVarDecls(struct TypedIdentList *list) {
+      struct TypedIdentListElement *cur = list->head;
+      while (NULL != cur) {
+        visitVarDecl(cur->node);
+        cur = cur->next;
+      }
+    }
+
