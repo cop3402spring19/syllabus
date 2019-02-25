@@ -97,7 +97,7 @@ again.
 
 You will be graded only on your `.c` source code files.  Be sure to
 avoid accidentally copying the compiler phase you are currently
-working on, which could lead you to believe your code is correct.
+working on or the compiler binary itself, which could lead you to believe your code is correct.
 Note that any changes to the source code of a previous phase will
 overwrite the copied binary.  Recopy the binary in case this happens.
 
