@@ -90,6 +90,7 @@ the lexer and parser:
     cd PATH/TO/PROJECT
     make
     cp PATH/TO/BINARIES/{lexer,parser}.o ./
+    touch {lexer,parser}.o
     make
 
 The output of the second `make` should show the compiler running
