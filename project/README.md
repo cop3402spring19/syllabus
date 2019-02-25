@@ -7,12 +7,8 @@ produces code for a virtual machine instruction interpreter.
 
 - Guides
   - [Overview](overview.md)
-  - [Lexer](lexer.md)
-  - [Parser](parser.md)
-  - [Type checking](typechecker.md)
-  - [Code generation](codegen.md)
-- Specifications
-  - [Grammar](grammar.md) for lexing and parsing
-  - [Abstract Syntax Tree (AST)](ast.md) for parsing
-  - [Type specification](type_specification.md) for type checking
-  - [VM specification](vm_specification.md) for the p-code machine and codegen
+  - Project 1: [Lexer](lexer.md), [Grammar](grammar.md)
+  - Project 2: [Parser](parser.md), [Grammar](grammar.md), [Abstract Syntax Tree (AST)](ast.md)
+  - Project 3: [Type checking](typechecker.md), [Type specification](type_specification.md), [Abstract Syntax Tree (AST)](ast.md)
+  - Project 4: [VM specification](vm_specification.md) for the p-code machine and codegen
+  - Projects 5 and 6: [Code generation](codegen.md)
