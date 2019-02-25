@@ -20,7 +20,7 @@ _Be sure to go over the precondition and postcondition invariants for the parsin
 
 For constructing the AST, look at the specification of it in ast.md.  This tells you, for each production, what AST node is constructed and what fields should be set.  As a general rule, each nonterminal is turned into an AST node, punctuation is not preserved on the AST, and { ... } productions are turned into lists.  Use any tokens encountered during parsing to populate the AST, e.g., the vardecl's identifier and the token from `type()` goes into the `TypedIdent` node. 
 
-## Tokens
+### Tokens
 
 Use `next()` to advance to the next token and `previous()` to go to the previous token.  `ensure_token(VAR)`, for instance, checks that the current token is a `VAR` token and exist with an error if not.  `is_token(VAR)`, for instance, returns true if the current token is a `VAR` otherwise it returns false.  Use `print_token(stdout, token())` to print out the current token.
 
