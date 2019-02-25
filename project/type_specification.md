@@ -14,7 +14,7 @@ Declarations notify the compiler about symbols used in the program and their typ
 
 - binary - the `binary_left` and `binary_right` expressions must be the same type.  The types of the expressions must also match the operation, `binary_op`.  The following shows the types of the operands for each operation as well as the resulting type of each operation.  The type notation, e.g., `(int, int) -> bool`, means the operation takes two integer parameters, enclosed in parentheses, and produces a Bool result, notated by an arrow followed by the resulting type.
   - `PLUS`, `MINUS`, `MULT`, `DIV`, `MOD` are `(int, int) -> int`
-  - `LT`, `LTE`, `GT`, `GTE`, `MOD` are `(int, int) -> bool`
+  - `LT`, `LTE`, `GT`, `GTE` are `(int, int) -> bool`
   - `AND` and `OR` are `(bool, bool) -> bool`
   - `EQ` and `NEQ` are `(a, a) -> bool`, i.e., both operands must be the same type `a` (integer or Boolean), while the result is always Boolean.
 - unary - the `unary_expression` type must match the operation used, `unary_op`.  `MINUS` is `(int) -> int`, while `NOT` is `(bool) -> bool`
