@@ -1,5 +1,16 @@
 ## Parser
 
+The job of the parser is two-fold:
+
+1. check that the input program is valid according to the language's grammar
+2. construct an abstract syntax tree (AST) representation of that program
+
+These tasks are implemented simultaneously in the parsing functions.  Our parser is a predictive recursive descent parser.  This just means that (i) we implement each grammar production as a function, where the name is the nonterminal and the body is the production's right-hand side and (ii) we can look at the next token in the input to tell us what production we are matching, e.g., if we see a VAR we know we are in the vardecls production.
+
+For validating according to the grammar, the parser takes a list of tokens from the lexer.  `next()` and `previous()` move a pointer forwards and backwards one token in this list.  The pointer is initially set to the space before the first token, i.e., `program` first calls `next()` to see the first token in the list.  I recommend tackling each parsing function largely individually.  Make sure the parsing is implemented correctly before constructing the AST.
+
+For constructing the AST, look at the specification of it in ast.md.  This tells you, for each production, what AST node is constructed and what fields should be set.  As a general rule, each nonterminal is turned into an AST node, punctuation is not preserved on the AST, and { ... } productions are turned into lists.  Use any tokens encountered during parsing to populate the AST, e.g., the vardecl's identifier and the token from `type()` goes into the `TypedIdent` node. 
+
 ### AST Attributes for Type-Checking
 
 Don't worry about the Symbol, Scope, DataType, and ershov attributes
