@@ -54,7 +54,7 @@ function parameter expressions.)
 
 - assignment - type of `assign_variable` and `assign_expression` must match.
 - call - `call_function` must be declared as a function and it's actual parameter types must match it's formal parameter types.  `call_function`'s return value may be any type; if it is not void, the return value wlil be ignore.
-- return - type of `return_expression` must match the return type of the function containing the return statment. look up the `current_scope->name` in the parent scope to find the current function's return type.
+- return - type of `return_expression` must match the return type of the function containing the return statment. look up the `current_scope->name` in the parent scope to find the current function's return type.  you can get the function symbol's type with the `datatype` field and the return type from `datatype->return_type`.
 - if - `if_expression` must be Boolean.
 - while - `while_expression` must be Boolean.
 - read - ensure that given symbol is a variable, i.e., a primitive type
