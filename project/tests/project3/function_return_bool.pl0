@@ -1,0 +1,5 @@
+function t(s : bool) : bool
+	begin
+		return not s
+	end
+t(false)

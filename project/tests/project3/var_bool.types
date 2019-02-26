@@ -1,0 +1,25 @@
+scope: <GLOBAL>, level: 0
+  x : bool @0
+TranslationUnit
+| scope = <GLOBAL>
+| block = Block
+| | vardecls = TypedIdentList
+| | | TypedIdent
+| | | | symbol = <GLOBAL>.x
+| | | | identifier = x
+| | | | type = BOOL
+| | funcdecls = FuncDeclList
+| | statement = WriteStatement
+| | | write_expression = BinaryExpression
+| | | | ershov = 2
+| | | | datatype = bool
+| | | | binary_op = NEQ
+| | | | binary_left = VariableFactor
+| | | | | ershov = 1
+| | | | | datatype = bool
+| | | | | variable_symbol = <GLOBAL>.x
+| | | | | variable = x
+| | | | binary_right = BooleanFactor
+| | | | | ershov = 1
+| | | | | datatype = bool
+| | | | | boolean_value = true

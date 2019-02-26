@@ -1,0 +1,48 @@
+scope: <GLOBAL>, level: 0
+  x : (int) -> int @0
+  scope: x, level: 1
+    s : int @0
+TranslationUnit
+| scope = <GLOBAL>
+| block = Block
+| | vardecls = TypedIdentList
+| | funcdecls = FuncDeclList
+| | | FuncDecl
+| | | | scope = x
+| | | | symbol = <GLOBAL>.x
+| | | | identifier = x
+| | | | formals = TypedIdentList
+| | | | | TypedIdent
+| | | | | | symbol = x.s
+| | | | | | identifier = s
+| | | | | | type = INT
+| | | | has_return = true
+| | | | return_type = INT
+| | | | block = Block
+| | | | | vardecls = TypedIdentList
+| | | | | funcdecls = FuncDeclList
+| | | | | statement = CompoundStatement
+| | | | | | compound_statement = StatementList
+| | | | | | | ReturnStatement
+| | | | | | | | function_symbol = <GLOBAL>.x
+| | | | | | | | return_expression = BinaryExpression
+| | | | | | | | | ershov = 2
+| | | | | | | | | datatype = int
+| | | | | | | | | binary_op = PLUS
+| | | | | | | | | binary_left = VariableFactor
+| | | | | | | | | | ershov = 1
+| | | | | | | | | | datatype = int
+| | | | | | | | | | variable_symbol = x.s
+| | | | | | | | | | variable = s
+| | | | | | | | | binary_right = NumberFactor
+| | | | | | | | | | ershov = 1
+| | | | | | | | | | datatype = int
+| | | | | | | | | | number_value = 3
+| | statement = CallStatement
+| | | call_symbol = <GLOBAL>.x
+| | | call_function = x
+| | | call_parameters = ExpressionList
+| | | | NumberFactor
+| | | | | ershov = 1
+| | | | | datatype = int
+| | | | | number_value = 3
