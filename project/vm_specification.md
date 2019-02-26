@@ -102,7 +102,7 @@ Some pseudo is left as homework to fill in.
     // storage
     mov dest ri:       ?
     movi dest imm:     ?
-    ld dest ri imm:    reg[dest] = mem[reg[ri]] + imm
+    ld dest ri imm:    reg[dest] = mem[reg[ri] + imm]
     st src ri imm:     ?
     psh src ri:        reg[ri]++; mem[reg[ri]] = reg[src]
     pop dest ri:       ?  (remember that ri points to top element of stack)
