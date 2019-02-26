@@ -1,0 +1,3 @@
+var x : bool
+x := x + 1
+

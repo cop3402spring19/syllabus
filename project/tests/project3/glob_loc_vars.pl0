@@ -1,0 +1,9 @@
+var x : bool
+var y : int
+
+function f(x : int , y : bool) : bool
+  begin
+    return not y
+  end
+
+f(2 , true)

@@ -1,0 +1,44 @@
+scope: <GLOBAL>, level: 0
+  t : (bool) -> bool @0
+  scope: t, level: 1
+    s : bool @0
+TranslationUnit
+| scope = <GLOBAL>
+| block = Block
+| | vardecls = TypedIdentList
+| | funcdecls = FuncDeclList
+| | | FuncDecl
+| | | | scope = t
+| | | | symbol = <GLOBAL>.t
+| | | | identifier = t
+| | | | formals = TypedIdentList
+| | | | | TypedIdent
+| | | | | | symbol = t.s
+| | | | | | identifier = s
+| | | | | | type = BOOL
+| | | | has_return = true
+| | | | return_type = BOOL
+| | | | block = Block
+| | | | | vardecls = TypedIdentList
+| | | | | funcdecls = FuncDeclList
+| | | | | statement = CompoundStatement
+| | | | | | compound_statement = StatementList
+| | | | | | | ReturnStatement
+| | | | | | | | function_symbol = <GLOBAL>.t
+| | | | | | | | return_expression = UnaryExpression
+| | | | | | | | | ershov = 1
+| | | | | | | | | datatype = bool
+| | | | | | | | | unary_op = NOT
+| | | | | | | | | unary_expression = VariableFactor
+| | | | | | | | | | ershov = 1
+| | | | | | | | | | datatype = bool
+| | | | | | | | | | variable_symbol = t.s
+| | | | | | | | | | variable = s
+| | statement = CallStatement
+| | | call_symbol = <GLOBAL>.t
+| | | call_function = t
+| | | call_parameters = ExpressionList
+| | | | BooleanFactor
+| | | | | ershov = 1
+| | | | | datatype = bool
+| | | | | boolean_value = false

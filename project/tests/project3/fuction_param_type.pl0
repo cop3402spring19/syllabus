@@ -1,0 +1,5 @@
+function f(a : int, b : bool) : bool
+	begin 
+		return (a > 3) and not b
+	end
+f(3, true)
