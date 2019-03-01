@@ -11,3 +11,11 @@
        reg[instruction.arg1] = mem[reg[instruction.arg2] + instruction.arg3];
        break;
        
+     case OP_NOP:
+       // do nothing
+       break;
+      
+     case OP_HLT:
+       fprintf(vmtrace, "done\n");
+       exit(0);
+       break;
