@@ -1,0 +1,10 @@
+function f(x : int) : bool
+	function g(x : bool) : bool
+		begin
+			return not x
+		end
+	begin
+		g(x >= 3)
+	end
+f(10)
+		

@@ -1,0 +1,6 @@
+function f()
+	begin
+		return true
+	end
+f()
+

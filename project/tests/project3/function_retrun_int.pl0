@@ -1,0 +1,5 @@
+function x (s : int) : int
+	begin
+		return s + 3
+	end
+x(3)

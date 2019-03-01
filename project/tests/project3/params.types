@@ -1,0 +1,57 @@
+scope: <GLOBAL>, level: 0
+  a : (int, int, bool) -> void @0
+  scope: a, level: 1
+    i : int @0
+    j : int @0
+    k : bool @0
+TranslationUnit
+| scope = <GLOBAL>
+| block = Block
+| | vardecls = TypedIdentList
+| | funcdecls = FuncDeclList
+| | | FuncDecl
+| | | | scope = a
+| | | | symbol = <GLOBAL>.a
+| | | | identifier = a
+| | | | formals = TypedIdentList
+| | | | | TypedIdent
+| | | | | | symbol = a.i
+| | | | | | identifier = i
+| | | | | | type = INT
+| | | | | TypedIdent
+| | | | | | symbol = a.j
+| | | | | | identifier = j
+| | | | | | type = INT
+| | | | | TypedIdent
+| | | | | | symbol = a.k
+| | | | | | identifier = k
+| | | | | | type = BOOL
+| | | | has_return = false
+| | | | return_type = 
+| | | | block = Block
+| | | | | vardecls = TypedIdentList
+| | | | | funcdecls = FuncDeclList
+| | | | | statement = CompoundStatement
+| | | | | | compound_statement = StatementList
+| | | | | | | WriteStatement
+| | | | | | | | write_expression = VariableFactor
+| | | | | | | | | ershov = 1
+| | | | | | | | | datatype = bool
+| | | | | | | | | variable_symbol = a.k
+| | | | | | | | | variable = k
+| | statement = CallStatement
+| | | call_symbol = <GLOBAL>.a
+| | | call_function = a
+| | | call_parameters = ExpressionList
+| | | | NumberFactor
+| | | | | ershov = 1
+| | | | | datatype = int
+| | | | | number_value = 1
+| | | | NumberFactor
+| | | | | ershov = 1
+| | | | | datatype = int
+| | | | | number_value = 2
+| | | | BooleanFactor
+| | | | | ershov = 1
+| | | | | datatype = bool
+| | | | | boolean_value = true

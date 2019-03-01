@@ -1,0 +1,70 @@
+scope: <GLOBAL>, level: 0
+  f : (int, bool) -> bool @0
+  scope: f, level: 1
+    a : int @0
+    b : bool @0
+TranslationUnit
+| scope = <GLOBAL>
+| block = Block
+| | vardecls = TypedIdentList
+| | funcdecls = FuncDeclList
+| | | FuncDecl
+| | | | scope = f
+| | | | symbol = <GLOBAL>.f
+| | | | identifier = f
+| | | | formals = TypedIdentList
+| | | | | TypedIdent
+| | | | | | symbol = f.a
+| | | | | | identifier = a
+| | | | | | type = INT
+| | | | | TypedIdent
+| | | | | | symbol = f.b
+| | | | | | identifier = b
+| | | | | | type = BOOL
+| | | | has_return = true
+| | | | return_type = BOOL
+| | | | block = Block
+| | | | | vardecls = TypedIdentList
+| | | | | funcdecls = FuncDeclList
+| | | | | statement = CompoundStatement
+| | | | | | compound_statement = StatementList
+| | | | | | | ReturnStatement
+| | | | | | | | function_symbol = <GLOBAL>.f
+| | | | | | | | return_expression = BinaryExpression
+| | | | | | | | | ershov = 2
+| | | | | | | | | datatype = bool
+| | | | | | | | | binary_op = AND
+| | | | | | | | | binary_left = BinaryExpression
+| | | | | | | | | | ershov = 2
+| | | | | | | | | | datatype = bool
+| | | | | | | | | | binary_op = GT
+| | | | | | | | | | binary_left = VariableFactor
+| | | | | | | | | | | ershov = 1
+| | | | | | | | | | | datatype = int
+| | | | | | | | | | | variable_symbol = f.a
+| | | | | | | | | | | variable = a
+| | | | | | | | | | binary_right = NumberFactor
+| | | | | | | | | | | ershov = 1
+| | | | | | | | | | | datatype = int
+| | | | | | | | | | | number_value = 3
+| | | | | | | | | binary_right = UnaryExpression
+| | | | | | | | | | ershov = 1
+| | | | | | | | | | datatype = bool
+| | | | | | | | | | unary_op = NOT
+| | | | | | | | | | unary_expression = VariableFactor
+| | | | | | | | | | | ershov = 1
+| | | | | | | | | | | datatype = bool
+| | | | | | | | | | | variable_symbol = f.b
+| | | | | | | | | | | variable = b
+| | statement = CallStatement
+| | | call_symbol = <GLOBAL>.f
+| | | call_function = f
+| | | call_parameters = ExpressionList
+| | | | NumberFactor
+| | | | | ershov = 1
+| | | | | datatype = int
+| | | | | number_value = 3
+| | | | BooleanFactor
+| | | | | ershov = 1
+| | | | | datatype = bool
+| | | | | boolean_value = true

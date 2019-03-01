@@ -14,7 +14,7 @@ Declarations notify the compiler about symbols used in the program and their typ
 
 - binary - the `binary_left` and `binary_right` expressions must be the same type.  The types of the expressions must also match the operation, `binary_op`.  The following shows the types of the operands for each operation as well as the resulting type of each operation.  The type notation, e.g., `(int, int) -> bool`, means the operation takes two integer parameters, enclosed in parentheses, and produces a Bool result, notated by an arrow followed by the resulting type.
   - `PLUS`, `MINUS`, `MULT`, `DIV`, `MOD` are `(int, int) -> int`
-  - `LT`, `LTE`, `GT`, `GTE`, `MOD` are `(int, int) -> bool`
+  - `LT`, `LTE`, `GT`, `GTE` are `(int, int) -> bool`
   - `AND` and `OR` are `(bool, bool) -> bool`
   - `EQ` and `NEQ` are `(a, a) -> bool`, i.e., both operands must be the same type `a` (integer or Boolean), while the result is always Boolean.
 - unary - the `unary_expression` type must match the operation used, `unary_op`.  `MINUS` is `(int) -> int`, while `NOT` is `(bool) -> bool`
@@ -54,7 +54,7 @@ function parameter expressions.)
 
 - assignment - type of `assign_variable` and `assign_expression` must match.
 - call - `call_function` must be declared as a function and it's actual parameter types must match it's formal parameter types.  `call_function`'s return value may be any type; if it is not void, the return value wlil be ignore.
-- return - type of `return_expression` must match the return type of the function containing the return statment. look up the `current_scope->name` in the parent scope to find the current function's return type.
+- return - type of `return_expression` must match the return type of the function containing the return statment. look up the `current_scope->name` in the parent scope to find the current function's return type.  you can get the function symbol's type with the `datatype` field and the return type from `datatype->return_type`.
 - if - `if_expression` must be Boolean.
 - while - `while_expression` must be Boolean.
 - read - ensure that given symbol is a variable, i.e., a primitive type

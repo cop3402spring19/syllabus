@@ -1,5 +1,29 @@
 ## Parser
 
+The job of the parser is two-fold:
+
+1. check that the input program is valid according to the language's grammar
+2. construct an abstract syntax tree (AST) representation of that program
+
+These tasks are implemented simultaneously in the parsing functions.  Our parser is a predictive recursive descent parser.  This just means that (i) we implement each grammar production as a function, where the name is the nonterminal and the body is the production's right-hand side and (ii) we can look at the next token in the input to tell us what production we are matching, e.g., if we see a VAR we know we are in the vardecls production.
+
+For validating according to the grammar, the parser takes a list of tokens from the lexer.  `next()` and `previous()` move a pointer forwards and backwards one token in this list.  The pointer is initially set to the space before the first token, i.e., `program` first calls `next()` to see the first token in the list.  I recommend tackling each parsing function largely individually.  Make sure the parsing is implemented correctly before constructing the AST.
+
+Convert the grammar to code like this:
+
+- If there's a nonterminal, call its parsing function.
+- If there's a terminal, advance to the next token and check that it's the correct token according to the grammar.
+
+Note that this is subtly difficult when there are multiple possibilities for the next token, e.g., in `factor ::= IDENT ...` and when there are `{ ... }`.  In the latter case, you will need to look ahead and if you don't see the token you expect, you need to move back to the previous token.
+
+_Be sure to go over the precondition and postcondition invariants for the parsing functions below._.  Do not advance the token before calling a nonterminal nor at the end of a parsing function, but advance it before looking for a token.  See the invariants for details.
+
+For constructing the AST, look at the specification of it in ast.md.  This tells you, for each production, what AST node is constructed and what fields should be set.  As a general rule, each nonterminal is turned into an AST node, punctuation is not preserved on the AST, and { ... } productions are turned into lists.  Use any tokens encountered during parsing to populate the AST, e.g., the vardecl's identifier and the token from `type()` goes into the `TypedIdent` node. 
+
+### Tokens
+
+Use `next()` to advance to the next token and `previous()` to go to the previous token.  `ensure_token(VAR)`, for instance, checks that the current token is a `VAR` token and exist with an error if not.  `is_token(VAR)`, for instance, returns true if the current token is a `VAR` otherwise it returns false.  Use `print_token(stdout, token())` to print out the current token.
+
 ### AST Attributes for Type-Checking
 
 Don't worry about the Symbol, Scope, DataType, and ershov attributes

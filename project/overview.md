@@ -90,6 +90,7 @@ the lexer and parser:
     cd PATH/TO/PROJECT
     make
     cp PATH/TO/BINARIES/{lexer,parser}.o ./
+    touch {lexer,parser}.o
     make
 
 The output of the second `make` should show the compiler running
@@ -97,7 +98,7 @@ again.
 
 You will be graded only on your `.c` source code files.  Be sure to
 avoid accidentally copying the compiler phase you are currently
-working on, which could lead you to believe your code is correct.
+working on or the compiler binary itself, which could lead you to believe your code is correct.
 Note that any changes to the source code of a previous phase will
 overwrite the copied binary.  Recopy the binary in case this happens.
 

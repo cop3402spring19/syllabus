@@ -1,0 +1,80 @@
+scope: <GLOBAL>, level: 0
+  f : (int) -> bool @0
+  scope: f, level: 1
+    x : int @0
+    g : (bool) -> bool @0
+    scope: g, level: 2
+      x : bool @0
+TranslationUnit
+| scope = <GLOBAL>
+| block = Block
+| | vardecls = TypedIdentList
+| | funcdecls = FuncDeclList
+| | | FuncDecl
+| | | | scope = f
+| | | | symbol = <GLOBAL>.f
+| | | | identifier = f
+| | | | formals = TypedIdentList
+| | | | | TypedIdent
+| | | | | | symbol = f.x
+| | | | | | identifier = x
+| | | | | | type = INT
+| | | | has_return = true
+| | | | return_type = BOOL
+| | | | block = Block
+| | | | | vardecls = TypedIdentList
+| | | | | funcdecls = FuncDeclList
+| | | | | | FuncDecl
+| | | | | | | scope = g
+| | | | | | | symbol = f.g
+| | | | | | | identifier = g
+| | | | | | | formals = TypedIdentList
+| | | | | | | | TypedIdent
+| | | | | | | | | symbol = g.x
+| | | | | | | | | identifier = x
+| | | | | | | | | type = BOOL
+| | | | | | | has_return = true
+| | | | | | | return_type = BOOL
+| | | | | | | block = Block
+| | | | | | | | vardecls = TypedIdentList
+| | | | | | | | funcdecls = FuncDeclList
+| | | | | | | | statement = CompoundStatement
+| | | | | | | | | compound_statement = StatementList
+| | | | | | | | | | ReturnStatement
+| | | | | | | | | | | function_symbol = f.g
+| | | | | | | | | | | return_expression = UnaryExpression
+| | | | | | | | | | | | ershov = 1
+| | | | | | | | | | | | datatype = bool
+| | | | | | | | | | | | unary_op = NOT
+| | | | | | | | | | | | unary_expression = VariableFactor
+| | | | | | | | | | | | | ershov = 1
+| | | | | | | | | | | | | datatype = bool
+| | | | | | | | | | | | | variable_symbol = g.x
+| | | | | | | | | | | | | variable = x
+| | | | | statement = CompoundStatement
+| | | | | | compound_statement = StatementList
+| | | | | | | CallStatement
+| | | | | | | | call_symbol = f.g
+| | | | | | | | call_function = g
+| | | | | | | | call_parameters = ExpressionList
+| | | | | | | | | BinaryExpression
+| | | | | | | | | | ershov = 2
+| | | | | | | | | | datatype = bool
+| | | | | | | | | | binary_op = GTE
+| | | | | | | | | | binary_left = VariableFactor
+| | | | | | | | | | | ershov = 1
+| | | | | | | | | | | datatype = int
+| | | | | | | | | | | variable_symbol = f.x
+| | | | | | | | | | | variable = x
+| | | | | | | | | | binary_right = NumberFactor
+| | | | | | | | | | | ershov = 1
+| | | | | | | | | | | datatype = int
+| | | | | | | | | | | number_value = 3
+| | statement = CallStatement
+| | | call_symbol = <GLOBAL>.f
+| | | call_function = f
+| | | call_parameters = ExpressionList
+| | | | NumberFactor
+| | | | | ershov = 1
+| | | | | datatype = int
+| | | | | number_value = 10

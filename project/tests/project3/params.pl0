@@ -1,0 +1,5 @@
+function a(i : int, j : int, k : bool)
+	begin
+		write k
+	end
+a(1, 2, true)

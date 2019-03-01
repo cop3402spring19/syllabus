@@ -1,0 +1,33 @@
+scope: <GLOBAL>, level: 0
+  x : int @0
+  y : int @0
+TranslationUnit
+| scope = <GLOBAL>
+| block = Block
+| | vardecls = TypedIdentList
+| | | TypedIdent
+| | | | symbol = <GLOBAL>.x
+| | | | identifier = x
+| | | | type = INT
+| | | TypedIdent
+| | | | symbol = <GLOBAL>.y
+| | | | identifier = y
+| | | | type = INT
+| | funcdecls = FuncDeclList
+| | statement = AssignStatement
+| | | assign_symbol = <GLOBAL>.x
+| | | assign_variable = x
+| | | assign_expression = BinaryExpression
+| | | | ershov = 2
+| | | | datatype = int
+| | | | binary_op = PLUS
+| | | | binary_left = VariableFactor
+| | | | | ershov = 1
+| | | | | datatype = int
+| | | | | variable_symbol = <GLOBAL>.x
+| | | | | variable = x
+| | | | binary_right = VariableFactor
+| | | | | ershov = 1
+| | | | | datatype = int
+| | | | | variable_symbol = <GLOBAL>.y
+| | | | | variable = y
