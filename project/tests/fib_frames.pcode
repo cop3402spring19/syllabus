@@ -1,11 +1,9 @@
 addi sp sp 1
 addi sp sp 1
-br 93
+br 91
 psh ln sp
 psh fp sp
 mov fp sp
-addi sp sp 1
-addi sp sp 1
 addi sp sp 1
 addi sp sp 1
 br 1
@@ -63,7 +61,7 @@ st r0 sp 0
 addi sp sp 1
 ld r0 fp -2
 psh r0 sp
-bl -62
+bl -60
 subi sp sp 1
 pop r0 sp
 subi sp sp 1
@@ -76,13 +74,13 @@ st r0 sp 0
 addi sp sp 1
 ld r0 fp -2
 psh r0 sp
-bl -75
+bl -73
 subi sp sp 1
 pop r0 sp
 subi sp sp 1
 st r0 fp 1
-ld r0 fp 4
-ld r1 fp 3
+ld r0 fp 2
+ld r1 fp 1
 add r0 r1 r0
 st r0 fp -3
 mov sp fp
@@ -109,7 +107,7 @@ ld r0 fp 1
 st r0 sp 0
 addi sp sp 1
 psh fp sp
-bl -108
+bl -106
 subi sp sp 1
 pop r0 sp
 subi sp sp 1
