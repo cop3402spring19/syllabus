@@ -24,12 +24,6 @@ TranslationUnit
 | | | | | | TypedIdent
 | | | | | | | identifier = f1
 | | | | | | | type = INT
-| | | | | | TypedIdent
-| | | | | | | identifier = a
-| | | | | | | type = INT
-| | | | | | TypedIdent
-| | | | | | | identifier = b
-| | | | | | | type = INT
 | | | | | funcdecls = FuncDeclList
 | | | | | statement = CompoundStatement
 | | | | | | compound_statement = StatementList
@@ -89,9 +83,9 @@ TranslationUnit
 | | | | | | | | | | | | return_expression = BinaryExpression
 | | | | | | | | | | | | | binary_op = PLUS
 | | | | | | | | | | | | | binary_left = VariableFactor
-| | | | | | | | | | | | | | variable = a
+| | | | | | | | | | | | | | variable = f0
 | | | | | | | | | | | | | binary_right = VariableFactor
-| | | | | | | | | | | | | | variable = b
+| | | | | | | | | | | | | | variable = f1
 | | statement = CompoundStatement
 | | | compound_statement = StatementList
 | | | | ReadStatement

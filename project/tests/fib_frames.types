@@ -6,8 +6,6 @@ scope: <GLOBAL>, level: 0
     x : int @0
     f0 : int @0
     f1 : int @0
-    a : int @0
-    b : int @0
 TranslationUnit
 | scope = <GLOBAL>
 | block = Block
@@ -41,14 +39,6 @@ TranslationUnit
 | | | | | | TypedIdent
 | | | | | | | symbol = fib.f1
 | | | | | | | identifier = f1
-| | | | | | | type = INT
-| | | | | | TypedIdent
-| | | | | | | symbol = fib.a
-| | | | | | | identifier = a
-| | | | | | | type = INT
-| | | | | | TypedIdent
-| | | | | | | symbol = fib.b
-| | | | | | | identifier = b
 | | | | | | | type = INT
 | | | | | funcdecls = FuncDeclList
 | | | | | statement = CompoundStatement
@@ -165,13 +155,13 @@ TranslationUnit
 | | | | | | | | | | | | | binary_left = VariableFactor
 | | | | | | | | | | | | | | ershov = 1
 | | | | | | | | | | | | | | datatype = int
-| | | | | | | | | | | | | | variable_symbol = fib.a
-| | | | | | | | | | | | | | variable = a
+| | | | | | | | | | | | | | variable_symbol = fib.f0
+| | | | | | | | | | | | | | variable = f0
 | | | | | | | | | | | | | binary_right = VariableFactor
 | | | | | | | | | | | | | | ershov = 1
 | | | | | | | | | | | | | | datatype = int
-| | | | | | | | | | | | | | variable_symbol = fib.b
-| | | | | | | | | | | | | | variable = b
+| | | | | | | | | | | | | | variable_symbol = fib.f1
+| | | | | | | | | | | | | | variable = f1
 | | statement = CompoundStatement
 | | | compound_statement = StatementList
 | | | | ReadStatement
