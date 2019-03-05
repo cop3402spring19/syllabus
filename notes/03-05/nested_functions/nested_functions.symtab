@@ -1,0 +1,5 @@
+scope: <GLOBAL>, level: 0
+  f : () -> void @1
+  scope: f, level: 1
+    nested : () -> void @5
+    scope: nested, level: 2

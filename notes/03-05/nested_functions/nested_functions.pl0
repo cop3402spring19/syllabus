@@ -1,0 +1,5 @@
+function f()
+  function nested()
+    write 1
+  nested()
+f()

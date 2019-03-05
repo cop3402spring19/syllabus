@@ -1,0 +1,6 @@
+scope: <GLOBAL>, level: 0
+  global : int @1
+  f : (int) -> void @2
+  scope: f, level: 1
+    x : int @-4
+    local : int @1

@@ -1,0 +1,5 @@
+var global : int
+function f(x: int)
+  var local : int
+  write x
+f(global)

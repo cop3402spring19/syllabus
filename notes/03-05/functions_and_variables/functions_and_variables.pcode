@@ -1,0 +1,23 @@
+addi sp sp 1
+br 12
+psh ln sp
+psh fp sp
+mov fp sp
+addi sp sp 1
+br 1
+ld r0 fp -4
+wr r0
+mov sp fp
+pop fp sp
+pop ln sp
+ret ln
+addi sp sp 1
+ld r0 fp 1
+st r0 sp 0
+addi sp sp 1
+psh fp sp
+bl -16
+subi sp sp 1
+pop r0 sp
+subi sp sp 1
+hlt
