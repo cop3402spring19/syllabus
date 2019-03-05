@@ -1,0 +1,19 @@
+begin
+  if 2 > 3 then write 0
+  if 3 >= 2 then write 1
+  if 2 > 3 then write 2 else write 3
+  if 3 <= 2 then write 4 else write 5
+  
+  if 2 <> 3 then
+    begin
+      write 6
+      write 7
+      write 8
+    end
+  else
+    begin
+      write 9
+      write 10
+      write 11
+    end
+end

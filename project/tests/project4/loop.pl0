@@ -1,0 +1,10 @@
+var x : int
+
+begin
+  x := 10
+  while x > 1 do
+  begin
+    write x
+    x := x - 1
+  end
+end

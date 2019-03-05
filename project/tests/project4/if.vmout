@@ -1,0 +1,330 @@
+registers: r0=0, r1=0, r2=0, r3=0, r4=0, r5=0, r6=0, r7=0, r8=0, r9=0, r10=0, r11=0, fp(r12)=0, sp(r13)=0, ln(r14)=0, ip(r15)=0
+mem[i]:    0
+     i:    0
+    fp:   fp
+    sp:   sp
+(ip=0) br 1
+registers: r0=0, r1=0, r2=0, r3=0, r4=0, r5=0, r6=0, r7=0, r8=0, r9=0, r10=0, r11=0, fp(r12)=0, sp(r13)=0, ln(r14)=0, ip(r15)=0
+mem[i]:    0
+     i:    0
+    fp:   fp
+    sp:   sp
+(ip=1) movi r0 3
+registers: r0=3, r1=0, r2=0, r3=0, r4=0, r5=0, r6=0, r7=0, r8=0, r9=0, r10=0, r11=0, fp(r12)=0, sp(r13)=0, ln(r14)=0, ip(r15)=1
+mem[i]:    0
+     i:    0
+    fp:   fp
+    sp:   sp
+(ip=2) movi r1 2
+registers: r0=3, r1=2, r2=0, r3=0, r4=0, r5=0, r6=0, r7=0, r8=0, r9=0, r10=0, r11=0, fp(r12)=0, sp(r13)=0, ln(r14)=0, ip(r15)=2
+mem[i]:    0
+     i:    0
+    fp:   fp
+    sp:   sp
+(ip=3) cmp r1 r0
+registers: r0=3, r1=2, r2=0, r3=0, r4=0, r5=0, r6=0, r7=0, r8=0, r9=0, r10=0, r11=0, fp(r12)=0, sp(r13)=0, ln(r14)=0, ip(r15)=3
+mem[i]:    0
+     i:    0
+    fp:   fp
+    sp:   sp
+(ip=4) bgt 3
+registers: r0=3, r1=2, r2=0, r3=0, r4=0, r5=0, r6=0, r7=0, r8=0, r9=0, r10=0, r11=0, fp(r12)=0, sp(r13)=0, ln(r14)=0, ip(r15)=4
+mem[i]:    0
+     i:    0
+    fp:   fp
+    sp:   sp
+(ip=5) movi r0 0
+registers: r0=0, r1=2, r2=0, r3=0, r4=0, r5=0, r6=0, r7=0, r8=0, r9=0, r10=0, r11=0, fp(r12)=0, sp(r13)=0, ln(r14)=0, ip(r15)=5
+mem[i]:    0
+     i:    0
+    fp:   fp
+    sp:   sp
+(ip=6) br 2
+registers: r0=0, r1=2, r2=0, r3=0, r4=0, r5=0, r6=0, r7=0, r8=0, r9=0, r10=0, r11=0, fp(r12)=0, sp(r13)=0, ln(r14)=0, ip(r15)=6
+mem[i]:    0
+     i:    0
+    fp:   fp
+    sp:   sp
+(ip=8) cmpi r0 1
+registers: r0=0, r1=2, r2=0, r3=0, r4=0, r5=0, r6=0, r7=0, r8=0, r9=0, r10=0, r11=0, fp(r12)=0, sp(r13)=0, ln(r14)=0, ip(r15)=8
+mem[i]:    0
+     i:    0
+    fp:   fp
+    sp:   sp
+(ip=9) bne 4
+registers: r0=0, r1=2, r2=0, r3=0, r4=0, r5=0, r6=0, r7=0, r8=0, r9=0, r10=0, r11=0, fp(r12)=0, sp(r13)=0, ln(r14)=0, ip(r15)=9
+mem[i]:    0
+     i:    0
+    fp:   fp
+    sp:   sp
+(ip=13) movi r0 2
+registers: r0=2, r1=2, r2=0, r3=0, r4=0, r5=0, r6=0, r7=0, r8=0, r9=0, r10=0, r11=0, fp(r12)=0, sp(r13)=0, ln(r14)=0, ip(r15)=13
+mem[i]:    0
+     i:    0
+    fp:   fp
+    sp:   sp
+(ip=14) movi r1 3
+registers: r0=2, r1=3, r2=0, r3=0, r4=0, r5=0, r6=0, r7=0, r8=0, r9=0, r10=0, r11=0, fp(r12)=0, sp(r13)=0, ln(r14)=0, ip(r15)=14
+mem[i]:    0
+     i:    0
+    fp:   fp
+    sp:   sp
+(ip=15) cmp r1 r0
+registers: r0=2, r1=3, r2=0, r3=0, r4=0, r5=0, r6=0, r7=0, r8=0, r9=0, r10=0, r11=0, fp(r12)=0, sp(r13)=0, ln(r14)=0, ip(r15)=15
+mem[i]:    0
+     i:    0
+    fp:   fp
+    sp:   sp
+(ip=16) bge 3
+registers: r0=2, r1=3, r2=0, r3=0, r4=0, r5=0, r6=0, r7=0, r8=0, r9=0, r10=0, r11=0, fp(r12)=0, sp(r13)=0, ln(r14)=0, ip(r15)=16
+mem[i]:    0
+     i:    0
+    fp:   fp
+    sp:   sp
+(ip=19) movi r0 1
+registers: r0=1, r1=3, r2=0, r3=0, r4=0, r5=0, r6=0, r7=0, r8=0, r9=0, r10=0, r11=0, fp(r12)=0, sp(r13)=0, ln(r14)=0, ip(r15)=19
+mem[i]:    0
+     i:    0
+    fp:   fp
+    sp:   sp
+(ip=20) cmpi r0 1
+registers: r0=1, r1=3, r2=0, r3=0, r4=0, r5=0, r6=0, r7=0, r8=0, r9=0, r10=0, r11=0, fp(r12)=0, sp(r13)=0, ln(r14)=0, ip(r15)=20
+mem[i]:    0
+     i:    0
+    fp:   fp
+    sp:   sp
+(ip=21) bne 4
+registers: r0=1, r1=3, r2=0, r3=0, r4=0, r5=0, r6=0, r7=0, r8=0, r9=0, r10=0, r11=0, fp(r12)=0, sp(r13)=0, ln(r14)=0, ip(r15)=21
+mem[i]:    0
+     i:    0
+    fp:   fp
+    sp:   sp
+(ip=22) movi r0 1
+registers: r0=1, r1=3, r2=0, r3=0, r4=0, r5=0, r6=0, r7=0, r8=0, r9=0, r10=0, r11=0, fp(r12)=0, sp(r13)=0, ln(r14)=0, ip(r15)=22
+mem[i]:    0
+     i:    0
+    fp:   fp
+    sp:   sp
+(ip=23) wr r0
+registers: r0=1, r1=3, r2=0, r3=0, r4=0, r5=0, r6=0, r7=0, r8=0, r9=0, r10=0, r11=0, fp(r12)=0, sp(r13)=0, ln(r14)=0, ip(r15)=23
+mem[i]:    0
+     i:    0
+    fp:   fp
+    sp:   sp
+(ip=24) br 1
+registers: r0=1, r1=3, r2=0, r3=0, r4=0, r5=0, r6=0, r7=0, r8=0, r9=0, r10=0, r11=0, fp(r12)=0, sp(r13)=0, ln(r14)=0, ip(r15)=24
+mem[i]:    0
+     i:    0
+    fp:   fp
+    sp:   sp
+(ip=25) movi r0 3
+registers: r0=3, r1=3, r2=0, r3=0, r4=0, r5=0, r6=0, r7=0, r8=0, r9=0, r10=0, r11=0, fp(r12)=0, sp(r13)=0, ln(r14)=0, ip(r15)=25
+mem[i]:    0
+     i:    0
+    fp:   fp
+    sp:   sp
+(ip=26) movi r1 2
+registers: r0=3, r1=2, r2=0, r3=0, r4=0, r5=0, r6=0, r7=0, r8=0, r9=0, r10=0, r11=0, fp(r12)=0, sp(r13)=0, ln(r14)=0, ip(r15)=26
+mem[i]:    0
+     i:    0
+    fp:   fp
+    sp:   sp
+(ip=27) cmp r1 r0
+registers: r0=3, r1=2, r2=0, r3=0, r4=0, r5=0, r6=0, r7=0, r8=0, r9=0, r10=0, r11=0, fp(r12)=0, sp(r13)=0, ln(r14)=0, ip(r15)=27
+mem[i]:    0
+     i:    0
+    fp:   fp
+    sp:   sp
+(ip=28) bgt 3
+registers: r0=3, r1=2, r2=0, r3=0, r4=0, r5=0, r6=0, r7=0, r8=0, r9=0, r10=0, r11=0, fp(r12)=0, sp(r13)=0, ln(r14)=0, ip(r15)=28
+mem[i]:    0
+     i:    0
+    fp:   fp
+    sp:   sp
+(ip=29) movi r0 0
+registers: r0=0, r1=2, r2=0, r3=0, r4=0, r5=0, r6=0, r7=0, r8=0, r9=0, r10=0, r11=0, fp(r12)=0, sp(r13)=0, ln(r14)=0, ip(r15)=29
+mem[i]:    0
+     i:    0
+    fp:   fp
+    sp:   sp
+(ip=30) br 2
+registers: r0=0, r1=2, r2=0, r3=0, r4=0, r5=0, r6=0, r7=0, r8=0, r9=0, r10=0, r11=0, fp(r12)=0, sp(r13)=0, ln(r14)=0, ip(r15)=30
+mem[i]:    0
+     i:    0
+    fp:   fp
+    sp:   sp
+(ip=32) cmpi r0 1
+registers: r0=0, r1=2, r2=0, r3=0, r4=0, r5=0, r6=0, r7=0, r8=0, r9=0, r10=0, r11=0, fp(r12)=0, sp(r13)=0, ln(r14)=0, ip(r15)=32
+mem[i]:    0
+     i:    0
+    fp:   fp
+    sp:   sp
+(ip=33) bne 4
+registers: r0=0, r1=2, r2=0, r3=0, r4=0, r5=0, r6=0, r7=0, r8=0, r9=0, r10=0, r11=0, fp(r12)=0, sp(r13)=0, ln(r14)=0, ip(r15)=33
+mem[i]:    0
+     i:    0
+    fp:   fp
+    sp:   sp
+(ip=37) movi r0 3
+registers: r0=3, r1=2, r2=0, r3=0, r4=0, r5=0, r6=0, r7=0, r8=0, r9=0, r10=0, r11=0, fp(r12)=0, sp(r13)=0, ln(r14)=0, ip(r15)=37
+mem[i]:    0
+     i:    0
+    fp:   fp
+    sp:   sp
+(ip=38) wr r0
+registers: r0=3, r1=2, r2=0, r3=0, r4=0, r5=0, r6=0, r7=0, r8=0, r9=0, r10=0, r11=0, fp(r12)=0, sp(r13)=0, ln(r14)=0, ip(r15)=38
+mem[i]:    0
+     i:    0
+    fp:   fp
+    sp:   sp
+(ip=39) movi r0 2
+registers: r0=2, r1=2, r2=0, r3=0, r4=0, r5=0, r6=0, r7=0, r8=0, r9=0, r10=0, r11=0, fp(r12)=0, sp(r13)=0, ln(r14)=0, ip(r15)=39
+mem[i]:    0
+     i:    0
+    fp:   fp
+    sp:   sp
+(ip=40) movi r1 3
+registers: r0=2, r1=3, r2=0, r3=0, r4=0, r5=0, r6=0, r7=0, r8=0, r9=0, r10=0, r11=0, fp(r12)=0, sp(r13)=0, ln(r14)=0, ip(r15)=40
+mem[i]:    0
+     i:    0
+    fp:   fp
+    sp:   sp
+(ip=41) cmp r1 r0
+registers: r0=2, r1=3, r2=0, r3=0, r4=0, r5=0, r6=0, r7=0, r8=0, r9=0, r10=0, r11=0, fp(r12)=0, sp(r13)=0, ln(r14)=0, ip(r15)=41
+mem[i]:    0
+     i:    0
+    fp:   fp
+    sp:   sp
+(ip=42) ble 3
+registers: r0=2, r1=3, r2=0, r3=0, r4=0, r5=0, r6=0, r7=0, r8=0, r9=0, r10=0, r11=0, fp(r12)=0, sp(r13)=0, ln(r14)=0, ip(r15)=42
+mem[i]:    0
+     i:    0
+    fp:   fp
+    sp:   sp
+(ip=43) movi r0 0
+registers: r0=0, r1=3, r2=0, r3=0, r4=0, r5=0, r6=0, r7=0, r8=0, r9=0, r10=0, r11=0, fp(r12)=0, sp(r13)=0, ln(r14)=0, ip(r15)=43
+mem[i]:    0
+     i:    0
+    fp:   fp
+    sp:   sp
+(ip=44) br 2
+registers: r0=0, r1=3, r2=0, r3=0, r4=0, r5=0, r6=0, r7=0, r8=0, r9=0, r10=0, r11=0, fp(r12)=0, sp(r13)=0, ln(r14)=0, ip(r15)=44
+mem[i]:    0
+     i:    0
+    fp:   fp
+    sp:   sp
+(ip=46) cmpi r0 1
+registers: r0=0, r1=3, r2=0, r3=0, r4=0, r5=0, r6=0, r7=0, r8=0, r9=0, r10=0, r11=0, fp(r12)=0, sp(r13)=0, ln(r14)=0, ip(r15)=46
+mem[i]:    0
+     i:    0
+    fp:   fp
+    sp:   sp
+(ip=47) bne 4
+registers: r0=0, r1=3, r2=0, r3=0, r4=0, r5=0, r6=0, r7=0, r8=0, r9=0, r10=0, r11=0, fp(r12)=0, sp(r13)=0, ln(r14)=0, ip(r15)=47
+mem[i]:    0
+     i:    0
+    fp:   fp
+    sp:   sp
+(ip=51) movi r0 5
+registers: r0=5, r1=3, r2=0, r3=0, r4=0, r5=0, r6=0, r7=0, r8=0, r9=0, r10=0, r11=0, fp(r12)=0, sp(r13)=0, ln(r14)=0, ip(r15)=51
+mem[i]:    0
+     i:    0
+    fp:   fp
+    sp:   sp
+(ip=52) wr r0
+registers: r0=5, r1=3, r2=0, r3=0, r4=0, r5=0, r6=0, r7=0, r8=0, r9=0, r10=0, r11=0, fp(r12)=0, sp(r13)=0, ln(r14)=0, ip(r15)=52
+mem[i]:    0
+     i:    0
+    fp:   fp
+    sp:   sp
+(ip=53) movi r0 3
+registers: r0=3, r1=3, r2=0, r3=0, r4=0, r5=0, r6=0, r7=0, r8=0, r9=0, r10=0, r11=0, fp(r12)=0, sp(r13)=0, ln(r14)=0, ip(r15)=53
+mem[i]:    0
+     i:    0
+    fp:   fp
+    sp:   sp
+(ip=54) movi r1 2
+registers: r0=3, r1=2, r2=0, r3=0, r4=0, r5=0, r6=0, r7=0, r8=0, r9=0, r10=0, r11=0, fp(r12)=0, sp(r13)=0, ln(r14)=0, ip(r15)=54
+mem[i]:    0
+     i:    0
+    fp:   fp
+    sp:   sp
+(ip=55) cmp r1 r0
+registers: r0=3, r1=2, r2=0, r3=0, r4=0, r5=0, r6=0, r7=0, r8=0, r9=0, r10=0, r11=0, fp(r12)=0, sp(r13)=0, ln(r14)=0, ip(r15)=55
+mem[i]:    0
+     i:    0
+    fp:   fp
+    sp:   sp
+(ip=56) bne 3
+registers: r0=3, r1=2, r2=0, r3=0, r4=0, r5=0, r6=0, r7=0, r8=0, r9=0, r10=0, r11=0, fp(r12)=0, sp(r13)=0, ln(r14)=0, ip(r15)=56
+mem[i]:    0
+     i:    0
+    fp:   fp
+    sp:   sp
+(ip=59) movi r0 1
+registers: r0=1, r1=2, r2=0, r3=0, r4=0, r5=0, r6=0, r7=0, r8=0, r9=0, r10=0, r11=0, fp(r12)=0, sp(r13)=0, ln(r14)=0, ip(r15)=59
+mem[i]:    0
+     i:    0
+    fp:   fp
+    sp:   sp
+(ip=60) cmpi r0 1
+registers: r0=1, r1=2, r2=0, r3=0, r4=0, r5=0, r6=0, r7=0, r8=0, r9=0, r10=0, r11=0, fp(r12)=0, sp(r13)=0, ln(r14)=0, ip(r15)=60
+mem[i]:    0
+     i:    0
+    fp:   fp
+    sp:   sp
+(ip=61) bne 8
+registers: r0=1, r1=2, r2=0, r3=0, r4=0, r5=0, r6=0, r7=0, r8=0, r9=0, r10=0, r11=0, fp(r12)=0, sp(r13)=0, ln(r14)=0, ip(r15)=61
+mem[i]:    0
+     i:    0
+    fp:   fp
+    sp:   sp
+(ip=62) movi r0 6
+registers: r0=6, r1=2, r2=0, r3=0, r4=0, r5=0, r6=0, r7=0, r8=0, r9=0, r10=0, r11=0, fp(r12)=0, sp(r13)=0, ln(r14)=0, ip(r15)=62
+mem[i]:    0
+     i:    0
+    fp:   fp
+    sp:   sp
+(ip=63) wr r0
+registers: r0=6, r1=2, r2=0, r3=0, r4=0, r5=0, r6=0, r7=0, r8=0, r9=0, r10=0, r11=0, fp(r12)=0, sp(r13)=0, ln(r14)=0, ip(r15)=63
+mem[i]:    0
+     i:    0
+    fp:   fp
+    sp:   sp
+(ip=64) movi r0 7
+registers: r0=7, r1=2, r2=0, r3=0, r4=0, r5=0, r6=0, r7=0, r8=0, r9=0, r10=0, r11=0, fp(r12)=0, sp(r13)=0, ln(r14)=0, ip(r15)=64
+mem[i]:    0
+     i:    0
+    fp:   fp
+    sp:   sp
+(ip=65) wr r0
+registers: r0=7, r1=2, r2=0, r3=0, r4=0, r5=0, r6=0, r7=0, r8=0, r9=0, r10=0, r11=0, fp(r12)=0, sp(r13)=0, ln(r14)=0, ip(r15)=65
+mem[i]:    0
+     i:    0
+    fp:   fp
+    sp:   sp
+(ip=66) movi r0 8
+registers: r0=8, r1=2, r2=0, r3=0, r4=0, r5=0, r6=0, r7=0, r8=0, r9=0, r10=0, r11=0, fp(r12)=0, sp(r13)=0, ln(r14)=0, ip(r15)=66
+mem[i]:    0
+     i:    0
+    fp:   fp
+    sp:   sp
+(ip=67) wr r0
+registers: r0=8, r1=2, r2=0, r3=0, r4=0, r5=0, r6=0, r7=0, r8=0, r9=0, r10=0, r11=0, fp(r12)=0, sp(r13)=0, ln(r14)=0, ip(r15)=67
+mem[i]:    0
+     i:    0
+    fp:   fp
+    sp:   sp
+(ip=68) br 7
+registers: r0=8, r1=2, r2=0, r3=0, r4=0, r5=0, r6=0, r7=0, r8=0, r9=0, r10=0, r11=0, fp(r12)=0, sp(r13)=0, ln(r14)=0, ip(r15)=68
+mem[i]:    0
+     i:    0
+    fp:   fp
+    sp:   sp
+done
+1
+3
+5
+6
+7
+8

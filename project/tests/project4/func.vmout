@@ -1,0 +1,267 @@
+registers: r0=0, r1=0, r2=0, r3=0, r4=0, r5=0, r6=0, r7=0, r8=0, r9=0, r10=0, r11=0, fp(r12)=0, sp(r13)=0, ln(r14)=0, ip(r15)=0
+mem[i]:    0
+     i:    0
+    fp:   fp
+    sp:   sp
+(ip=0) addi sp sp 1
+registers: r0=0, r1=0, r2=0, r3=0, r4=0, r5=0, r6=0, r7=0, r8=0, r9=0, r10=0, r11=0, fp(r12)=0, sp(r13)=1, ln(r14)=0, ip(r15)=0
+mem[i]:    0|    0
+     i:    0|    1
+    fp:   fp|     
+    sp:     |   sp
+(ip=1) br 17
+registers: r0=0, r1=0, r2=0, r3=0, r4=0, r5=0, r6=0, r7=0, r8=0, r9=0, r10=0, r11=0, fp(r12)=0, sp(r13)=1, ln(r14)=0, ip(r15)=1
+mem[i]:    0|    0
+     i:    0|    1
+    fp:   fp|     
+    sp:     |   sp
+(ip=18) addi sp sp 1
+registers: r0=0, r1=0, r2=0, r3=0, r4=0, r5=0, r6=0, r7=0, r8=0, r9=0, r10=0, r11=0, fp(r12)=0, sp(r13)=2, ln(r14)=0, ip(r15)=18
+mem[i]:    0|    0|    0
+     i:    0|    1|    2
+    fp:   fp|     |     
+    sp:     |     |   sp
+(ip=19) psh fp sp
+registers: r0=0, r1=0, r2=0, r3=0, r4=0, r5=0, r6=0, r7=0, r8=0, r9=0, r10=0, r11=0, fp(r12)=0, sp(r13)=3, ln(r14)=0, ip(r15)=19
+mem[i]:    0|    0|    0|    0
+     i:    0|    1|    2|    3
+    fp:   fp|     |     |     
+    sp:     |     |     |   sp
+(ip=20) bl -18
+registers: r0=0, r1=0, r2=0, r3=0, r4=0, r5=0, r6=0, r7=0, r8=0, r9=0, r10=0, r11=0, fp(r12)=0, sp(r13)=3, ln(r14)=21, ip(r15)=20
+mem[i]:    0|    0|    0|    0
+     i:    0|    1|    2|    3
+    fp:   fp|     |     |     
+    sp:     |     |     |   sp
+(ip=2) psh ln sp
+registers: r0=0, r1=0, r2=0, r3=0, r4=0, r5=0, r6=0, r7=0, r8=0, r9=0, r10=0, r11=0, fp(r12)=0, sp(r13)=4, ln(r14)=21, ip(r15)=2
+mem[i]:    0|    0|    0|    0|   21
+     i:    0|    1|    2|    3|    4
+    fp:   fp|     |     |     |     
+    sp:     |     |     |     |   sp
+(ip=3) psh fp sp
+registers: r0=0, r1=0, r2=0, r3=0, r4=0, r5=0, r6=0, r7=0, r8=0, r9=0, r10=0, r11=0, fp(r12)=0, sp(r13)=5, ln(r14)=21, ip(r15)=3
+mem[i]:    0|    0|    0|    0|   21|    0
+     i:    0|    1|    2|    3|    4|    5
+    fp:   fp|     |     |     |     |     
+    sp:     |     |     |     |     |   sp
+(ip=4) mov fp sp
+registers: r0=0, r1=0, r2=0, r3=0, r4=0, r5=0, r6=0, r7=0, r8=0, r9=0, r10=0, r11=0, fp(r12)=5, sp(r13)=5, ln(r14)=21, ip(r15)=4
+mem[i]:    0|    0|    0|    0|   21|    0
+     i:    0|    1|    2|    3|    4|    5
+    fp:     |     |     |     |     |   fp
+    sp:     |     |     |     |     |   sp
+(ip=5) br 1
+registers: r0=0, r1=0, r2=0, r3=0, r4=0, r5=0, r6=0, r7=0, r8=0, r9=0, r10=0, r11=0, fp(r12)=5, sp(r13)=5, ln(r14)=21, ip(r15)=5
+mem[i]:    0|    0|    0|    0|   21|    0
+     i:    0|    1|    2|    3|    4|    5
+    fp:     |     |     |     |     |   fp
+    sp:     |     |     |     |     |   sp
+(ip=6) movi r0 0
+registers: r0=0, r1=0, r2=0, r3=0, r4=0, r5=0, r6=0, r7=0, r8=0, r9=0, r10=0, r11=0, fp(r12)=5, sp(r13)=5, ln(r14)=21, ip(r15)=6
+mem[i]:    0|    0|    0|    0|   21|    0
+     i:    0|    1|    2|    3|    4|    5
+    fp:     |     |     |     |     |   fp
+    sp:     |     |     |     |     |   sp
+(ip=7) wr r0
+registers: r0=0, r1=0, r2=0, r3=0, r4=0, r5=0, r6=0, r7=0, r8=0, r9=0, r10=0, r11=0, fp(r12)=5, sp(r13)=5, ln(r14)=21, ip(r15)=7
+mem[i]:    0|    0|    0|    0|   21|    0
+     i:    0|    1|    2|    3|    4|    5
+    fp:     |     |     |     |     |   fp
+    sp:     |     |     |     |     |   sp
+(ip=8) movi r0 1
+registers: r0=1, r1=0, r2=0, r3=0, r4=0, r5=0, r6=0, r7=0, r8=0, r9=0, r10=0, r11=0, fp(r12)=5, sp(r13)=5, ln(r14)=21, ip(r15)=8
+mem[i]:    0|    0|    0|    0|   21|    0
+     i:    0|    1|    2|    3|    4|    5
+    fp:     |     |     |     |     |   fp
+    sp:     |     |     |     |     |   sp
+(ip=9) st r0 fp -3
+registers: r0=1, r1=0, r2=0, r3=0, r4=0, r5=0, r6=0, r7=0, r8=0, r9=0, r10=0, r11=0, fp(r12)=5, sp(r13)=5, ln(r14)=21, ip(r15)=9
+mem[i]:    0|    0|    1|    0|   21|    0
+     i:    0|    1|    2|    3|    4|    5
+    fp:     |     |     |     |     |   fp
+    sp:     |     |     |     |     |   sp
+(ip=10) mov sp fp
+registers: r0=1, r1=0, r2=0, r3=0, r4=0, r5=0, r6=0, r7=0, r8=0, r9=0, r10=0, r11=0, fp(r12)=5, sp(r13)=5, ln(r14)=21, ip(r15)=10
+mem[i]:    0|    0|    1|    0|   21|    0
+     i:    0|    1|    2|    3|    4|    5
+    fp:     |     |     |     |     |   fp
+    sp:     |     |     |     |     |   sp
+(ip=11) pop fp sp
+registers: r0=1, r1=0, r2=0, r3=0, r4=0, r5=0, r6=0, r7=0, r8=0, r9=0, r10=0, r11=0, fp(r12)=0, sp(r13)=4, ln(r14)=21, ip(r15)=11
+mem[i]:    0|    0|    1|    0|   21
+     i:    0|    1|    2|    3|    4
+    fp:   fp|     |     |     |     
+    sp:     |     |     |     |   sp
+(ip=12) pop ln sp
+registers: r0=1, r1=0, r2=0, r3=0, r4=0, r5=0, r6=0, r7=0, r8=0, r9=0, r10=0, r11=0, fp(r12)=0, sp(r13)=3, ln(r14)=21, ip(r15)=12
+mem[i]:    0|    0|    1|    0
+     i:    0|    1|    2|    3
+    fp:   fp|     |     |     
+    sp:     |     |     |   sp
+(ip=13) ret ln
+registers: r0=1, r1=0, r2=0, r3=0, r4=0, r5=0, r6=0, r7=0, r8=0, r9=0, r10=0, r11=0, fp(r12)=0, sp(r13)=3, ln(r14)=21, ip(r15)=13
+mem[i]:    0|    0|    1|    0
+     i:    0|    1|    2|    3
+    fp:   fp|     |     |     
+    sp:     |     |     |   sp
+(ip=21) subi sp sp 1
+registers: r0=1, r1=0, r2=0, r3=0, r4=0, r5=0, r6=0, r7=0, r8=0, r9=0, r10=0, r11=0, fp(r12)=0, sp(r13)=2, ln(r14)=21, ip(r15)=21
+mem[i]:    0|    0|    1
+     i:    0|    1|    2
+    fp:   fp|     |     
+    sp:     |     |   sp
+(ip=22) pop r0 sp
+registers: r0=1, r1=0, r2=0, r3=0, r4=0, r5=0, r6=0, r7=0, r8=0, r9=0, r10=0, r11=0, fp(r12)=0, sp(r13)=1, ln(r14)=21, ip(r15)=22
+mem[i]:    0|    0
+     i:    0|    1
+    fp:   fp|     
+    sp:     |   sp
+(ip=23) movi r0 1
+registers: r0=1, r1=0, r2=0, r3=0, r4=0, r5=0, r6=0, r7=0, r8=0, r9=0, r10=0, r11=0, fp(r12)=0, sp(r13)=1, ln(r14)=21, ip(r15)=23
+mem[i]:    0|    0
+     i:    0|    1
+    fp:   fp|     
+    sp:     |   sp
+(ip=24) psh r0 sp
+registers: r0=1, r1=0, r2=0, r3=0, r4=0, r5=0, r6=0, r7=0, r8=0, r9=0, r10=0, r11=0, fp(r12)=0, sp(r13)=2, ln(r14)=21, ip(r15)=24
+mem[i]:    0|    0|    1
+     i:    0|    1|    2
+    fp:   fp|     |     
+    sp:     |     |   sp
+(ip=25) addi sp sp 1
+registers: r0=1, r1=0, r2=0, r3=0, r4=0, r5=0, r6=0, r7=0, r8=0, r9=0, r10=0, r11=0, fp(r12)=0, sp(r13)=3, ln(r14)=21, ip(r15)=25
+mem[i]:    0|    0|    1|    0
+     i:    0|    1|    2|    3
+    fp:   fp|     |     |     
+    sp:     |     |     |   sp
+(ip=26) psh fp sp
+registers: r0=1, r1=0, r2=0, r3=0, r4=0, r5=0, r6=0, r7=0, r8=0, r9=0, r10=0, r11=0, fp(r12)=0, sp(r13)=4, ln(r14)=21, ip(r15)=26
+mem[i]:    0|    0|    1|    0|    0
+     i:    0|    1|    2|    3|    4
+    fp:   fp|     |     |     |     
+    sp:     |     |     |     |   sp
+(ip=27) bl -25
+registers: r0=1, r1=0, r2=0, r3=0, r4=0, r5=0, r6=0, r7=0, r8=0, r9=0, r10=0, r11=0, fp(r12)=0, sp(r13)=4, ln(r14)=28, ip(r15)=27
+mem[i]:    0|    0|    1|    0|    0
+     i:    0|    1|    2|    3|    4
+    fp:   fp|     |     |     |     
+    sp:     |     |     |     |   sp
+(ip=2) psh ln sp
+registers: r0=1, r1=0, r2=0, r3=0, r4=0, r5=0, r6=0, r7=0, r8=0, r9=0, r10=0, r11=0, fp(r12)=0, sp(r13)=5, ln(r14)=28, ip(r15)=2
+mem[i]:    0|    0|    1|    0|    0|   28
+     i:    0|    1|    2|    3|    4|    5
+    fp:   fp|     |     |     |     |     
+    sp:     |     |     |     |     |   sp
+(ip=3) psh fp sp
+registers: r0=1, r1=0, r2=0, r3=0, r4=0, r5=0, r6=0, r7=0, r8=0, r9=0, r10=0, r11=0, fp(r12)=0, sp(r13)=6, ln(r14)=28, ip(r15)=3
+mem[i]:    0|    0|    1|    0|    0|   28|    0
+     i:    0|    1|    2|    3|    4|    5|    6
+    fp:   fp|     |     |     |     |     |     
+    sp:     |     |     |     |     |     |   sp
+(ip=4) mov fp sp
+registers: r0=1, r1=0, r2=0, r3=0, r4=0, r5=0, r6=0, r7=0, r8=0, r9=0, r10=0, r11=0, fp(r12)=6, sp(r13)=6, ln(r14)=28, ip(r15)=4
+mem[i]:    0|    0|    1|    0|    0|   28|    0
+     i:    0|    1|    2|    3|    4|    5|    6
+    fp:     |     |     |     |     |     |   fp
+    sp:     |     |     |     |     |     |   sp
+(ip=5) br 1
+registers: r0=1, r1=0, r2=0, r3=0, r4=0, r5=0, r6=0, r7=0, r8=0, r9=0, r10=0, r11=0, fp(r12)=6, sp(r13)=6, ln(r14)=28, ip(r15)=5
+mem[i]:    0|    0|    1|    0|    0|   28|    0
+     i:    0|    1|    2|    3|    4|    5|    6
+    fp:     |     |     |     |     |     |   fp
+    sp:     |     |     |     |     |     |   sp
+(ip=6) movi r0 0
+registers: r0=0, r1=0, r2=0, r3=0, r4=0, r5=0, r6=0, r7=0, r8=0, r9=0, r10=0, r11=0, fp(r12)=6, sp(r13)=6, ln(r14)=28, ip(r15)=6
+mem[i]:    0|    0|    1|    0|    0|   28|    0
+     i:    0|    1|    2|    3|    4|    5|    6
+    fp:     |     |     |     |     |     |   fp
+    sp:     |     |     |     |     |     |   sp
+(ip=7) wr r0
+registers: r0=0, r1=0, r2=0, r3=0, r4=0, r5=0, r6=0, r7=0, r8=0, r9=0, r10=0, r11=0, fp(r12)=6, sp(r13)=6, ln(r14)=28, ip(r15)=7
+mem[i]:    0|    0|    1|    0|    0|   28|    0
+     i:    0|    1|    2|    3|    4|    5|    6
+    fp:     |     |     |     |     |     |   fp
+    sp:     |     |     |     |     |     |   sp
+(ip=8) movi r0 1
+registers: r0=1, r1=0, r2=0, r3=0, r4=0, r5=0, r6=0, r7=0, r8=0, r9=0, r10=0, r11=0, fp(r12)=6, sp(r13)=6, ln(r14)=28, ip(r15)=8
+mem[i]:    0|    0|    1|    0|    0|   28|    0
+     i:    0|    1|    2|    3|    4|    5|    6
+    fp:     |     |     |     |     |     |   fp
+    sp:     |     |     |     |     |     |   sp
+(ip=9) st r0 fp -3
+registers: r0=1, r1=0, r2=0, r3=0, r4=0, r5=0, r6=0, r7=0, r8=0, r9=0, r10=0, r11=0, fp(r12)=6, sp(r13)=6, ln(r14)=28, ip(r15)=9
+mem[i]:    0|    0|    1|    1|    0|   28|    0
+     i:    0|    1|    2|    3|    4|    5|    6
+    fp:     |     |     |     |     |     |   fp
+    sp:     |     |     |     |     |     |   sp
+(ip=10) mov sp fp
+registers: r0=1, r1=0, r2=0, r3=0, r4=0, r5=0, r6=0, r7=0, r8=0, r9=0, r10=0, r11=0, fp(r12)=6, sp(r13)=6, ln(r14)=28, ip(r15)=10
+mem[i]:    0|    0|    1|    1|    0|   28|    0
+     i:    0|    1|    2|    3|    4|    5|    6
+    fp:     |     |     |     |     |     |   fp
+    sp:     |     |     |     |     |     |   sp
+(ip=11) pop fp sp
+registers: r0=1, r1=0, r2=0, r3=0, r4=0, r5=0, r6=0, r7=0, r8=0, r9=0, r10=0, r11=0, fp(r12)=0, sp(r13)=5, ln(r14)=28, ip(r15)=11
+mem[i]:    0|    0|    1|    1|    0|   28
+     i:    0|    1|    2|    3|    4|    5
+    fp:   fp|     |     |     |     |     
+    sp:     |     |     |     |     |   sp
+(ip=12) pop ln sp
+registers: r0=1, r1=0, r2=0, r3=0, r4=0, r5=0, r6=0, r7=0, r8=0, r9=0, r10=0, r11=0, fp(r12)=0, sp(r13)=4, ln(r14)=28, ip(r15)=12
+mem[i]:    0|    0|    1|    1|    0
+     i:    0|    1|    2|    3|    4
+    fp:   fp|     |     |     |     
+    sp:     |     |     |     |   sp
+(ip=13) ret ln
+registers: r0=1, r1=0, r2=0, r3=0, r4=0, r5=0, r6=0, r7=0, r8=0, r9=0, r10=0, r11=0, fp(r12)=0, sp(r13)=4, ln(r14)=28, ip(r15)=13
+mem[i]:    0|    0|    1|    1|    0
+     i:    0|    1|    2|    3|    4
+    fp:   fp|     |     |     |     
+    sp:     |     |     |     |   sp
+(ip=28) subi sp sp 1
+registers: r0=1, r1=0, r2=0, r3=0, r4=0, r5=0, r6=0, r7=0, r8=0, r9=0, r10=0, r11=0, fp(r12)=0, sp(r13)=3, ln(r14)=28, ip(r15)=28
+mem[i]:    0|    0|    1|    1
+     i:    0|    1|    2|    3
+    fp:   fp|     |     |     
+    sp:     |     |     |   sp
+(ip=29) pop r1 sp
+registers: r0=1, r1=1, r2=0, r3=0, r4=0, r5=0, r6=0, r7=0, r8=0, r9=0, r10=0, r11=0, fp(r12)=0, sp(r13)=2, ln(r14)=28, ip(r15)=29
+mem[i]:    0|    0|    1
+     i:    0|    1|    2
+    fp:   fp|     |     
+    sp:     |     |   sp
+(ip=30) pop r0 sp
+registers: r0=1, r1=1, r2=0, r3=0, r4=0, r5=0, r6=0, r7=0, r8=0, r9=0, r10=0, r11=0, fp(r12)=0, sp(r13)=1, ln(r14)=28, ip(r15)=30
+mem[i]:    0|    0
+     i:    0|    1
+    fp:   fp|     
+    sp:     |   sp
+(ip=31) add r0 r1 r0
+registers: r0=2, r1=1, r2=0, r3=0, r4=0, r5=0, r6=0, r7=0, r8=0, r9=0, r10=0, r11=0, fp(r12)=0, sp(r13)=1, ln(r14)=28, ip(r15)=31
+mem[i]:    0|    0
+     i:    0|    1
+    fp:   fp|     
+    sp:     |   sp
+(ip=32) st r0 fp 1
+registers: r0=2, r1=1, r2=0, r3=0, r4=0, r5=0, r6=0, r7=0, r8=0, r9=0, r10=0, r11=0, fp(r12)=0, sp(r13)=1, ln(r14)=28, ip(r15)=32
+mem[i]:    0|    2
+     i:    0|    1
+    fp:   fp|     
+    sp:     |   sp
+(ip=33) ld r0 fp 1
+registers: r0=2, r1=1, r2=0, r3=0, r4=0, r5=0, r6=0, r7=0, r8=0, r9=0, r10=0, r11=0, fp(r12)=0, sp(r13)=1, ln(r14)=28, ip(r15)=33
+mem[i]:    0|    2
+     i:    0|    1
+    fp:   fp|     
+    sp:     |   sp
+(ip=34) wr r0
+registers: r0=2, r1=1, r2=0, r3=0, r4=0, r5=0, r6=0, r7=0, r8=0, r9=0, r10=0, r11=0, fp(r12)=0, sp(r13)=1, ln(r14)=28, ip(r15)=34
+mem[i]:    0|    2
+     i:    0|    1
+    fp:   fp|     
+    sp:     |   sp
+done
+0
+0
+2

@@ -1,0 +1,24 @@
+addi sp sp 1
+addi sp sp 1
+br 1
+movi r0 8
+st r0 fp 1
+movi r0 3
+st r0 fp 2
+ld r0 fp 2
+ld r1 fp 1
+div r0 r1 r0
+ld r1 fp 2
+add r0 r0 r1
+movi r1 3
+mod r0 r0 r1
+ld r1 fp 1
+add r0 r0 r1
+ld r1 fp 2
+sub r0 r0 r1
+st r0 fp 1
+ld r0 fp 1
+wr r0
+ld r0 fp 2
+wr r0
+hlt

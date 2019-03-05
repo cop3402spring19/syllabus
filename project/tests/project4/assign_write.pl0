@@ -1,0 +1,6 @@
+var x : int
+
+begin
+  x := 2
+  write x
+end

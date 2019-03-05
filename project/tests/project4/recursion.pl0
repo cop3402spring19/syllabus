@@ -1,0 +1,20 @@
+function f(x : int) : int
+begin
+  if x <= 1 then return 1
+  write x
+  f(x - 1)
+  write x
+  return x
+end
+
+begin
+  write 0
+  f(0)
+  write 10
+  f(1)
+  write 20
+  f(5)
+  write 30
+end
+
+
