@@ -114,7 +114,7 @@ Thursday 04/25 10:00AM-12:50PM CSB-0101
       - p-code: depends on no previous phases
       - code generation: use the given parser.o, typechecker.o, and vm.o, only typesafe programs will be tested
           - functions and variables: no statements will be tested (except those given and required)
-          - expressions and statements: functions or variables will be tested (except those given)
+          - expressions and statements: functions or variables will not be tested (except those given)
       
 - 25% Homework
 
