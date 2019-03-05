@@ -1,0 +1,18 @@
+var x : int
+
+function f()
+  function g()
+  begin
+    write 0
+  end
+begin
+  write 1
+  g()
+  write 2
+end
+
+begin
+  write 3
+  f()
+  write 4
+end

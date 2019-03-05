@@ -1,0 +1,6 @@
+br 1
+movi r0 2
+movi r1 8
+div r0 r1 r0
+wr r0
+hlt

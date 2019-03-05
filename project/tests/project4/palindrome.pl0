@@ -1,0 +1,69 @@
+function pow(base : int, power : int) : int
+  var x : int
+  begin
+    if power < 1 then
+      return 1
+
+    x := 1
+    while power > 1 do
+      begin
+        x := x * base
+        power := power - 1
+      end
+    
+    return x
+  end
+
+function digitcount(param : int) : int
+  var c : int
+  begin
+    if param < 0 then
+    begin
+      return digitcount(-param)
+    end
+    else if (param >= 0) and (param < 10) then
+    begin
+      return 1
+    end
+    else begin
+      return digitcount(param / 10) + 1
+    end
+  end
+
+function ispalindrome(param : int) : bool
+  var first_digit : int
+  var last_digit  : int
+  begin
+    if digitcount(param) = 1 then
+      return true
+    else if digitcount(param) = 2 then
+      return (param % 10) = (param / 10)
+    else
+      begin
+        first_digit := param / pow(10, digitcount(param))
+        last_digit  := param % 10
+
+        if first_digit <> last_digit then
+          return false
+        else
+          begin
+            # crop out the first and last digits
+            param := (param - (first_digit * pow(10, digitcount(param)))) / 10
+            return ispalindrome(param)
+          end
+      end
+
+  end
+
+begin  
+  write ispalindrome(1)
+  write ispalindrome(12)
+  write ispalindrome(123)
+  write ispalindrome(11)
+  write ispalindrome(121)
+  write ispalindrome(123321)
+  write ispalindrome(123123)
+  write ispalindrome(12323)
+  write ispalindrome(1111111)
+end
+

@@ -1,0 +1,13 @@
+var x : int
+
+function f() : int
+begin
+  write 0
+  return 1
+end
+
+begin
+  f()
+  x := f() + 1
+  write x
+end

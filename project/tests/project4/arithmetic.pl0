@@ -1,0 +1,10 @@
+var x : int
+var y : int
+
+begin
+  x := 8
+  y := 3
+  x := (((((x / y) + y) % 3) + x) - y)
+  write x
+  write y
+end

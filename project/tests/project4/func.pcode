@@ -1,0 +1,36 @@
+addi sp sp 1
+br 17
+psh ln sp
+psh fp sp
+mov fp sp
+br 1
+movi r0 0
+wr r0
+movi r0 1
+st r0 fp -3
+mov sp fp
+pop fp sp
+pop ln sp
+ret ln
+mov sp fp
+pop fp sp
+pop ln sp
+ret ln
+addi sp sp 1
+psh fp sp
+bl -18
+subi sp sp 1
+pop r0 sp
+movi r0 1
+psh r0 sp
+addi sp sp 1
+psh fp sp
+bl -25
+subi sp sp 1
+pop r1 sp
+pop r0 sp
+add r0 r1 r0
+st r0 fp 1
+ld r0 fp 1
+wr r0
+hlt

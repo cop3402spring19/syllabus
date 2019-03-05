@@ -1,0 +1,5 @@
+addi sp sp 1
+br 1
+movi r0 2
+st r0 fp 1
+hlt
