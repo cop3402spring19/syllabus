@@ -1,0 +1,17 @@
+var x : int
+var y : bool
+function f()
+     function g()
+          var x : int
+          begin
+               write x
+          end
+     begin
+          g()
+          read x
+          write x
+          write y
+     end  
+begin
+     f()
+end
