@@ -1,0 +1,20 @@
+var x : int
+
+function r()
+    read x
+
+function w()
+    write x
+    
+function rw()
+  var x : int
+  begin
+    read x
+    write x
+  end
+
+begin
+  r()
+  rw()
+  w()
+end
