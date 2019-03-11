@@ -15,7 +15,7 @@
 
 ## Office Hours
 
-- Mondays 1:00pm-2:00pm (Sharare, HEC-315)
+- Mondays 1:00pm-2:00pm (Sharare, HEC-315) except 03/18
 - Mondays 2:00pm-3:00pm (Paul, HEC-239) except week of spring break, 03/25, and 04/08
 - Tuesdays 11:00am-12:00pm (Necip, R1-368)
 - Wednesdays 1:00pm-2:00pm (Sharare, HEC-315)
