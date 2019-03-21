@@ -109,7 +109,7 @@ There are convenience macros for these offsets:
 
 `setupFunctionCall` is used both `visitCallStatement` and `visitFunctionFactor` to prepare the stack for the call
 
-- (`visitFunctionFactor` only) emit pushes for any registers that hold
+- `visitFunctionFactor` (given) emits pushes for any registers that hold
   temp values (r0-r#), all registers before `reg_base`.
   `visitCallStatement` doesn't need tod o this because it doesn't use
   any registers itself.
@@ -118,9 +118,11 @@ There are convenience macros for these offsets:
         push r1 sp
         ...
 
-- allocate space on the stack for all the parameters
+`setupFunctionCall` does the following:
+
+- allocate space on the stack for all the parameters (if there are any)
   - use the `list->size` to move the stack pointer `addi sp sp size`, where size is `list->size`
-- evaluate `visitExpressionList`
+- evaluate `visitExpressionList` for each expression element.  evaluate these one-at-a-time and immediately store them onto the stack.  that will obviate the need to hold values in registers.
   - use `SP - i` to access the ith parameter
   - emit code for each expression
   - then emit a sto for the resulting value of each expression
