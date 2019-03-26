@@ -60,7 +60,7 @@ There are convenience macros for these offsets:
 
 `visitFuncDecl`
 
-- Prologue (before emitting code for the block)
+- Prologue (before emitting code for the function body)
 
   - emit a push for the link register (r14), i.e., return address, `psh r14 r13`
   - emit a push for the old frame pointer (r12), `psh r12 r13`
