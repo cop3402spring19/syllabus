@@ -66,6 +66,7 @@ There are convenience macros for these offsets:
   - emit a push for the old frame pointer (r12), `psh r12 r13`
   - update the frame pointer to be the current stack pointer, `mov r12 r13`
   - add space for the local variables, i.e., advance the stack pointer by one for each variable
+    - locals are in vardecls, so let that function emit `addi sp 1` for each one
 
 - Epilogue (after emitting code for the block)
 
@@ -98,6 +99,7 @@ There are convenience macros for these offsets:
 - set the address for each variable (`symbol->address`), which is the offset from the frame pointer.  variables appear one after another starting from `OFFSET_FIRST_LOCAL`.
   - e.g., if there are three local variables, `x` and `y`, `x` has
     offset 1 while `y` has offset 2 and so on for more locals.
+- emit `addi sp 1` for each variable for the prologue
 
 `visitReturnStatement`
 
@@ -113,7 +115,7 @@ There are convenience macros for these offsets:
   temp values (r0-r#), all registers before `reg_base`.
   `visitCallStatement` doesn't need tod o this because it doesn't use
   any registers itself.
-
+m
         push r0 sp
         push r1 sp
         ...
