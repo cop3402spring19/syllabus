@@ -60,6 +60,8 @@ There are convenience macros for these offsets:
 
 `visitFuncDecl`
 
+The function's address in the symbol table is the index into the code array.
+
 - Prologue (before emitting code for the function body)
 
   - emit a push for the link register (r14), i.e., return address, `psh r14 r13`
