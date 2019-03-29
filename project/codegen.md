@@ -164,13 +164,11 @@ m
   - If it's in the current scope, load the variable's value into the register given by `reg_base`.  The load takes some base register plus an offset immediate value.  The base address in this case is the frame pointer, whereas the offset is the address for the variable (`symbol->address`) computed when visiting the function declaration.
   - If the scope is an ancestor (level of symbol is lower than current scope), then we need to emit code that follows the static link N times, where N is the difference in nesting depth, i.e., the difference between the levels.  Save the current frame pointer, and keep loading the static link to the parent's stack frame into FP.  Then store the value into the same register and restore FP.  Recall that the static link can be found at `FP - 2`.
   
-            psh fp, sp      # save the current FP
-            ld fp, fp, -2   # N=1, fp holds the static parent frame pointer
-            ld fp, fp, -2   # N=2, fp holds the static parent's parent's frame pointer
-            ld fp, fp, -2   # etc
-            ...
-            ld r#, fp, off  # finally load the variables new value r# (reg_base) into its palce on the stack, i.e., the offset symbol->address from the ancestor stack frame found
-            pop fp, sp      # restore the current FP
+            mov r# fp       # store the current fp into the given reg_base r#
+            ld r#, r#, -2   # get the parent's frame pointer
+            ld r#, r#, -2   # get the parent's parent's frame pointer
+            ...             # etc
+            ld r#, r#, off  # finally load the variables new value r# (reg_base) into its palce on the stack, i.e., the offset symbol->address from the ancestor stack frame found
 
 
 `setVariable(struct Symbol *symbol, int reg);` and `visitAssignStatement(struct Statement *node);`
