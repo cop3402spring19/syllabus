@@ -154,7 +154,6 @@ m
             psh r0 sp 
    
 - emit `bl disp`, where `disp` is the current IP (r15) minus the address of function (from symbol table)
-- emit the function
 - emit pops for the register values stored by the prologue (in reverse order!)
 
 #### Variable Access
