@@ -62,6 +62,8 @@ There are convenience macros for these offsets:
 
 The function's address in the symbol table is the index into the code array.
 
+`current_scope` is updated to record the current scope to look up variables in the symbol table  Set and restore this variable to the `scope` field of the FuncDecl AST node as you traverse the tree.
+
 - Prologue (before emitting code for the function body)
 
   - emit a push for the link register (r14), i.e., return address, `psh r14 r13`
