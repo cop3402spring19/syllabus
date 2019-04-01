@@ -108,6 +108,7 @@ The function's address in the symbol table is the index into the code array.
 `visitReturnStatement`
 
 - Recall that the caller pushed the return address to `FP - 3`
+- visit the expression using its ershov number minus 1 (the initial register base)
 - move the register holding the return expression to the stack at that offset
 - emit the epilogue
 
