@@ -132,6 +132,19 @@ m
 - allocate space on the stack for all the parameters (if there are any)
   - use the `list->size` to move the stack pointer `addi sp sp size`, where size is `list->size`
 - run `visitExpression` for each expression element.  evaluate these one-at-a-time and immediately store them onto the stack.  that will obviate the need to hold values in registers.
+
+        struct ExpressionListElement *cur = parameters->head;
+        int i = 0;
+        while (NULL != cur) {
+          // visit the expression and record the resulting register
+          emit a store into the stack frame under the corresponding actual parameter slot
+          i++;
+    
+          cur = cur->next;
+        }
+
+
+
   - use `SP - i` to access the ith parameter
   - emit code for each expression
   - then emit a sto for the resulting value of each expression
