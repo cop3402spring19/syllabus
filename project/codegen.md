@@ -70,7 +70,7 @@ The function's address in the symbol table is the index into the code array.
   - emit a push for the old frame pointer (r12), `psh r12 r13`
   - update the frame pointer to be the current stack pointer, `mov r12 r13`
   - add space for the local variables, i.e., advance the stack pointer by one for each variable
-    - locals are in vardecls, so let that function emit `addi sp 1` for each one
+    - locals are done by visitVarDecls, so that function should emit `addi sp 1` for each one
 
 - Epilogue (after emitting code for the block)
 
