@@ -69,8 +69,8 @@ The function's address in the symbol table is the index into the code array.
   - emit a push for the link register (r14), i.e., return address, `psh r14 r13`
   - emit a push for the old frame pointer (r12), `psh r12 r13`
   - update the frame pointer to be the current stack pointer, `mov r12 r13`
-  - add space for the local variables, i.e., advance the stack pointer by one for each variable
-    - locals are done by visitVarDecls, so that function should emit `addi sp sp 1` for each one
+  - (done via `visitBlock`) add space for the local variables, i.e., advance the stack pointer by one for each variable
+    - locals are done by `visitVarDecls` via `visitBlock`, so that function should emit `addi sp sp 1` for each one
 
 - Epilogue (after emitting code for the block)
 
@@ -117,7 +117,8 @@ The function's address in the symbol table is the index into the code array.
 `setupFunctionCall` is used both `visitCallStatement` and `visitFunctionFactor` to prepare the stack for the call
 
 - note that your compiler doesn't track the stack pointer, rather it emits code that increments/decrements the pointer in well-defined fixed amounts, i.e., the stack frame size.
-- `visitFunctionFactor` (given) emits pushes for any registers that hold
+- `
+tionFactor` (given) emits pushes for any registers that hold
   temp values (r0-r#), all registers before `reg_base`.
   `visitCallStatement` doesn't need tod o this because it doesn't use
   any registers itself.
