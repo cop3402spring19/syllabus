@@ -99,7 +99,7 @@ The function's address in the symbol table is the index into the code array.
 `visitVarDecls`
 
 - loop through the variables (skeleton code for iterating over the list is given)
-- get the symbol for each variable
+- get the symbol (`cur->node->symbol`) for each variable
 - set the address for each variable (`symbol->address`), which is the offset from the frame pointer.  variables appear one after another starting from `OFFSET_FIRST_LOCAL`.
   - e.g., if there are three local variables, `x` and `y`, `x` has
     offset 1 while `y` has offset 2 and so on for more locals.
