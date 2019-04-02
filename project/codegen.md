@@ -69,8 +69,10 @@ The function's address in the symbol table is the index into the code array.
   - emit a push for the link register (r14), i.e., return address, `psh r14 r13`
   - emit a push for the old frame pointer (r12), `psh r12 r13`
   - update the frame pointer to be the current stack pointer, `mov r12 r13`
-  - (done via `visitBlock`) add space for the local variables, i.e., advance the stack pointer by one for each variable
+  - (done via `visitBlock`, not in `visitFuncDecl`) add space for the local variables, i.e., advance the stack pointer by one for each variable
     - locals are done by `visitVarDecls` via `visitBlock`, so that function should emit `addi sp sp 1` for each one
+
+- Call `visitFormals` and `visitBlock` between prologue and epilogue
 
 - Epilogue (after emitting code for the block)
 
@@ -81,7 +83,7 @@ The function's address in the symbol table is the index into the code array.
 
 `visitFormals`
 
-- Addresses of parameters
+- The addresses parameters are relative offsets from the fp, i.e., only store the offset, not the absolute address (which is not knowable at compile-time)
 
   - These are allocated and stored by the caller, so we only need to set their addresses
   - Each parameters is a fixed distance from the frame pointer
