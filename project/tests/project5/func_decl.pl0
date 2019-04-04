@@ -1,0 +1,4 @@
+function f()
+  write 10
+
+write 20

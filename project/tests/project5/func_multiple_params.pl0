@@ -1,0 +1,20 @@
+function f(x : int, y : int, z : int)
+  begin
+    write x
+    write y
+    write z
+    x := 100
+    y := 200
+    z := 300
+    write x
+    write y
+    write z
+  end
+
+begin
+  write 11
+  f(1, 2, 3)
+  write 22
+  f(10, 20, 30)
+  write 33
+end

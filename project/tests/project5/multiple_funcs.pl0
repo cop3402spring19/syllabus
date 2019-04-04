@@ -1,0 +1,21 @@
+function f()
+  write 10
+
+function g()
+  write 20
+
+function h()
+begin
+  write 30
+  write 40
+end
+
+begin
+  write 50
+  f()
+  write 60
+  h()
+  write 70
+  g()
+  write 80
+end

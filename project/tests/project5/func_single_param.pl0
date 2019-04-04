@@ -1,0 +1,4 @@
+function f(x : int)
+  write x
+
+f(10)

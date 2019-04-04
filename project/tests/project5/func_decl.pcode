@@ -1,0 +1,17 @@
+scope: <GLOBAL>, level: 0
+  f : () -> void @1
+  scope: f, level: 1
+br 11
+psh ln sp
+psh fp sp
+mov fp sp
+br 1
+movi r0 10
+wr r0
+mov sp fp
+pop fp sp
+pop ln sp
+ret ln
+movi r0 20
+wr r0
+hlt

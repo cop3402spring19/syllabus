@@ -1,0 +1,37 @@
+var x : int
+
+function f() : int
+  var x : int
+
+  function g() : int
+    var x : int
+    begin
+      x := 10
+      write x
+      return 10
+    end
+
+  function h() : int
+    var x : int
+    begin
+      x := 20
+      write x
+      return 20
+    end
+
+  begin
+    x := 30
+    write x
+    g()
+    write x
+    h()
+    write x
+    return 30
+  end
+
+begin
+  x := 40
+  write x
+  f()
+  write x
+end

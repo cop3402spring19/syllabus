@@ -1,0 +1,9 @@
+var x : int
+
+function f() : int
+  return 10
+
+begin
+  x := f()
+  write x
+end

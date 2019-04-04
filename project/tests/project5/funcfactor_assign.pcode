@@ -1,0 +1,29 @@
+scope: <GLOBAL>, level: 0
+  x : int @1
+  f : () -> int @2
+  scope: f, level: 1
+addi sp sp 1
+br 15
+psh ln sp
+psh fp sp
+mov fp sp
+br 1
+movi r0 10
+st r0 fp -3
+mov sp fp
+pop fp sp
+pop ln sp
+ret ln
+mov sp fp
+pop fp sp
+pop ln sp
+ret ln
+addi sp sp 1
+psh fp sp
+bl -16
+subi sp sp 1
+pop r0 sp
+st r0 fp 1
+ld r0 fp 1
+wr r0
+hlt

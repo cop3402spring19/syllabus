@@ -1,0 +1,52 @@
+scope: <GLOBAL>, level: 0
+  f : () -> void @1
+  scope: f, level: 1
+    h : () -> void @5
+    scope: h, level: 2
+br 37
+psh ln sp
+psh fp sp
+mov fp sp
+br 11
+psh ln sp
+psh fp sp
+mov fp sp
+br 1
+movi r0 10
+wr r0
+mov sp fp
+pop fp sp
+pop ln sp
+ret ln
+movi r0 20
+wr r0
+addi sp sp 1
+ld r0 fp -2
+psh r0 sp
+bl -19
+subi sp sp 1
+pop r0 sp
+movi r0 30
+wr r0
+addi sp sp 1
+ld r0 fp -2
+psh r0 sp
+bl -27
+subi sp sp 1
+pop r0 sp
+movi r0 40
+wr r0
+mov sp fp
+pop fp sp
+pop ln sp
+ret ln
+movi r0 50
+wr r0
+addi sp sp 1
+psh fp sp
+bl -40
+subi sp sp 1
+pop r0 sp
+movi r0 60
+wr r0
+hlt

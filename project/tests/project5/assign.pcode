@@ -1,0 +1,7 @@
+scope: <GLOBAL>, level: 0
+  x : int @1
+addi sp sp 1
+br 1
+movi r0 10
+st r0 fp 1
+hlt

@@ -1,0 +1,15 @@
+var x : int
+
+function f(x : int)
+  begin
+    write x
+    x := 10
+    write x
+  end
+
+begin
+  x := 20
+  write x
+  f(30)
+  write x
+end

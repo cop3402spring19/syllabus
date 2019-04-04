@@ -1,0 +1,6 @@
+function f()
+  function h()
+    write 10
+  write 20
+
+write 30
