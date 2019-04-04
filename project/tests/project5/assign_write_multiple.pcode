@@ -1,0 +1,21 @@
+scope: <GLOBAL>, level: 0
+  x : int @1
+  y : int @2
+  z : int @3
+addi sp sp 1
+addi sp sp 1
+addi sp sp 1
+br 1
+movi r0 10
+st r0 fp 1
+ld r0 fp 1
+wr r0
+movi r0 20
+st r0 fp 2
+ld r0 fp 2
+wr r0
+movi r0 30
+st r0 fp 3
+ld r0 fp 3
+wr r0
+hlt

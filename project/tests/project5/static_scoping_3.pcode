@@ -1,0 +1,74 @@
+scope: <GLOBAL>, level: 0
+  x : int @1
+  y : int @2
+  z : int @3
+  f : (int) -> void @4
+  scope: f, level: 1
+    y : int @-4
+    z : int @1
+addi sp sp 1
+addi sp sp 1
+addi sp sp 1
+br 35
+psh ln sp
+psh fp sp
+mov fp sp
+addi sp sp 1
+br 1
+movi r0 10
+st r0 fp 1
+mov r0 fp
+ld r0 r0 -2
+ld r0 r0 1
+wr r0
+ld r0 fp -4
+wr r0
+ld r0 fp 1
+wr r0
+movi r0 20
+psh fp sp
+ld fp fp -2
+st r0 fp 1
+pop fp sp
+movi r0 30
+st r0 fp -4
+mov r0 fp
+ld r0 r0 -2
+ld r0 r0 1
+wr r0
+ld r0 fp -4
+wr r0
+ld r0 fp 1
+wr r0
+mov sp fp
+pop fp sp
+pop ln sp
+ret ln
+movi r0 40
+st r0 fp 1
+movi r0 50
+st r0 fp 2
+movi r0 60
+st r0 fp 3
+ld r0 fp 1
+wr r0
+ld r0 fp 2
+wr r0
+ld r0 fp 3
+wr r0
+addi sp sp 1
+movi r0 70
+st r0 sp 0
+addi sp sp 1
+psh fp sp
+bl -51
+subi sp sp 1
+pop r0 sp
+subi sp sp 1
+ld r0 fp 1
+wr r0
+ld r0 fp 2
+wr r0
+ld r0 fp 3
+wr r0
+hlt

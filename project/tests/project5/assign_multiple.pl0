@@ -1,0 +1,9 @@
+var x : int
+var y : int
+var z : int
+
+begin
+  x := 10
+  y := 20
+  z := 30
+end

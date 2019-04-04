@@ -1,0 +1,96 @@
+scope: <GLOBAL>, level: 0
+  x : int @1
+  f : () -> int @2
+  scope: f, level: 1
+    x : int @1
+    g : () -> int @7
+    h : () -> int @26
+    scope: g, level: 2
+      x : int @1
+    scope: h, level: 2
+      x : int @1
+addi sp sp 1
+br 72
+psh ln sp
+psh fp sp
+mov fp sp
+addi sp sp 1
+br 39
+psh ln sp
+psh fp sp
+mov fp sp
+addi sp sp 1
+br 1
+movi r0 10
+st r0 fp 1
+ld r0 fp 1
+wr r0
+movi r0 10
+st r0 fp -3
+mov sp fp
+pop fp sp
+pop ln sp
+ret ln
+mov sp fp
+pop fp sp
+pop ln sp
+ret ln
+psh ln sp
+psh fp sp
+mov fp sp
+addi sp sp 1
+br 1
+movi r0 20
+st r0 fp 1
+ld r0 fp 1
+wr r0
+movi r0 20
+st r0 fp -3
+mov sp fp
+pop fp sp
+pop ln sp
+ret ln
+mov sp fp
+pop fp sp
+pop ln sp
+ret ln
+movi r0 30
+st r0 fp 1
+ld r0 fp 1
+wr r0
+addi sp sp 1
+psh fp sp
+bl -44
+subi sp sp 1
+pop r0 sp
+ld r0 fp 1
+wr r0
+addi sp sp 1
+psh fp sp
+bl -32
+subi sp sp 1
+pop r0 sp
+ld r0 fp 1
+wr r0
+movi r0 30
+st r0 fp -3
+mov sp fp
+pop fp sp
+pop ln sp
+ret ln
+mov sp fp
+pop fp sp
+pop ln sp
+ret ln
+movi r0 40
+st r0 fp 1
+ld r0 fp 1
+wr r0
+addi sp sp 1
+psh fp sp
+bl -77
+subi sp sp 1
+pop r0 sp
+ld r0 fp 1
+wr r0
+hlt

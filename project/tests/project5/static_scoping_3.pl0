@@ -1,0 +1,33 @@
+var x : int
+var y : int
+var z : int
+
+function f(y : int)
+  var z : int
+  begin
+    z := 10
+    write x
+    write y
+    write z
+    x := 20
+    y := 30
+    write x
+    write y
+    write z
+  end
+
+begin
+  x := 40
+  y := 50
+  z := 60
+
+  write x
+  write y
+  write z
+
+  f(70)
+
+  write x
+  write y
+  write z
+end
