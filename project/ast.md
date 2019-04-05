@@ -15,7 +15,7 @@
                  | CallStatement(call_function, call_parameters)
                  | ReturnStatement(return_expression)
                  | CompoundStatement(compound_statement)
-                 | IfStatement(if_condition, if_branch, if_elsebranch)
+                 | IfStatement(if_condition, if_branch, if_elsebranch) if_elsebranch is NULL if the conditional has no else branch
                  | WhileStatement(while_condition, while_body)
                  | ReadStatement(read_variable)
                  | WriteStatement(write_expression)
