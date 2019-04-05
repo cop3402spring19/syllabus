@@ -138,8 +138,8 @@ m
         struct ExpressionListElement *cur = parameters->head;
         int i = 0;
         while (NULL != cur) {
-          // visit the expression and record the resulting register
-          // emit a store into the stack frame under the corresponding actual parameter slot
+          // TODO: visit the expression and record the resulting register
+          // TODO: emit a store into the stack frame under the corresponding actual parameter slot
           i++;
     
           cur = cur->next;
