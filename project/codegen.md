@@ -410,3 +410,7 @@ and it's equivalent VM code:
 
 This is just like an if statement, but with an extra jump back to the
 condition evaluation.
+
+`static void visitReadStatement(struct Statement *node);`
+
+- be sure to use setVariable
