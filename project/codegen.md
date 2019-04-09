@@ -116,13 +116,13 @@ The function's address in the symbol table is the index into the code array.
 
 ##### Caller Setup
 
-`setupFunctionCall` is used both `visitCallStatement` and `visitFunctionFactor` to prepare the stack for the call
+`setupFunctionCall` is used by both `visitCallStatement` and `visitFunctionFactor` to prepare the stack for the call.
 
 - note that your compiler doesn't track the stack pointer, rather it emits code that increments/decrements the pointer in well-defined fixed amounts, i.e., the stack frame size.
 - `
-tionFactor` (given) emits pushes for any registers that hold
+visitFunctionFactor` (given) emits pushes for any registers that hold
   temp values (r0-r#), all registers before `reg_base`.
-  `visitCallStatement` doesn't need tod o this because it doesn't use
+  `visitCallStatement` doesn't need to do this because it doesn't use
   any registers itself.
 m
         push r0 sp
