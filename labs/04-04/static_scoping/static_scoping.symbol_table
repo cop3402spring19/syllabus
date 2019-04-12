@@ -1,0 +1,4 @@
+scope: <GLOBAL>, level: 0
+  x : int @1
+  f : () -> void @2
+  scope: f, level: 1

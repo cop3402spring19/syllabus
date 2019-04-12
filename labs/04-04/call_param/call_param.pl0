@@ -1,0 +1,7 @@
+function f(x : int, y: bool)
+  begin
+    write x
+    write y
+  end
+
+f(10, false)
