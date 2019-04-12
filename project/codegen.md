@@ -279,7 +279,6 @@ Here is the algorithm for choosing registers:
 
 _Don't forget to return the resulting register number from each expression visitor!_
 
-
 #### Boolean Expressions
 
 Computing operations on Boolean expressions is very different from
@@ -353,9 +352,7 @@ check each operand one-at-a-time.  `or` is similar, but instead if either operan
 - Generating correct control flow and store instructions
 - Tested with writes of integer constants
 
-Statements can always given 0 for the reg_base (or any other
-general-purpose register), since statements require no temporary
-values.
+_For all statements (except read) that use expressions, give `ershov - 1` as the initial `reg_base`.  For the read statement, you can just use register `0`, since no expression is being evaluated._
 
 `static void visitIfStatement(struct Statement *node);`
 
