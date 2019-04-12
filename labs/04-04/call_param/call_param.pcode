@@ -1,0 +1,39 @@
+br 13
+
+# prologue
+psh ln sp
+psh fp sp
+mov fp sp
+
+# block starts
+br 1        # no function decl
+ld r0 fp -4 # load the parameter x
+wr r0       # write x
+ld r0 fp -5 # load the parameter y
+wr r0       # write y
+
+# epilogue
+mov sp fp
+pop fp sp
+pop ln sp
+ret ln
+
+# main function
+
+# caller setup
+# parameters
+addi sp sp 2 # make space for parameters in the stack
+movi r0 10   # put 10 to r0
+st r0 sp 0   # put first parameter to the stack
+movi r0 0    # put false to r0
+st r0 sp -1  # put second parameter to the stack
+
+addi sp sp 1 # make space for the return value
+psh fp sp    # push the static link to the stack
+bl -19       # call
+
+# tear down the stack frame after returning from function
+subi sp sp 1
+pop r0 sp
+subi sp sp 2
+hlt

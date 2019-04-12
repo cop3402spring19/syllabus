@@ -1,0 +1,8 @@
+var x : int
+function f()
+  write x
+
+begin
+  x := 1
+  f()  
+end

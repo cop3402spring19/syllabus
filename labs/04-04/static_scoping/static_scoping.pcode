@@ -1,0 +1,34 @@
+addi sp sp 1 # space for global x
+br 13        # jump to main
+
+# prologue
+psh ln sp
+psh fp sp
+mov fp sp
+
+br 1 # no func decl
+
+# the variable is from a parent scope, the level difference is 1
+# therefore, load static link to frame pointer to reach to the variable
+mov r0 fp   # put fp to r0
+ld r0 r0 -2 # gets the static link from r0 (which is frame pointer)
+ld r0 r0 1  # load variable from parent stack frame
+wr r0       # write the value of the variable
+
+# epilogue
+mov sp fp
+pop fp sp
+pop ln sp
+ret ln
+
+# assign 1 to x
+movi r0 1
+st r0 fp 1
+
+# caller setup
+addi sp sp 1
+psh fp sp
+bl -16  # call
+subi sp sp 1
+pop r0 sp
+hlt

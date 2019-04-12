@@ -1,0 +1,5 @@
+scope: <GLOBAL>, level: 0
+  f : (int, bool) -> void @1
+  scope: f, level: 1
+    x : int @-4
+    y : bool @-5
