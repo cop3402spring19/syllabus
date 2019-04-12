@@ -389,6 +389,9 @@ and it's equivalent VM code:
     bne 4
     movi r0 1
     wr r0
+    br 1
+    
+ 
 
 
 
