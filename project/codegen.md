@@ -3,26 +3,26 @@
 ### Helper Functions
 
     VM_OPNAME(arg, arg, ...)
-    
+
 There is a series of macros to create the instruction struct for each
 opcode, e.g., `VM_CMPI(0, 1)`, generates `cmpi r0 1`.  These are all
 contained in `codegen_instr.h`.  See `ops.txt` as a reference.
 
     int emit(Instruction instr);
-    
+
 This function adds the given instructions to the `code[]` array,
 advances the `code_index`, and returns the index of the generated
 instruction.  For instance, `emit(VM_CMPI(0, 1))`, adds `cmpi r0 1` to
 the list of generated instructions.
 
     void backpatch(int branch_instruction_address, int new_disp);
-    
+
 This function backpatches a branch at code index
 `instruction_address`, i.e., it replaces the displacement argument
 with the given `new_disp` value.  For instance, if I generate a branch:
 
     int save_index = emit(VM_BR(0));
-    
+
 I can later backpatch it by doing:
 
     backpatch(save_index, code_index - save_index);
@@ -54,7 +54,7 @@ There are convenience macros for these offsets:
     #define OFFSET_RET_VAL -3
     #define OFFSET_STATIC_LINK -2
     #define OFFSET_RET_ADDR -1
-    #define OFFSET_FIRST_LOCAL 1 
+    #define OFFSET_FIRST_LOCAL 1
 
 ##### Callee Setup
 
@@ -94,7 +94,7 @@ The function's address in the symbol table is the index into the code array.
 - call the visitor for variable declarations
 - save the current `code_index` in order to backpatch the jump
 - emit a jump with an arbitrary `disp` that we will backpatch later
-- call the visitors for function declarations and 
+- call the visitors for function declarations and
 - backpatch the saved jump with the now current `code_index`, .e., `code[saved_code_index] = code_index - saved_code_index` (recall that branches use relative offsets in the code)
 - visit the statement to emit it
 
@@ -141,7 +141,7 @@ m
           // TODO: visit the expression and record the resulting register
           // TODO: emit a store into the stack frame under the corresponding actual parameter slot
           i++;
-    
+
           cur = cur->next;
         }
 
@@ -156,22 +156,22 @@ m
   - if the callee is defined inside the caller's scope (`fsymbol->scope->level == current_scope->level`), the static link is the caller's frame pointer:
 
             psh fp, sp
-        
+
   - if the callee is a sibling (`fsymbol->scope->level == current_scope->level - 1`), the static link is copied from the current stack frame:
-  
-  
+
+
             ld r0 fp -2
             psh r0 sp
-        
+
   - if the callee is in an ancestor's scope, i.e., N > 0, where N is `(current_scope->level - 1) - fsymbol->scope->level`, then follow the static link N times and copy the the static link found there:
-  
+
             ld r0 fp -2
             ld r0 r0 -2   # for N=1
             ld r0 r0 -2   # for N=2
             ...           # etc
-            psh r0 sp 
-   
-- emit `bl disp`, where `disp` is the current IP (r15) minus the address of function (from symbol table)
+            psh r0 sp
+
+- emit `bl disp`, where `disp` is the current `code_index` minus the address of function (from symbol table)
 - emit pops for the register values stored by the prologue (in reverse order!)
 
 #### Variable Access
@@ -182,7 +182,7 @@ m
 - Check whether the variable is in the current scope (`current_scope->level` vs variable's `symbol->scope->level`)
   - If it's in the current scope, load the variable's value into the register given by `reg_base`.  The load takes some base register plus an offset immediate value.  The base address in this case is the frame pointer, whereas the offset is the address for the variable (`symbol->address`) computed when visiting the function declaration.
   - If the scope is an ancestor (level of symbol is lower than current scope), then we need to emit code that follows the static link N times, where N is the difference in nesting depth, i.e., the difference between the levels.  Save the current frame pointer, and keep loading the static link to the parent's stack frame into FP.  Then store the value into the same register and restore FP.  Recall that the static link can be found at `FP - 2`.
-  
+
             mov r# fp       # store the current fp into the given reg_base r#
             ld r#, r#, -2   # get the parent's frame pointer
             ld r#, r#, -2   # get the parent's parent's frame pointer
@@ -220,7 +220,7 @@ The assign statement is factored out in `setVariable`, since
     static int visitUnaryExpressionBool(struct Expression *node, int reg_base);
     static int visitNumberFactor(struct Expression *node, int reg_base);
     static int visitBooleanFactor(struct Expression *node, int reg_base);
-    
+
 - Getting the register allocation right, eshov number
 - Tested with writes of expressions of constant factors
 
@@ -309,7 +309,7 @@ and `r1` hold the values being compared and `r2` holds the result.
     movi r1 0
     br 2
     movi r2 1
-    
+
 The code is very similar, except that we use `blt` instead of `beq`,
 because we are evaluating the less than symbol.  `<=`. `>`, `>=`, `=`,
 and `!=` are similar, using the corresponding branch operator.
@@ -347,7 +347,7 @@ check each operand one-at-a-time.  `or` is similar, but instead if either operan
     static void visitWhileStatement(struct Statement *node);
     static void visitWriteStatement(struct Statement *node);
     static void visitReadStatement(struct Statement *node);
-    
+
 
 - Generating correct control flow and store instructions
 - Tested with writes of integer constants
@@ -387,8 +387,8 @@ and it's equivalent VM code:
     movi r0 1
     wr r0
     br 1
-    
- 
+
+
 
 
 
