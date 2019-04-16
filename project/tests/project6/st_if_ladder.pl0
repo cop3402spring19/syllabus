@@ -1,0 +1,10 @@
+if true then
+  write 10
+else if false then
+  write 20
+else if true then
+  write 30
+else if false then
+  write 40
+else
+  write 50

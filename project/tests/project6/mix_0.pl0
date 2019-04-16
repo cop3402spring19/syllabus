@@ -1,0 +1,13 @@
+begin
+  if false or true then
+  begin
+    while (10 <> 20) and (30 > 40) do
+    begin
+      write (50 * 60 + 70) / (13 % 2)
+    end
+  end
+  else
+  begin
+    write (10 < 20) and ((30 + 40) > 50) or false
+  end
+end

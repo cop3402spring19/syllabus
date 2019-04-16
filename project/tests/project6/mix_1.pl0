@@ -1,0 +1,10 @@
+while 20 = (10 + 5 * 2) do
+  if ((3 + 4 / 2) <> 0) and true then
+  begin
+    write 15 % 2 + 7
+    write (15 % 2 + 7 * 5) = 10
+  end
+  else if true or false and true then
+  begin
+    write true or false and true
+  end

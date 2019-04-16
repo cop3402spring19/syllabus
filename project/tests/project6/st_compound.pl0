@@ -1,0 +1,6 @@
+begin
+  write 10
+  write 20
+  write 30
+  write 40
+end

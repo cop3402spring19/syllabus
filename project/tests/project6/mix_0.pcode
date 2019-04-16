@@ -1,0 +1,81 @@
+scope: <GLOBAL>, level: 0
+br 1
+movi r0 1
+movi r1 0
+cmpi r1 1
+beq 5
+cmpi r0 1
+beq 3
+movi r0 0
+br 2
+movi r0 1
+cmpi r0 1
+bne 36
+movi r0 40
+movi r1 30
+cmp r1 r0
+bgt 3
+movi r0 0
+br 2
+movi r0 1
+movi r1 20
+movi r2 10
+cmp r2 r1
+bne 3
+movi r1 0
+br 2
+movi r1 1
+cmpi r1 0
+beq 5
+cmpi r0 0
+beq 3
+movi r0 1
+br 2
+movi r0 0
+cmpi r0 1
+bne 12
+movi r0 2
+movi r1 13
+mod r0 r1 r0
+movi r1 60
+movi r2 50
+mul r1 r2 r1
+movi r2 70
+add r1 r1 r2
+div r0 r1 r0
+wr r0
+br -33
+br 33
+movi r0 40
+movi r1 30
+add r0 r1 r0
+movi r1 50
+cmp r0 r1
+bgt 3
+movi r0 0
+br 2
+movi r0 1
+movi r1 20
+movi r2 10
+cmp r2 r1
+blt 3
+movi r1 0
+br 2
+movi r1 1
+cmpi r1 0
+beq 5
+cmpi r0 0
+beq 3
+movi r0 1
+br 2
+movi r0 0
+movi r2 0
+cmpi r0 1
+beq 5
+cmpi r2 1
+beq 3
+movi r0 0
+br 2
+movi r0 1
+wr r0
+hlt
