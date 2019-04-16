@@ -306,7 +306,7 @@ and `r1` hold the values being compared and `r2` holds the result.
 
     cmp r0 r1
     blt 3
-    movi r1 0
+    movi r2 0
     br 2
     movi r2 1
 
