@@ -1,0 +1,1 @@
+if true then write 10 else write 20

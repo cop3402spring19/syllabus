@@ -1,0 +1,9 @@
+scope: <GLOBAL>, level: 0
+br 1
+movi r0 20
+movi r1 10
+add r0 r1 r0
+movi r1 20
+mul r0 r0 r1
+wr r0
+hlt
