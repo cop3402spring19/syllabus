@@ -15,13 +15,16 @@
 
 ## Office Hours
 
+All office hours end 04/19 except for Paul's which end 04/26 (inclusive)
+
 - Mondays 1:00pm-2:00pm (Sharare, HEC-315) except 03/18
-- Mondays 2:00pm-3:00pm (Paul, HEC-239) except week of spring break, 03/25, and 04/08
+- Mondays 2:00pm-3:00pm (Paul, HEC-239) except 03/25, and 04/08
 - Tuesdays 11:00am-12:00pm (Necip, R1-368)
 - Wednesdays 1:00pm-2:00pm (Sharare, HEC-315)
-- Thursdays 10:00am-11:00am (Necip, R1-368) except 04/18
+- Thursdays 10:00am-11:00am (Necip, R1-368) except 04/18 (moved to 04/19 11am-12pm)
 - Fridays 10:00am-11:00am (Paul, HEC-239)
 - or by appointment as necessary
+- no office hours during the week of spring break
 
 ## Schedule
 
