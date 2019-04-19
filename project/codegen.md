@@ -133,7 +133,7 @@ m
 
 - allocate space on the stack for all the parameters (if there are any)
   - use the `list->size` to move the stack pointer `addi sp sp size`, where size is `list->size`
-- run `visitExpression` for each expression element.  evaluate these one-at-a-time and immediately store them onto the stack.  that will obviate the need to hold values in registers.
+- run `visitExpression` for each expression element.  evaluate these one-at-a-time and immediately store them onto the stack.  that will obviate the need to hold values in registers.  use `ershov - 1` for register allocation.
 
         struct ExpressionListElement *cur = parameters->head;
         int i = 0;
