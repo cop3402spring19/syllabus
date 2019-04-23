@@ -1,0 +1,19 @@
+var x : int
+var result : int
+function factorial(x : int) : int
+  begin
+    if x = 0 then
+      return 1
+    else
+      return x * factorial(x - 1)
+  end
+begin
+  x := 4
+  if x >= 0 then
+  begin
+    result := factorial(x)
+    write result
+  end
+  else
+    write 1
+end

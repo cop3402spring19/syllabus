@@ -1,0 +1,152 @@
+scope: <GLOBAL>, level: 0
+  isprime : (int) -> bool @1
+  scope: isprime, level: 1
+    param : int @-4
+    x : int @1
+br 96
+psh ln sp
+psh fp sp
+mov fp sp
+addi sp sp 1
+br 1
+movi r0 1
+ld r1 fp -4
+cmp r1 r0
+blt 3
+movi r0 0
+br 2
+movi r0 1
+cmpi r0 1
+bne 8
+movi r0 0
+st r0 fp -3
+mov sp fp
+pop fp sp
+pop ln sp
+ret ln
+br 31
+movi r0 2
+ld r1 fp -4
+cmp r1 r0
+beq 3
+movi r0 0
+br 2
+movi r0 1
+movi r1 1
+ld r2 fp -4
+cmp r2 r1
+beq 3
+movi r1 0
+br 2
+movi r1 1
+cmpi r1 1
+beq 5
+cmpi r0 1
+beq 3
+movi r0 0
+br 2
+movi r0 1
+cmpi r0 1
+bne 8
+movi r0 1
+st r0 fp -3
+mov sp fp
+pop fp sp
+pop ln sp
+ret ln
+br 1
+movi r0 2
+st r0 fp 1
+ld r0 fp -4
+ld r1 fp 1
+cmp r1 r0
+blt 3
+movi r0 0
+br 2
+movi r0 1
+cmpi r0 1
+bne 24
+ld r0 fp 1
+ld r1 fp -4
+mod r0 r1 r0
+movi r1 0
+cmp r0 r1
+beq 3
+movi r0 0
+br 2
+movi r0 1
+cmpi r0 1
+bne 8
+movi r0 0
+st r0 fp -3
+mov sp fp
+pop fp sp
+pop ln sp
+ret ln
+br 1
+movi r0 1
+ld r1 fp 1
+add r0 r1 r0
+st r0 fp 1
+br -31
+movi r0 1
+st r0 fp -3
+mov sp fp
+pop fp sp
+pop ln sp
+ret ln
+mov sp fp
+pop fp sp
+pop ln sp
+ret ln
+addi sp sp 1
+movi r0 1
+st r0 sp 0
+addi sp sp 1
+psh fp sp
+bl -100
+subi sp sp 1
+pop r0 sp
+subi sp sp 1
+wr r0
+addi sp sp 1
+movi r0 2
+st r0 sp 0
+addi sp sp 1
+psh fp sp
+bl -110
+subi sp sp 1
+pop r0 sp
+subi sp sp 1
+wr r0
+addi sp sp 1
+movi r0 3
+st r0 sp 0
+addi sp sp 1
+psh fp sp
+bl -120
+subi sp sp 1
+pop r0 sp
+subi sp sp 1
+wr r0
+addi sp sp 1
+movi r0 4
+st r0 sp 0
+addi sp sp 1
+psh fp sp
+bl -130
+subi sp sp 1
+pop r0 sp
+subi sp sp 1
+wr r0
+addi sp sp 1
+movi r0 5
+st r0 sp 0
+addi sp sp 1
+psh fp sp
+bl -140
+subi sp sp 1
+pop r0 sp
+subi sp sp 1
+wr r0
+hlt
