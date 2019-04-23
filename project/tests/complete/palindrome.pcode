@@ -1,0 +1,405 @@
+scope: <GLOBAL>, level: 0
+  pow : (int, int) -> int @1
+  digitcount : (int) -> int @52
+  ispalindrome : (int) -> bool @138
+  scope: pow, level: 1
+    base : int @-4
+    power : int @-5
+    x : int @1
+  scope: digitcount, level: 1
+    param : int @-4
+    c : int @1
+  scope: ispalindrome, level: 1
+    param : int @-4
+    first_digit : int @1
+    last_digit : int @2
+br 299
+psh ln sp
+psh fp sp
+mov fp sp
+addi sp sp 1
+br 1
+movi r0 1
+ld r1 fp -5
+cmp r1 r0
+blt 3
+movi r0 0
+br 2
+movi r0 1
+cmpi r0 1
+bne 8
+movi r0 1
+st r0 fp -3
+mov sp fp
+pop fp sp
+pop ln sp
+ret ln
+br 1
+movi r0 1
+st r0 fp 1
+movi r0 1
+ld r1 fp -5
+cmp r1 r0
+bgt 3
+movi r0 0
+br 2
+movi r0 1
+cmpi r0 1
+bne 10
+ld r0 fp -4
+ld r1 fp 1
+mul r0 r1 r0
+st r0 fp 1
+movi r0 1
+ld r1 fp -5
+sub r0 r1 r0
+st r0 fp -5
+br -17
+ld r0 fp 1
+st r0 fp -3
+mov sp fp
+pop fp sp
+pop ln sp
+ret ln
+mov sp fp
+pop fp sp
+pop ln sp
+ret ln
+psh ln sp
+psh fp sp
+mov fp sp
+addi sp sp 1
+br 1
+movi r0 0
+ld r1 fp -4
+cmp r1 r0
+blt 3
+movi r0 0
+br 2
+movi r0 1
+cmpi r0 1
+bne 18
+addi sp sp 1
+ld r0 fp -4
+muli r0 r0 -1
+st r0 sp 0
+addi sp sp 1
+ld r0 fp -2
+psh r0 sp
+bl -21
+subi sp sp 1
+pop r0 sp
+subi sp sp 1
+st r0 fp -3
+mov sp fp
+pop fp sp
+pop ln sp
+ret ln
+br 52
+movi r0 10
+ld r1 fp -4
+cmp r1 r0
+blt 3
+movi r0 0
+br 2
+movi r0 1
+movi r1 0
+ld r2 fp -4
+cmp r2 r1
+bge 3
+movi r1 0
+br 2
+movi r1 1
+cmpi r1 0
+beq 5
+cmpi r0 0
+beq 3
+movi r0 1
+br 2
+movi r0 0
+cmpi r0 1
+bne 8
+movi r0 1
+st r0 fp -3
+mov sp fp
+pop fp sp
+pop ln sp
+ret ln
+br 22
+movi r0 1
+psh r0 sp
+addi sp sp 1
+movi r0 10
+ld r1 fp -4
+div r0 r1 r0
+st r0 sp 0
+addi sp sp 1
+ld r0 fp -2
+psh r0 sp
+bl -71
+subi sp sp 1
+pop r1 sp
+subi sp sp 1
+pop r0 sp
+add r0 r1 r0
+st r0 fp -3
+mov sp fp
+pop fp sp
+pop ln sp
+ret ln
+mov sp fp
+pop fp sp
+pop ln sp
+ret ln
+psh ln sp
+psh fp sp
+mov fp sp
+addi sp sp 1
+addi sp sp 1
+br 1
+movi r0 1
+psh r0 sp
+addi sp sp 1
+ld r0 fp -4
+st r0 sp 0
+addi sp sp 1
+ld r0 fp -2
+psh r0 sp
+bl -100
+subi sp sp 1
+pop r1 sp
+subi sp sp 1
+pop r0 sp
+cmp r1 r0
+beq 3
+movi r0 0
+br 2
+movi r0 1
+cmpi r0 1
+bne 8
+movi r0 1
+st r0 fp -3
+mov sp fp
+pop fp sp
+pop ln sp
+ret ln
+br 125
+movi r0 2
+psh r0 sp
+addi sp sp 1
+ld r0 fp -4
+st r0 sp 0
+addi sp sp 1
+ld r0 fp -2
+psh r0 sp
+bl -127
+subi sp sp 1
+pop r1 sp
+subi sp sp 1
+pop r0 sp
+cmp r1 r0
+beq 3
+movi r0 0
+br 2
+movi r0 1
+cmpi r0 1
+bne 18
+movi r0 10
+ld r1 fp -4
+div r0 r1 r0
+movi r1 10
+ld r2 fp -4
+mod r1 r2 r1
+cmp r1 r0
+beq 3
+movi r0 0
+br 2
+movi r0 1
+st r0 fp -3
+mov sp fp
+pop fp sp
+pop ln sp
+ret ln
+br 88
+addi sp sp 2
+movi r0 10
+st r0 sp 0
+addi sp sp 1
+ld r0 fp -4
+st r0 sp 0
+addi sp sp 1
+ld r0 fp -2
+psh r0 sp
+bl -165
+subi sp sp 1
+pop r0 sp
+subi sp sp 1
+st r0 sp -1
+addi sp sp 1
+ld r0 fp -2
+psh r0 sp
+bl -224
+subi sp sp 1
+pop r0 sp
+subi sp sp 2
+ld r1 fp -4
+div r0 r1 r0
+st r0 fp 1
+movi r0 10
+ld r1 fp -4
+mod r0 r1 r0
+st r0 fp 2
+ld r0 fp 2
+ld r1 fp 1
+cmp r1 r0
+bne 3
+movi r0 0
+br 2
+movi r0 1
+cmpi r0 1
+bne 8
+movi r0 0
+st r0 fp -3
+mov sp fp
+pop fp sp
+pop ln sp
+ret ln
+br 44
+addi sp sp 2
+movi r0 10
+st r0 sp 0
+addi sp sp 1
+ld r0 fp -4
+st r0 sp 0
+addi sp sp 1
+ld r0 fp -2
+psh r0 sp
+bl -209
+subi sp sp 1
+pop r0 sp
+subi sp sp 1
+st r0 sp -1
+addi sp sp 1
+ld r0 fp -2
+psh r0 sp
+bl -268
+subi sp sp 1
+pop r0 sp
+subi sp sp 2
+ld r1 fp 1
+mul r0 r1 r0
+ld r1 fp -4
+sub r0 r1 r0
+movi r1 10
+div r0 r0 r1
+st r0 fp -4
+addi sp sp 1
+ld r0 fp -4
+st r0 sp 0
+addi sp sp 1
+ld r0 fp -2
+psh r0 sp
+bl -148
+subi sp sp 1
+pop r0 sp
+subi sp sp 1
+st r0 fp -3
+mov sp fp
+pop fp sp
+pop ln sp
+ret ln
+mov sp fp
+pop fp sp
+pop ln sp
+ret ln
+addi sp sp 1
+movi r0 1
+st r0 sp 0
+addi sp sp 1
+psh fp sp
+bl -166
+subi sp sp 1
+pop r0 sp
+subi sp sp 1
+wr r0
+addi sp sp 1
+movi r0 12
+st r0 sp 0
+addi sp sp 1
+psh fp sp
+bl -176
+subi sp sp 1
+pop r0 sp
+subi sp sp 1
+wr r0
+addi sp sp 1
+movi r0 123
+st r0 sp 0
+addi sp sp 1
+psh fp sp
+bl -186
+subi sp sp 1
+pop r0 sp
+subi sp sp 1
+wr r0
+addi sp sp 1
+movi r0 11
+st r0 sp 0
+addi sp sp 1
+psh fp sp
+bl -196
+subi sp sp 1
+pop r0 sp
+subi sp sp 1
+wr r0
+addi sp sp 1
+movi r0 121
+st r0 sp 0
+addi sp sp 1
+psh fp sp
+bl -206
+subi sp sp 1
+pop r0 sp
+subi sp sp 1
+wr r0
+addi sp sp 1
+movi r0 123321
+st r0 sp 0
+addi sp sp 1
+psh fp sp
+bl -216
+subi sp sp 1
+pop r0 sp
+subi sp sp 1
+wr r0
+addi sp sp 1
+movi r0 123123
+st r0 sp 0
+addi sp sp 1
+psh fp sp
+bl -226
+subi sp sp 1
+pop r0 sp
+subi sp sp 1
+wr r0
+addi sp sp 1
+movi r0 12323
+st r0 sp 0
+addi sp sp 1
+psh fp sp
+bl -236
+subi sp sp 1
+pop r0 sp
+subi sp sp 1
+wr r0
+addi sp sp 1
+movi r0 1111111
+st r0 sp 0
+addi sp sp 1
+psh fp sp
+bl -246
+subi sp sp 1
+pop r0 sp
+subi sp sp 1
+wr r0
+hlt
